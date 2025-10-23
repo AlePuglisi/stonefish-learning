@@ -74,6 +74,7 @@
 #include <utils/UnitSystem.h>
 #include <core/ScenarioParser.h>
 #include <core/NED.h>
+#include <entities/solids/Sphere.h>
 
 UnderwaterTestManager::UnderwaterTestManager(sf::Scalar stepsPerSecond)
 : SimulationManager(stepsPerSecond, sf::SolverType::SOLVER_SI, sf::CollisionFilteringType::COLLISION_EXCLUSIVE)
@@ -112,9 +113,11 @@ void UnderwaterTestManager::BuildScenario()
     //Create environment
     EnableOcean(0.0);
     getOcean()->setWaterType(0.2);
-    //getOcean()->AddVelocityField(new sf::Jet(sf::Vector3(0,0,1.0), sf::VY(), 0.3, 5.0));
-    //getOcean()->AddVelocityField(new sf::Uniform(sf::Vector3(1.0,0.0,0.0)));
-    //getOcean()->EnableCurrents();
+    
+    getOcean()->AddVelocityField(new sf::Jet(sf::Vector3(0,0,1.0), sf::VY(), 0.3, 5.0));
+    getOcean()->AddVelocityField(new sf::Uniform(sf::Vector3(1.0,0.0,0.0)));
+    getOcean()->EnableCurrents();
+
     getAtmosphere()->SetSunPosition(0.0, 60.0);
     getNED()->Init(41.77737, 3.03376, 0.0);
     
@@ -122,7 +125,7 @@ void UnderwaterTestManager::BuildScenario()
     AddStaticEntity(seabed, sf::Transform(sf::IQ(), sf::Vector3(0,0,15.0)));
     sf::Obstacle* cyl = new sf::Obstacle("Cyl", 0.5, 5.0, sf::I4(), "Fiberglass", "seabed");
     AddStaticEntity(cyl, sf::Transform(sf::Quaternion(0,M_PI_2,0), sf::Vector3(6.0,2.0,5.0)));
-	
+
 	sf::Light* spot = new sf::Light("Spot", 0.02, 50.0, sf::Color::BlackBody(5000.0), 100.0);
 	spot->AttachToWorld(sf::Transform(sf::Quaternion(0,0,M_PI/3.0), sf::Vector3(0.0,0.0,1.0)));
 	AddActuator(spot);
@@ -136,6 +139,9 @@ void UnderwaterTestManager::BuildScenario()
     sf::BodyPhysicsSettings phy;
     phy.mode = sf::BodyPhysicsMode::SUBMERGED;
     phy.collisions = true;
+
+    // sf::Sphere* sph = new sf::Sphere("Sphere", phy, 0.5, sf::I4(), "Steel", "Yellow");
+    // AddSolidEntity(sph, sf::I4());
     
     phy.buoyancy = false;
     sf::Polyhedron* hullB = new sf::Polyhedron("HullBottom", phy, sf::GetDataPath() + "hull_hydro.obj", sf::Scalar(1), sf::I4(), "Fiberglass", "yellow", sf::Scalar(0.003));
