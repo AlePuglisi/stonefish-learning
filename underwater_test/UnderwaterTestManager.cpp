@@ -108,23 +108,37 @@ void UnderwaterTestManager::BuildScenario()
     CreateLook("black", sf::Color::RGB(0.1f, 0.1f, 0.1f), 0.4f, 0.5f);
     CreateLook("manipulator", sf::Color::RGB(0.2f, 0.15f, 0.1f), 0.6f, 0.8f);
     CreateLook("link4", sf::Color::RGB(1.f, 1.f, 1.f), 0.6f, 0.8f, 0.f, sf::GetDataPath() + "link4_tex.png");
+    CreateLook("canyon", sf::Color::RGB(1.f, 1.f, 1.f), 0.6f, 0.8f, 0.f, sf::GetDataPath() + "canyon.png");
     
     ////////OBJECTS    
     //Create environment
     EnableOcean(0.0);
     getOcean()->setWaterType(0.2);
     
-    getOcean()->AddVelocityField(new sf::Jet(sf::Vector3(0,0,1.0), sf::VY(), 0.3, 5.0));
-    getOcean()->AddVelocityField(new sf::Uniform(sf::Vector3(1.0,0.0,0.0)));
-    getOcean()->EnableCurrents();
+    // getOcean()->AddVelocityField(new sf::Jet(sf::Vector3(0,0,1.0), sf::VY(), 0.3, 5.0));
+    // getOcean()->AddVelocityField(new sf::Uniform(sf::Vector3(1.0,0.0,0.0)));
+    // getOcean()->EnableCurrents();
 
     getAtmosphere()->SetSunPosition(0.0, 60.0);
     getNED()->Init(41.77737, 3.03376, 0.0);
     
-    sf::Terrain* seabed = new sf::Terrain("Seabed", sf::GetDataPath() + "terrain.png", 1.0, 1.0, 5.0, "Rock", "seabed", 5.f);
+    sf::Terrain* seabed = new sf::Terrain("Seabed", sf::GetDataPath() + "terrain.png", 1.0, 1.0, 0, "Rock", "seabed", 5.f);
     AddStaticEntity(seabed, sf::Transform(sf::IQ(), sf::Vector3(0,0,15.0)));
-    sf::Obstacle* cyl = new sf::Obstacle("Cyl", 0.5, 5.0, sf::I4(), "Fiberglass", "seabed");
-    AddStaticEntity(cyl, sf::Transform(sf::Quaternion(0,M_PI_2,0), sf::Vector3(6.0,2.0,5.0)));
+    
+    // sf::Obstacle* cyl = new sf::Obstacle("Cyl", 0.5, 5.0, sf::I4(), "Fiberglass", "seabed");
+    // AddStaticEntity(cyl, sf::Transform(sf::Quaternion(0,M_PI_2,0), sf::Vector3(6.5,0.0,3.0)));
+
+    sf::Obstacle* cyl2 = new sf::Obstacle("Cyl", 0.5, 8.0, sf::I4(), "Fiberglass", "seabed");
+    AddStaticEntity(cyl2, sf::Transform(sf::Quaternion(0,0,0), sf::Vector3(4.0,1.5,0.0)));
+
+    sf::Obstacle* cyl3 = new sf::Obstacle("Cyl", 0.5, 8.0, sf::I4(), "Fiberglass", "seabed");
+    AddStaticEntity(cyl3, sf::Transform(sf::Quaternion(0,0,0), sf::Vector3(4.0,-1.5,0.0)));
+
+    sf::Obstacle* cyl4 = new sf::Obstacle("Cyl", 0.5, 8.0, sf::I4(), "Fiberglass", "seabed");
+    AddStaticEntity(cyl4, sf::Transform(sf::Quaternion(0,0,0), sf::Vector3(8.0,0.0,0.0)));
+
+    sf::Obstacle* canyon = new sf::Obstacle("Canyon", sf::GetDataPath() + "canyon.obj", 2.5, sf::I4(), sf::GetDataPath() + "canyon.obj", 2.5, sf::I4(), true, "Rock", "canyon");
+    AddStaticEntity(canyon, sf::Transform(sf::Quaternion(0.0, 0.0, 0.0), sf::Vector3(0.0, 0.0, 15.0)));
 
 	sf::Light* spot = new sf::Light("Spot", 0.02, 50.0, sf::Color::BlackBody(5000.0), 100.0);
 	spot->AttachToWorld(sf::Transform(sf::Quaternion(0,0,M_PI/3.0), sf::Vector3(0.0,0.0,1.0)));
@@ -244,15 +258,18 @@ void UnderwaterTestManager::BuildScenario()
     //mb->setDisplayOnScreen(true);
     //sf::DepthCamera* dc = new sf::DepthCamera("DepthCam", 1000, 350, 50.0, 0.1, 10.0, 10.0);
     //dc->setDisplayOnScreen(true);
-    sf::FLS* fls = new sf::FLS("FLS", 256, 500, 150.0, 30.0, 1.0, 20.0, sf::ColorMap::GREEN_BLUE);
+
+    sf::FLS* fls = new sf::FLS("FLS", 512, 500, 120.0, 30.0, 0.5, 20.0, sf::ColorMap::PERULA);
+    fls->setGain(1.1); 
     fls->setNoise(0.05, 0.05);
-    fls->setDisplayOnScreen(true, 800, 250, 0.4f);
+    fls->setDisplayOnScreen(true, 800, 250, 0.35f);
+
     //sf::SSS* sss = new sf::SSS("SSS", 800, 400, 70.0, 1.5, 50.0, 1.0, 100.0, sf::ColorMap::GREEN_BLUE);
     //sss->setDisplayOnScreen(true, 710, 5, 0.6f);
     //sf::MSIS* msis = new sf::MSIS("MSIS", 1.5, 500, 2.0, 30.0, -50, 50, 1.0, 100.0, sf::ColorMap::GREEN_BLUE);
     //msis->setDisplayOnScreen(true, 880, 455, 0.6f);
-    //sf::ColorCamera* cam = new sf::ColorCamera("Cam", 300, 200, 60.0, 10.0);
-    //cam->setDisplayOnScreen(true);
+    sf::ColorCamera* cam = new sf::ColorCamera("Cam", 1920, 1080, 80.0, 10.0);
+    cam->setDisplayOnScreen(true, 800, 50, 0.16f);
     //sf::ColorCamera* cam2 = new sf::ColorCamera("Cam", 300, 200, 60.0);
     
     //Create AUV
@@ -287,16 +304,16 @@ void UnderwaterTestManager::BuildScenario()
     //auv->AddLinkActuator(vbs, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(-0.5,0.0,0.0)));
     
     //Sensors
-    auv->AddLinkSensor(odom, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0,0,0)));
-    auv->AddLinkSensor(press, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0.6,0,-0.7)));
-    auv->AddLinkSensor(dvl, "Vehicle", sf::Transform(sf::Quaternion(-M_PI_4,0,M_PI), sf::Vector3(-0.5,0,0.1)));
-    auv->AddLinkSensor(imu, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0,0,-0.7)));
-    auv->AddLinkSensor(fog, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0.3,0,-0.7)));
-    auv->AddLinkSensor(gps, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(-0.5,0,-0.9)));
-    auv->AddVisionSensor(fls, "Vehicle", sf::Transform(sf::Quaternion(1.57, 0.0, 0.8), sf::Vector3(0.0,0.0,1.0)));
+    //auv->AddLinkSensor(odom, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0,0,0)));
+    //auv->AddLinkSensor(press, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0.6,0,-0.7)));
+    //auv->AddLinkSensor(dvl, "Vehicle", sf::Transform(sf::Quaternion(-M_PI_4,0,M_PI), sf::Vector3(-0.5,0,0.1)));
+    //auv->AddLinkSensor(imu, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0,0,-0.7)));
+    //auv->AddLinkSensor(fog, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0.3,0,-0.7)));
+    //auv->AddLinkSensor(gps, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(-0.5,0,-0.9)));
+    auv->AddVisionSensor(fls, "Vehicle", sf::Transform(sf::Quaternion(M_PI_2, 0.0, M_PI/3), sf::Vector3(1.5,0.0,-0.1)));
     //auv->AddVisionSensor(sss, "Vehicle", sf::Transform(sf::Quaternion(1.57, 0.0, 0.0), sf::Vector3(0.0,0.0,0.0)));
     //auv->AddVisionSensor(msis, "Vehicle", sf::Transform(sf::Quaternion(0.0, 0.0, 1.57), sf::Vector3(0.0,0.0,1.0)));
-    //auv->AddVisionSensor(cam, "Vehicle", sf::Transform(sf::Quaternion(1.57, 0.0, 1.57), sf::Vector3(0.0,0.0,1.0)));
+    auv->AddVisionSensor(cam, "Vehicle", sf::Transform(sf::Quaternion(M_PI_2, 0.0, 1.57), sf::Vector3(1.5,0.0,0.3)));
     //auv->AddVisionSensor(cam2, "Vehicle", sf::Transform(sf::Quaternion(1.57, 0.0, 1.57), sf::Vector3(0.0,0.0,2.0)));
     AddRobot(auv, sf::Transform(sf::Quaternion(0,0,0), sf::Vector3(0.0,0.0,2.0)));
     

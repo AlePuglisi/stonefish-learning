@@ -1,3 +1,6 @@
 # Build files 
 /build
 
+# VS Code config 
+.vscode
+
