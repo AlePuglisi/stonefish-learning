@@ -61,6 +61,7 @@
 #include <comms/AcousticModem.h>
 #include <sensors/Sample.h>
 #include <actuators/Light.h>
+#include <actuators/Push.h>
 #include <sensors/scalar/RotaryEncoder.h>
 #include <sensors/scalar/Accelerometer.h>
 #include <entities/FeatherstoneEntity.h>
@@ -93,6 +94,7 @@ void UnderwaterTestManager::BuildScenario()
     CreateMaterial("Dummy", sf::UnitSystem::Density(sf::CGS, sf::MKS, 0.9), 0.3);
     CreateMaterial("Fiberglass", sf::UnitSystem::Density(sf::CGS, sf::MKS, 1.5), 0.9);
     CreateMaterial("Rock", sf::UnitSystem::Density(sf::CGS, sf::MKS, 3.0), 0.6);
+
     SetMaterialsInteraction("Dummy", "Dummy", 0.5, 0.2);
     SetMaterialsInteraction("Fiberglass", "Fiberglass", 0.5, 0.2);
     SetMaterialsInteraction("Rock", "Rock", 0.9, 0.7);
@@ -112,14 +114,20 @@ void UnderwaterTestManager::BuildScenario()
     
     ////////OBJECTS    
     //Create environment
-    EnableOcean(0.0);
-    getOcean()->setWaterType(0.2);
+    EnableOcean(0.0);                // No currents 0.0
+    getOcean()->setWaterType(0.2);   //Jerlov water type 
+    getOcean()->SetConditions(15.0); //Water Temperature at surface 
     
     // getOcean()->AddVelocityField(new sf::Jet(sf::Vector3(0,0,1.0), sf::VY(), 0.3, 5.0));
     // getOcean()->AddVelocityField(new sf::Uniform(sf::Vector3(1.0,0.0,0.0)));
     // getOcean()->EnableCurrents();
 
     getAtmosphere()->SetSunPosition(0.0, 60.0);
+    // additional atmospheric conditions such as temperature, and wind 
+    // getAtmosphere()->SetConditions(20.0, 101300.0, 0.5);
+    // getAtmosphere()->AddVelocityField(new sf::Uniform(sf::Vector3(1.0, 0.0, 0.0)));
+    // getAtmosphere()->AddVelocityField(new sf::Jet(sf::Vector3(0.0, 0.0, 3.0), sf::Vector3(0.0, 1.0, 0.0), 0.2, 2.0));
+
     getNED()->Init(41.77737, 3.03376, 0.0);
     
     sf::Terrain* seabed = new sf::Terrain("Seabed", sf::GetDataPath() + "terrain.png", 1.0, 1.0, 0, "Rock", "seabed", 5.f);
@@ -128,25 +136,25 @@ void UnderwaterTestManager::BuildScenario()
     // sf::Obstacle* cyl = new sf::Obstacle("Cyl", 0.5, 5.0, sf::I4(), "Fiberglass", "seabed");
     // AddStaticEntity(cyl, sf::Transform(sf::Quaternion(0,M_PI_2,0), sf::Vector3(6.5,0.0,3.0)));
 
-    sf::Obstacle* cyl2 = new sf::Obstacle("Cyl", 0.5, 8.0, sf::I4(), "Fiberglass", "seabed");
+    sf::Obstacle* cyl2 = new sf::Obstacle("Cyl2", 0.5, 8.0, sf::I4(), "Fiberglass", "seabed");
     AddStaticEntity(cyl2, sf::Transform(sf::Quaternion(0,0,0), sf::Vector3(4.0,1.5,0.0)));
 
-    sf::Obstacle* cyl3 = new sf::Obstacle("Cyl", 0.5, 8.0, sf::I4(), "Fiberglass", "seabed");
+    sf::Obstacle* cyl3 = new sf::Obstacle("Cyl3", 0.5, 8.0, sf::I4(), "Fiberglass", "seabed");
     AddStaticEntity(cyl3, sf::Transform(sf::Quaternion(0,0,0), sf::Vector3(4.0,-1.5,0.0)));
 
-    sf::Obstacle* cyl4 = new sf::Obstacle("Cyl", 0.5, 8.0, sf::I4(), "Fiberglass", "seabed");
+    sf::Obstacle* cyl4 = new sf::Obstacle("Cyl4", 0.5, 8.0, sf::I4(), "Fiberglass", "seabed");
     AddStaticEntity(cyl4, sf::Transform(sf::Quaternion(0,0,0), sf::Vector3(8.0,0.0,0.0)));
 
     sf::Obstacle* canyon = new sf::Obstacle("Canyon", sf::GetDataPath() + "canyon.obj", 2.5, sf::I4(), sf::GetDataPath() + "canyon.obj", 2.5, sf::I4(), true, "Rock", "canyon");
     AddStaticEntity(canyon, sf::Transform(sf::Quaternion(0.0, 0.0, 0.0), sf::Vector3(0.0, 0.0, 15.0)));
 
-	sf::Light* spot = new sf::Light("Spot", 0.02, 50.0, sf::Color::BlackBody(5000.0), 100.0);
-	spot->AttachToWorld(sf::Transform(sf::Quaternion(0,0,M_PI/3.0), sf::Vector3(0.0,0.0,1.0)));
-	AddActuator(spot);
+	// sf::Light* spot = new sf::Light("Spot", 0.02, 50.0, sf::Color::BlackBody(5000.0), 100.0);
+	// spot->AttachToWorld(sf::Transform(sf::Quaternion(0,0,M_PI/3.0), sf::Vector3(0.0,0.0,1.0)));
+	// AddActuator(spot);
     
-    sf::Light* omni = new sf::Light("Omni", 0.02, sf::Color::BlackBody(5000.0), 10000.0);
-	omni->AttachToWorld(sf::Transform(sf::Quaternion(0,0,M_PI/3.0), sf::Vector3(2.0,2.0,0.5)));
-	AddActuator(omni);
+    // sf::Light* omni = new sf::Light("Omni", 0.02, sf::Color::BlackBody(5000.0), 10000.0);
+	// omni->AttachToWorld(sf::Transform(sf::Quaternion(0,0,M_PI/3.0), sf::Vector3(2.0,2.0,0.5)));
+	// AddActuator(omni);
 
     //Create underwater vehicle body
     //Externals
@@ -154,8 +162,8 @@ void UnderwaterTestManager::BuildScenario()
     phy.mode = sf::BodyPhysicsMode::SUBMERGED;
     phy.collisions = true;
 
-    // sf::Sphere* sph = new sf::Sphere("Sphere", phy, 0.5, sf::I4(), "Steel", "Yellow");
-    // AddSolidEntity(sph, sf::I4());
+    // sf::Sphere* sph = new sf::Sphere("Sphere", phy, 0.5, sf::I4(), "Steel", "yellow");
+    // AddSolidEntity(sph,  sf::Transform(sf::IQ(), sf::Vector3(-3.0,0,0.0)));
     
     phy.buoyancy = false;
     sf::Polyhedron* hullB = new sf::Polyhedron("HullBottom", phy, sf::GetDataPath() + "hull_hydro.obj", sf::Scalar(1), sf::I4(), "Fiberglass", "yellow", sf::Scalar(0.003));
@@ -236,12 +244,14 @@ void UnderwaterTestManager::BuildScenario()
         thrusters[i] = new sf::Thruster(thrusterNames[i], propeller, rotorDynamics, thrustModel, 0.18, true, 105.0, false, true);
     }
 
+
+
     //Create VBS
-    //std::vector<std::string> vmeshes;
-    //vmeshes.push_back(sf::GetDataPath() + "vbs_max.obj");
-    //vmeshes.push_back(sf::GetDataPath() + "vbs_min.obj");
-    //sf::VariableBuoyancy* vbs = new sf::VariableBuoyancy("VBS", vmeshes, 0.002);
-       
+    // std::vector<std::string> vmeshes;
+    // vmeshes.push_back(sf::GetDataPath() + "vbs_max.obj");
+    // vmeshes.push_back(sf::GetDataPath() + "vbs_min.obj");
+    // sf::VariableBuoyancy* vbs = new sf::VariableBuoyancy("VBS", vmeshes, 0.002);
+
     //Create sensors
     sf::Odometry* odom = new sf::Odometry("Odom");
     sf::Pressure* press = new sf::Pressure("Pressure");
@@ -272,6 +282,10 @@ void UnderwaterTestManager::BuildScenario()
     cam->setDisplayOnScreen(true, 800, 50, 0.16f);
     //sf::ColorCamera* cam2 = new sf::ColorCamera("Cam", 300, 200, 60.0);
     
+    //Lights 
+    //sf::Light* light = new sf::Light("Omni", 0.2, sf::Color::RGB(0.2, 0.3, 1.0), 100000.0); 
+    sf::Light* light = new sf::Light("Spot", 0.1, 40.0, sf::Color::RGB(0.2, 0.3, 1.0), 8000.0); 
+
     //Create AUV
     sf::Robot* auv = new sf::FeatherstoneRobot("GIRONA500", false);
     
@@ -302,7 +316,8 @@ void UnderwaterTestManager::BuildScenario()
     auv->AddLinkActuator(thrusters[3], "Vehicle", sf::Transform(sf::Quaternion(0,-M_PI_2,0), sf::Vector3(-0.5337,0.0,-0.6747)));
     auv->AddLinkActuator(thrusters[4], "Vehicle", sf::Transform(sf::Quaternion(0,-M_PI_2,0), sf::Vector3(0.5837,0.0,-0.6747)));
     //auv->AddLinkActuator(vbs, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(-0.5,0.0,0.0)));
-    
+
+
     //Sensors
     //auv->AddLinkSensor(odom, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0,0,0)));
     //auv->AddLinkSensor(press, "Vehicle", sf::Transform(sf::IQ(), sf::Vector3(0.6,0,-0.7)));
@@ -315,10 +330,22 @@ void UnderwaterTestManager::BuildScenario()
     //auv->AddVisionSensor(msis, "Vehicle", sf::Transform(sf::Quaternion(0.0, 0.0, 1.57), sf::Vector3(0.0,0.0,1.0)));
     auv->AddVisionSensor(cam, "Vehicle", sf::Transform(sf::Quaternion(M_PI_2, 0.0, 1.57), sf::Vector3(1.5,0.0,0.3)));
     //auv->AddVisionSensor(cam2, "Vehicle", sf::Transform(sf::Quaternion(1.57, 0.0, 1.57), sf::Vector3(0.0,0.0,2.0)));
+    auv->AddLinkActuator(light, "Vehicle", sf::Transform(sf::Quaternion(M_PI_2,0,M_PI_2), sf::Vector3(0.5, 0.0, -0.3))); 
+
     AddRobot(auv, sf::Transform(sf::Quaternion(0,0,0), sf::Vector3(0.0,0.0,2.0)));
     
     //thSurgeP->setSetpoint(0.55);
     //thSurgeS->setSetpoint(0.58);
+
+    // To add and override compound object 
+    // sf::Sphere* part1 = new sf::Sphere("Part1", phy, 0.5, sf::I4(), "Rock", "yellow");
+    // sf::Box* part2 = new sf::Box("Part2", phy, sf::Vector3(0.5, 0.1, 0.1), sf::I4(), "Rock", "yellow");
+    // sf::Compound* comp = new sf::Compound("Comp", phy, part1, sf::I4());
+    // comp->AddInternalPart(part2, sf::Transform(sf::IQ(), sf::Vector3(0.25, 0.0, 0.0)));
+    //comp->ScalePhysicalPropertiesToArbitraryMass(10.0); 
+    // comp->SetArbitraryPhysicalProperties(200.0, sf::Vector3(200.0, 200.0, 200.0), sf::Transform(sf::IQ(), sf::Vector3(0.01, 0.01, 0.0)));
+    // comp->SetHydrodynamicCoefficients(sf::Vector3(0.2, 0.6, 0.6), sf::Vector3(0.05, 0.08, 0.08)); 
+    // AddSolidEntity(comp, sf::Transform(sf::IQ(), sf::Vector3(-8.0, 0.0, 5.0)));
     
 #endif
 } 
