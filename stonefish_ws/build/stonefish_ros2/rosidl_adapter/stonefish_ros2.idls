@@ -1,0 +1,13 @@
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/Int32Stamped.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/BeaconInfo.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/NEDPose.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/INS.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/DVLBeam.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/DVL.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/ThrusterState.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/DebugPhysics.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/Event.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/EventArray.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:srv/SonarSettings.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:srv/SonarSettings2.idl
+/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:srv/Respawn.idl

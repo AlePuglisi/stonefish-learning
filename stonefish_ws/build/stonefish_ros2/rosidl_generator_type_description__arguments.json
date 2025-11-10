@@ -1,0 +1,26 @@
+{
+  "package_name": "stonefish_ros2",
+  "output_dir": "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_generator_type_description/stonefish_ros2",
+  "idl_tuples": [
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/Int32Stamped.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/BeaconInfo.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/NEDPose.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/INS.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/DVLBeam.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/DVL.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/ThrusterState.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/DebugPhysics.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/Event.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:msg/EventArray.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:srv/SonarSettings.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:srv/SonarSettings2.idl",
+    "/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2/rosidl_adapter/stonefish_ros2:srv/Respawn.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "std_srvs:/opt/ros/jazzy/share/std_srvs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs"
+  ]
+}

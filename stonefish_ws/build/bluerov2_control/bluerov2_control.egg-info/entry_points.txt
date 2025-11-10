@@ -1,0 +1,2 @@
+[console_scripts]
+odom2tf = bluerov2_control.odom2tf:main

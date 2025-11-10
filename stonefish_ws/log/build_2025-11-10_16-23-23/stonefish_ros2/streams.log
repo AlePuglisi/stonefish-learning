@@ -1,0 +1,784 @@
+[0.009s] Invoking command in '/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ale/tutorials/stonefish-learning/stonefish_ws/src/stonefish_ros2 -DCMAKE_INSTALL_PREFIX=/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2
+[0.100s] -- The C compiler identification is GNU 13.3.0
+[0.172s] -- The CXX compiler identification is GNU 13.3.0
+[0.196s] -- Detecting C compiler ABI info
+[0.350s] -- Detecting C compiler ABI info - done
+[0.370s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.370s] -- Detecting C compile features
+[0.371s] -- Detecting C compile features - done
+[0.387s] -- Detecting CXX compiler ABI info
+[0.546s] -- Detecting CXX compiler ABI info - done
+[0.564s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.564s] -- Detecting CXX compile features
+[0.565s] -- Detecting CXX compile features - done
+[0.568s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.677s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.776s] -- Found rclcpp: 28.1.12 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.808s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.816s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.825s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.836s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.885s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.886s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.006s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.029s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.065s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.129s] -- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)
+[1.138s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.154s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[1.168s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.180s] -- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[1.195s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.201s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.202s] -- Found pcl_conversions: 2.6.2 (/opt/ros/jazzy/share/pcl_conversions/cmake)
+[1.254s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[1.254s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.254s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.254s]   cmake_policy command to set the policy and suppress this warning.
+[1.254s] 
+[1.254s]   CMake variable FLANN_ROOT is set to:
+[1.254s] 
+[1.254s]     /usr
+[1.255s] 
+[1.255s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.255s]   .cmake module might still use it.
+[1.255s] Call Stack (most recent call first):
+[1.255s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[1.255s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[1.255s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[1.255s]   /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.255s]   /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.255s]   CMakeLists.txt:20 (find_package)
+[1.255s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.255s] [0m
+[1.255s] -- Found flann version 1.9.2
+[1.739s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[1.740s] -- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+[3.626s] -- Checking for module 'libusb-1.0'
+[3.655s] --   Found libusb-1.0, version 1.0.27
+[3.726s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[3.728s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.840s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.848s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[3.866s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[3.882s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.43") 
+[4.317s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[4.326s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[4.705s] -- Found Qhull version 8.0.2
+[5.045s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.400s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[5.401s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[5.402s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[5.402s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[5.402s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[5.403s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[5.403s] -- Found PCL_2D: /usr/include/pcl-1.14  
+[5.403s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.14  
+[5.404s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[5.404s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[5.404s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[5.405s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[5.405s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[5.406s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[5.406s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[5.407s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[5.407s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[5.408s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[5.408s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[5.409s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[5.409s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.14  
+[5.410s] -- Found PCL_MODELER: /usr/include/pcl-1.14  
+[5.410s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.14  
+[5.410s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[5.411s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[5.413s] -- Found image_transport: 5.1.7 (/opt/ros/jazzy/share/image_transport/cmake)
+[5.422s] -- Found tf2: 0.36.14 (/opt/ros/jazzy/share/tf2/cmake)
+[5.424s] -- Found tf2_ros: 0.36.14 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[5.482s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[5.488s] -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.13.2") 
+[5.636s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[5.637s] -- Found OpenMP: TRUE (found version "4.5")  
+[6.421s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[7.512s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.934s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.940s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[8.073s] -- Found PythonExtra: /usr/bin/python3  
+[8.406s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[8.504s] [33mCMake Warning (dev) at CMakeLists.txt:45 (find_package):
+[8.504s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[8.504s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[8.504s]   command to set the policy and suppress this warning.
+[8.505s] 
+[8.505s]   CMake variable PCL_ROOT is set to:
+[8.505s] 
+[8.505s]     /usr
+[8.505s] 
+[8.505s]   For compatibility, CMake is ignoring the variable.
+[8.505s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[8.506s] [0m
+[8.598s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[8.630s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[8.631s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ale/tutorials/stonefish-learning/stonefish_ws/src/stonefish_ros2/include>
+[8.632s] -- Configured cppcheck exclude dirs and/or files: 
+[8.633s] -- Added test 'flake8' to check Python code syntax and style conventions
+[8.633s] -- Configured 'flake8' exclude dirs and/or files: 
+[8.635s] -- Added test 'lint_cmake' to check CMake code style
+[8.637s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[8.642s] -- Added test 'uncrustify' to check C / C++ code style
+[8.642s] -- Configured uncrustify additional arguments: 
+[8.643s] -- Added test 'xmllint' to check XML markup files
+[8.647s] -- Configuring done (8.6s)
+[8.813s] -- Generating done (0.1s)
+[8.838s] -- Build files have been written to: /home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2
+[8.876s] Invoked command in '/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ale/tutorials/stonefish-learning/stonefish_ws/src/stonefish_ros2 -DCMAKE_INSTALL_PREFIX=/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2
+[8.877s] Invoking command in '/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2 -- -j16 -l16
+[8.991s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[9.007s] [  1%] Built target ament_cmake_python_copy_stonefish_ros2
+[9.179s] running egg_info
+[9.180s] creating stonefish_ros2.egg-info
+[9.187s] writing stonefish_ros2.egg-info/PKG-INFO
+[9.187s] writing dependency_links to stonefish_ros2.egg-info/dependency_links.txt
+[9.187s] writing top-level names to stonefish_ros2.egg-info/top_level.txt
+[9.187s] writing manifest file 'stonefish_ros2.egg-info/SOURCES.txt'
+[9.208s] reading manifest file 'stonefish_ros2.egg-info/SOURCES.txt'
+[9.209s] writing manifest file 'stonefish_ros2.egg-info/SOURCES.txt'
+[9.237s] [  1%] Built target ament_cmake_python_build_stonefish_ros2_egg
+[9.309s] [  1%] Built target stonefish_ros2__rosidl_generator_type_description
+[9.331s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[9.350s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[10.131s] [  1%] Built target stonefish_ros2__cpp
+[10.286s] [  2%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/beacon_info__type_support.c.o[0m
+[10.286s] [  3%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/int32_stamped__description.c.o[0m
+[10.286s] [  3%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/int32_stamped__type_support.c.o[0m
+[10.286s] [  4%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/ned_pose__description.c.o[0m
+[10.286s] [  4%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/beacon_info__functions.c.o[0m
+[10.286s] [  4%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/ned_pose__functions.c.o[0m
+[10.288s] [  5%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/ins__functions.c.o[0m
+[10.288s] [  7%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/int32_stamped__functions.c.o[0m
+[10.288s] [  7%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/beacon_info__description.c.o[0m
+[10.288s] [  8%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/ned_pose__type_support.c.o[0m
+[10.290s] [ 10%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/dvl_beam__functions.c.o[0m
+[10.290s] [ 10%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/dvl__description.c.o[0m
+[10.291s] [ 10%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/dvl_beam__description.c.o[0m
+[10.292s] [ 10%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/dvl_beam__type_support.c.o[0m
+[10.297s] [ 10%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/ins__description.c.o[0m
+[10.297s] [ 11%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/ins__type_support.c.o[0m
+[10.325s] [ 12%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/dvl__functions.c.o[0m
+[10.326s] [ 12%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/dvl__type_support.c.o[0m
+[10.327s] [ 13%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/thruster_state__description.c.o[0m
+[10.334s] [ 14%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/thruster_state__functions.c.o[0m
+[10.336s] [ 14%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/thruster_state__type_support.c.o[0m
+[10.344s] [ 14%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/debug_physics__functions.c.o[0m
+[10.345s] [ 15%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/debug_physics__description.c.o[0m
+[10.350s] [ 16%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/debug_physics__type_support.c.o[0m
+[10.360s] [ 16%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/event__functions.c.o[0m
+[10.361s] [ 17%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/event__type_support.c.o[0m
+[10.362s] [ 18%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/event__description.c.o[0m
+[10.369s] [ 18%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/event_array__description.c.o[0m
+[10.380s] [ 19%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/event_array__type_support.c.o[0m
+[10.381s] [ 20%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/msg/detail/event_array__functions.c.o[0m
+[10.383s] [ 20%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/srv/detail/sonar_settings__description.c.o[0m
+[10.385s] [ 21%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/srv/detail/sonar_settings2__functions.c.o[0m
+[10.385s] [ 23%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/srv/detail/sonar_settings2__description.c.o[0m
+[10.386s] [ 23%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/srv/detail/sonar_settings__functions.c.o[0m
+[10.387s] [ 23%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/srv/detail/sonar_settings__type_support.c.o[0m
+[10.398s] [ 24%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/srv/detail/sonar_settings2__type_support.c.o[0m
+[10.398s] [ 24%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/srv/detail/respawn__description.c.o[0m
+[10.407s] [ 24%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/srv/detail/respawn__type_support.c.o[0m
+[10.413s] [ 25%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_c.dir/rosidl_generator_c/stonefish_ros2/srv/detail/respawn__functions.c.o[0m
+[10.515s] [ 26%] [32m[1mLinking C shared library libstonefish_ros2__rosidl_generator_c.so[0m
+[10.580s] [ 26%] Built target stonefish_ros2__rosidl_generator_c
+[10.596s] [ 29%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[10.596s] [ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[10.596s] [ 29%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[10.596s] [ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[10.597s] [ 29%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[10.597s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[10.946s] [ 32%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/dvl_beam__type_support.cpp.o[0m
+[10.946s] [ 32%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/int32_stamped__type_support.cpp.o[0m
+[10.946s] [ 32%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/ins__type_support.cpp.o[0m
+[10.946s] [ 32%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/ned_pose__type_support.cpp.o[0m
+[10.946s] [ 33%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/beacon_info__type_support.cpp.o[0m
+[10.947s] [ 34%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/debug_physics__type_support.cpp.o[0m
+[10.948s] [ 34%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/event__type_support.cpp.o[0m
+[10.948s] [ 35%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/thruster_state__type_support.cpp.o[0m
+[10.949s] [ 36%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/event_array__type_support.cpp.o[0m
+[10.954s] [ 36%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/msg/dvl__type_support.cpp.o[0m
+[10.956s] [ 37%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/int32_stamped__type_support.cpp.o[0m
+[10.957s] [ 37%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/srv/sonar_settings__type_support.cpp.o[0m
+[10.984s] [ 38%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/beacon_info__type_support.cpp.o[0m
+[11.031s] [ 38%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/ned_pose__type_support.cpp.o[0m
+[11.128s] [ 39%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/ins__type_support.cpp.o[0m
+[11.165s] [ 40%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/dvl_beam__type_support.cpp.o[0m
+[11.182s] [ 41%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/srv/sonar_settings2__type_support.cpp.o[0m
+[11.186s] [ 42%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/stonefish_ros2/srv/respawn__type_support.cpp.o[0m
+[11.202s] [ 42%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/dvl__type_support.cpp.o[0m
+[11.206s] [ 43%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/thruster_state__type_support.cpp.o[0m
+[11.221s] [ 43%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/debug_physics__type_support.cpp.o[0m
+[11.233s] [ 44%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/int32_stamped__type_support.cpp.o[0m
+[11.239s] [ 44%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/beacon_info__type_support.cpp.o[0m
+[11.239s] [ 45%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/event__type_support.cpp.o[0m
+[11.242s] [ 46%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/ned_pose__type_support.cpp.o[0m
+[11.273s] [ 47%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/msg/event_array__type_support.cpp.o[0m
+[11.278s] [ 47%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/srv/sonar_settings__type_support.cpp.o[0m
+[11.278s] [ 48%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/ins__type_support.cpp.o[0m
+[11.292s] [ 48%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/dvl_beam__type_support.cpp.o[0m
+[11.307s] [ 49%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/dvl__type_support.cpp.o[0m
+[11.308s] [ 50%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/srv/sonar_settings2__type_support.cpp.o[0m
+[11.308s] [ 51%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/int32_stamped__type_support.c.o[0m
+[11.358s] [ 51%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/thruster_state__type_support.cpp.o[0m
+[11.375s] [ 51%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/beacon_info__type_support.c.o[0m
+[11.375s] [ 52%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/int32_stamped__type_support.cpp.o[0m
+[11.376s] [ 52%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_c.dir/rosidl_typesupport_c/stonefish_ros2/srv/respawn__type_support.cpp.o[0m
+[11.387s] [ 53%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/debug_physics__type_support.cpp.o[0m
+[11.410s] [ 54%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/ned_pose__type_support.c.o[0m
+[11.411s] [ 54%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/beacon_info__type_support.cpp.o[0m
+[11.460s] [ 55%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/ins__type_support.c.o[0m
+[11.485s] [ 55%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/int32_stamped__type_support_c.cpp.o[0m
+[11.490s] [ 56%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/beacon_info__type_support_c.cpp.o[0m
+[11.529s] [ 57%] [32m[1mLinking CXX shared library libstonefish_ros2__rosidl_typesupport_c.so[0m
+[11.563s] [ 57%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/dvl_beam__type_support.c.o[0m
+[11.576s] [ 58%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/ned_pose__type_support.cpp.o[0m
+[11.659s] [ 59%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/event__type_support.cpp.o[0m
+[11.671s] [ 59%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/msg/detail/event_array__type_support.cpp.o[0m
+[11.696s] [ 59%] Built target stonefish_ros2__rosidl_typesupport_c
+[11.704s] [ 59%] [32m[1mLinking CXX shared library libstonefish_ros2__rosidl_typesupport_cpp.so[0m
+[11.715s] [ 60%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/dvl__type_support.c.o[0m
+[11.729s] [ 60%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/thruster_state__type_support.c.o[0m
+[11.736s] [ 61%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/debug_physics__type_support.c.o[0m
+[11.814s] [ 61%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/ins__type_support.cpp.o[0m
+[11.814s] [ 62%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/srv/detail/sonar_settings__type_support.cpp.o[0m
+[11.815s] [ 63%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/event__type_support.c.o[0m
+[11.833s] [ 64%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/ned_pose__type_support_c.cpp.o[0m
+[11.849s] [ 64%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/ins__type_support_c.cpp.o[0m
+[11.859s] [ 64%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/dvl__type_support_c.cpp.o[0m
+[11.861s] [ 65%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/dvl_beam__type_support_c.cpp.o[0m
+[11.875s] [ 65%] Built target stonefish_ros2__rosidl_typesupport_cpp
+[11.902s] [ 65%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/msg/detail/event_array__type_support.c.o[0m
+[11.907s] [ 66%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/srv/detail/sonar_settings__type_support.c.o[0m
+[11.946s] [ 66%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/srv/detail/sonar_settings2__type_support.c.o[0m
+[12.034s] [ 67%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/thruster_state__type_support_c.cpp.o[0m
+[12.040s] [ 68%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/stonefish_ros2/srv/detail/respawn__type_support.c.o[0m
+[12.078s] [ 69%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/srv/detail/sonar_settings2__type_support.cpp.o[0m
+[12.078s] [ 69%] [32mBuilding CXX object CMakeFiles/stonefish_ros2_interface.dir/src/stonefish_ros2/ROS2ConsoleSimulationApp.cpp.o[0m
+[12.084s] [ 70%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/dvl_beam__type_support.cpp.o[0m
+[12.108s] [ 71%] [32mBuilding CXX object CMakeFiles/stonefish_ros2_interface.dir/src/stonefish_ros2/ROS2GraphicalSimulationApp.cpp.o[0m
+[12.131s] [ 72%] [32m[1mLinking C shared library libstonefish_ros2__rosidl_typesupport_introspection_c.so[0m
+[12.244s] [ 73%] [32mBuilding CXX object CMakeFiles/stonefish_ros2_interface.dir/src/stonefish_ros2/ROS2SimulationManager.cpp.o[0m
+[12.246s] [ 73%] Built target stonefish_ros2__rosidl_typesupport_introspection_c
+[12.262s] [ 73%] [32mBuilding CXX object CMakeFiles/stonefish_ros2_interface.dir/src/stonefish_ros2/ROS2ScenarioParser.cpp.o[0m
+[12.263s] [ 74%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/debug_physics__type_support_c.cpp.o[0m
+[12.281s] [ 74%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/event__type_support_c.cpp.o[0m
+[12.293s] [ 75%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/dvl__type_support.cpp.o[0m
+[12.343s] [ 76%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/msg/detail/event_array__type_support_c.cpp.o[0m
+[12.406s] [ 77%] [32mBuilding CXX object CMakeFiles/stonefish_ros2_interface.dir/src/stonefish_ros2/ROS2Interface.cpp.o[0m
+[12.528s] [ 77%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/stonefish_ros2/srv/detail/respawn__type_support.cpp.o[0m
+[12.641s] [ 77%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/thruster_state__type_support.cpp.o[0m
+[12.644s] [ 77%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/srv/detail/sonar_settings__type_support_c.cpp.o[0m
+[12.665s] [ 78%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/srv/detail/sonar_settings2__type_support_c.cpp.o[0m
+[12.758s] [ 79%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/debug_physics__type_support.cpp.o[0m
+[12.758s] [ 79%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/event__type_support.cpp.o[0m
+[12.968s] [ 80%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/stonefish_ros2/srv/detail/respawn__type_support_c.cpp.o[0m
+[13.177s] [ 81%] [32m[1mLinking CXX shared library libstonefish_ros2__rosidl_typesupport_introspection_cpp.so[0m
+[13.239s] [ 82%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/msg/detail/dds_fastrtps/event_array__type_support.cpp.o[0m
+[13.284s] [ 83%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/srv/detail/dds_fastrtps/sonar_settings__type_support.cpp.o[0m
+[13.309s] [ 84%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/srv/detail/dds_fastrtps/respawn__type_support.cpp.o[0m
+[13.322s] [ 84%] [32mBuilding CXX object CMakeFiles/stonefish_ros2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/stonefish_ros2/srv/detail/dds_fastrtps/sonar_settings2__type_support.cpp.o[0m
+[13.377s] [ 84%] Built target stonefish_ros2__rosidl_typesupport_introspection_cpp
+[13.876s] [ 84%] [32m[1mLinking CXX shared library libstonefish_ros2__rosidl_typesupport_fastrtps_c.so[0m
+[14.024s] [ 84%] Built target stonefish_ros2__rosidl_typesupport_fastrtps_c
+[14.233s] [ 84%] [32m[1mLinking CXX shared library libstonefish_ros2__rosidl_typesupport_fastrtps_cpp.so[0m
+[14.451s] [ 84%] Built target stonefish_ros2__rosidl_typesupport_fastrtps_cpp
+[14.498s] [ 84%] Built target stonefish_ros2
+[14.549s] [ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[16.027s] [ 85%] Built target stonefish_ros2__py
+[16.080s] [ 85%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_int32_stamped_s.c.o[0m
+[16.080s] [ 85%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/srv/_sonar_settings_s.c.o[0m
+[16.087s] [ 86%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_beacon_info_s.c.o[0m
+[16.087s] [ 87%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_ned_pose_s.c.o[0m
+[16.087s] [ 87%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_dvl_s.c.o[0m
+[16.087s] [ 88%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_dvl_beam_s.c.o[0m
+[16.088s] [ 88%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_event_s.c.o[0m
+[16.088s] [ 89%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_debug_physics_s.c.o[0m
+[16.088s] [ 89%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_ins_s.c.o[0m
+[16.089s] [ 90%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_thruster_state_s.c.o[0m
+[16.094s] [ 91%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/msg/_event_array_s.c.o[0m
+[16.295s] [ 92%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/srv/_sonar_settings2_s.c.o[0m
+[16.304s] [ 93%] [32mBuilding C object CMakeFiles/stonefish_ros2__rosidl_generator_py.dir/rosidl_generator_py/stonefish_ros2/srv/_respawn_s.c.o[0m
+[16.531s] [ 93%] [32m[1mLinking C shared library libstonefish_ros2__rosidl_generator_py.so[0m
+[16.635s] [ 93%] Built target stonefish_ros2__rosidl_generator_py
+[16.682s] [ 94%] [32mBuilding C object CMakeFiles/stonefish_ros2_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/stonefish_ros2/_stonefish_ros2_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[16.682s] [ 94%] [32mBuilding C object CMakeFiles/stonefish_ros2_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/stonefish_ros2/_stonefish_ros2_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[16.682s] [ 94%] [32mBuilding C object CMakeFiles/stonefish_ros2_s__rosidl_typesupport_c.dir/rosidl_generator_py/stonefish_ros2/_stonefish_ros2_s.ep.rosidl_typesupport_c.c.o[0m
+[16.916s] [ 95%] [32m[1mLinking C shared module rosidl_generator_py/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_c.so[0m
+[16.931s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_introspection_c.so[0m
+[16.945s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_fastrtps_c.so[0m
+[16.984s] [ 97%] Built target stonefish_ros2_s__rosidl_typesupport_c
+[17.003s] [ 97%] Built target stonefish_ros2_s__rosidl_typesupport_introspection_c
+[17.028s] [ 97%] Built target stonefish_ros2_s__rosidl_typesupport_fastrtps_c
+[53.404s] [ 97%] [32m[1mLinking CXX shared library libstonefish_ros2_interface.so[0m
+[57.296s] [ 97%] Built target stonefish_ros2_interface
+[57.333s] [ 98%] [32mBuilding CXX object CMakeFiles/stonefish_simulator.dir/src/stonefish_simulator.cpp.o[0m
+[57.334s] [ 99%] [32mBuilding CXX object CMakeFiles/stonefish_simulator_nogpu.dir/src/stonefish_simulator_nogpu.cpp.o[0m
+[63.520s] [100%] [32m[1mLinking CXX executable stonefish_simulator_nogpu[0m
+[63.679s] [100%] [32m[1mLinking CXX executable stonefish_simulator[0m
+[66.854s] [100%] Built target stonefish_simulator_nogpu
+[67.124s] [100%] Built target stonefish_simulator
+[67.151s] Invoked command in '/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2 -- -j16 -l16
+[67.170s] Invoking command in '/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2
+[67.183s] -- Install configuration: ""
+[67.183s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/ament_index/resource_index/rosidl_interfaces/stonefish_ros2
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/Int32Stamped.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/BeaconInfo.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/NEDPose.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/INS.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/DVLBeam.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/DVL.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/ThrusterState.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/DebugPhysics.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/Event.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/EventArray.json
+[67.184s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/srv/SonarSettings.json
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/srv/SonarSettings2.json
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/srv/Respawn.json
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/respawn.h
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/sonar_settings2.h
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/sonar_settings.h
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__struct.h
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__type_support.h
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__struct.h
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__type_support.c
+[67.185s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__functions.c
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__description.c
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__description.c
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__type_support.h
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__functions.h
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__functions.c
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__description.c
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__struct.h
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__type_support.c
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__type_support.c
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__functions.c
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__functions.h
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__functions.h
+[67.186s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__type_support.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/event_array.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/debug_physics.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/rosidl_generator_c__visibility_control.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/ins.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/beacon_info.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/dvl.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/dvl_beam.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/thruster_state.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/int32_stamped.h
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__description.c
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__functions.c
+[67.187s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__functions.c
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__type_support.c
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__struct.h
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__type_support.c
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__functions.h
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__functions.h
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__type_support.c
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__description.c
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__description.c
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__type_support.h
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__struct.h
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__functions.h
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__functions.c
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__functions.h
+[67.188s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__type_support.h
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__type_support.h
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__description.c
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__functions.h
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__type_support.h
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__type_support.c
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__struct.h
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__functions.c
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__functions.c
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__struct.h
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__description.c
+[67.189s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__struct.h
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__description.c
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__functions.c
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__functions.h
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__functions.h
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__type_support.h
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__type_support.c
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__type_support.h
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__functions.h
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__type_support.h
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__type_support.h
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__description.c
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__functions.c
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__type_support.c
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__type_support.h
+[67.190s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__type_support.c
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__type_support.c
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__struct.h
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__struct.h
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__struct.h
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__type_support.h
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__description.c
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__struct.h
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__description.c
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__type_support.c
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__description.c
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__type_support.c
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__functions.c
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__functions.h
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__functions.h
+[67.191s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__functions.c
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__struct.h
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__functions.c
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/event.h
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/ned_pose.h
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/environment/library_path.sh
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/environment/library_path.dsv
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_generator_c.so
+[67.192s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_generator_c.so" to ""
+[67.192s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2
+[67.192s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv
+[67.192s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__rosidl_typesupport_fastrtps_c.h
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__rosidl_typesupport_fastrtps_c.h
+[67.192s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__rosidl_typesupport_fastrtps_c.h
+[67.192s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[67.193s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__rosidl_typesupport_fastrtps_c.h
+[67.193s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_fastrtps_c.so
+[67.193s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_fastrtps_c.so" to ""
+[67.194s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2
+[67.194s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/sonar_settings2.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/sonar_settings.hpp
+[67.194s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__struct.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__type_support.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__type_support.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__builder.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__traits.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__traits.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__builder.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__struct.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__builder.hpp
+[67.194s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__struct.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__traits.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__type_support.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/respawn.hpp
+[67.195s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/debug_physics.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/ins.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/event.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/ned_pose.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/thruster_state.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/dvl.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/int32_stamped.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/event_array.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/dvl_beam.hpp
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/beacon_info.hpp
+[67.195s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail
+[67.195s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__traits.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__type_support.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__struct.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__traits.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__struct.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__builder.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__type_support.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__type_support.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__struct.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__type_support.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__type_support.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__traits.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__type_support.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__builder.hpp
+[67.196s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__type_support.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__traits.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__traits.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__traits.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__builder.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__builder.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__traits.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__type_support.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__traits.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__builder.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__traits.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__builder.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__builder.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__type_support.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__struct.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__struct.hpp
+[67.197s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__builder.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__struct.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__struct.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__traits.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__struct.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__struct.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__type_support.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__builder.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__struct.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__builder.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/rosidl_generator_cpp__visibility_control.hpp
+[67.198s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2
+[67.198s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv
+[67.198s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__rosidl_typesupport_fastrtps_cpp.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__rosidl_typesupport_fastrtps_cpp.hpp
+[67.198s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/dds_fastrtps
+[67.199s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[67.199s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__rosidl_typesupport_fastrtps_cpp.hpp
+[67.199s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dds_fastrtps
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__rosidl_typesupport_fastrtps_cpp.hpp
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_fastrtps_cpp.so
+[67.200s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_fastrtps_cpp.so" to ""
+[67.200s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2
+[67.200s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv
+[67.200s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__type_support.c
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__rosidl_typesupport_introspection_c.h
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__rosidl_typesupport_introspection_c.h
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__type_support.c
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__type_support.c
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__rosidl_typesupport_introspection_c.h
+[67.200s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[67.200s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__rosidl_typesupport_introspection_c.h
+[67.200s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__type_support.c
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__type_support.c
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__type_support.c
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__rosidl_typesupport_introspection_c.h
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__rosidl_typesupport_introspection_c.h
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__rosidl_typesupport_introspection_c.h
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__type_support.c
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__rosidl_typesupport_introspection_c.h
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__rosidl_typesupport_introspection_c.h
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__type_support.c
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__rosidl_typesupport_introspection_c.h
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__type_support.c
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__type_support.c
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__rosidl_typesupport_introspection_c.h
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__type_support.c
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__rosidl_typesupport_introspection_c.h
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__type_support.c
+[67.201s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__rosidl_typesupport_introspection_c.h
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__type_support.c
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_introspection_c.so
+[67.202s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_introspection_c.so" to ""
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_c.so
+[67.202s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_c.so" to ""
+[67.202s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2
+[67.202s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv
+[67.202s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__rosidl_typesupport_introspection_cpp.hpp
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__rosidl_typesupport_introspection_cpp.hpp
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__rosidl_typesupport_introspection_cpp.hpp
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings2__type_support.cpp
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/sonar_settings__type_support.cpp
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/srv/detail/respawn__type_support.cpp
+[67.202s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg
+[67.202s] -- Up-to-date: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__rosidl_typesupport_introspection_cpp.hpp
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__rosidl_typesupport_introspection_cpp.hpp
+[67.202s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ins__rosidl_typesupport_introspection_cpp.hpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__rosidl_typesupport_introspection_cpp.hpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__rosidl_typesupport_introspection_cpp.hpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl_beam__rosidl_typesupport_introspection_cpp.hpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/beacon_info__rosidl_typesupport_introspection_cpp.hpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__rosidl_typesupport_introspection_cpp.hpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/dvl__rosidl_typesupport_introspection_cpp.hpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/ned_pose__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event_array__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/int32_stamped__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/debug_physics__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/thruster_state__type_support.cpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/stonefish_ros2/stonefish_ros2/msg/detail/event__rosidl_typesupport_introspection_cpp.hpp
+[67.203s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_introspection_cpp.so
+[67.204s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_introspection_cpp.so" to ""
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_cpp.so
+[67.204s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_typesupport_cpp.so" to ""
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/environment/pythonpath.sh
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/environment/pythonpath.dsv
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2-1.5.0-py3.12.egg-info
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2-1.5.0-py3.12.egg-info/dependency_links.txt
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2-1.5.0-py3.12.egg-info/top_level.txt
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2-1.5.0-py3.12.egg-info/SOURCES.txt
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2-1.5.0-py3.12.egg-info/PKG-INFO
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/_stonefish_ros2_s.ep.rosidl_typesupport_introspection_c.c
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_introspection_c.so
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/_sonar_settings_s.c
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/_respawn.py
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/_sonar_settings.py
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/_respawn_s.c
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/_sonar_settings2_s.c
+[67.204s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/__init__.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/_sonar_settings2.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/_stonefish_ros2_s.ep.rosidl_typesupport_fastrtps_c.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_fastrtps_c.so
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_event_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_debug_physics.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_dvl_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_ned_pose_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_thruster_state.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_event_array_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_thruster_state_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_dvl_beam.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_event.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_ned_pose.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_ins.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_int32_stamped_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_int32_stamped.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/__init__.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_beacon_info_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_dvl.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_dvl_beam_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_event_array.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_debug_physics_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_ins_s.c
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_beacon_info.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/__init__.py
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_c.so
+[67.205s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/_stonefish_ros2_s.ep.rosidl_typesupport_c.c
+[67.275s] Listing '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2'...
+[67.275s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/__init__.py'...
+[67.275s] Listing '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg'...
+[67.275s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/__init__.py'...
+[67.275s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_beacon_info.py'...
+[67.275s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_debug_physics.py'...
+[67.275s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_dvl.py'...
+[67.275s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_dvl_beam.py'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_event.py'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_event_array.py'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_ins.py'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_int32_stamped.py'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_ned_pose.py'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/msg/_thruster_state.py'...
+[67.276s] Listing '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/__init__.py'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/_respawn.py'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/_sonar_settings.py'...
+[67.276s] Compiling '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/srv/_sonar_settings2.py'...
+[67.280s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_fastrtps_c.so
+[67.280s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_fastrtps_c.so" to ""
+[67.280s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_introspection_c.so
+[67.280s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_introspection_c.so" to ""
+[67.281s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_c.so
+[67.281s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/python3.12/site-packages/stonefish_ros2/stonefish_ros2_s__rosidl_typesupport_c.so" to ""
+[67.281s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_generator_py.so
+[67.282s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2__rosidl_generator_py.so" to ""
+[67.282s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/Int32Stamped.idl
+[67.282s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/BeaconInfo.idl
+[67.282s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/NEDPose.idl
+[67.282s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/INS.idl
+[67.282s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/DVLBeam.idl
+[67.282s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/DVL.idl
+[67.282s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/ThrusterState.idl
+[67.282s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/DebugPhysics.idl
+[67.282s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/Event.idl
+[67.283s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/EventArray.idl
+[67.283s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/srv/SonarSettings.idl
+[67.283s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/srv/SonarSettings2.idl
+[67.283s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/srv/Respawn.idl
+[67.283s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/Int32Stamped.msg
+[67.283s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/BeaconInfo.msg
+[67.283s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/NEDPose.msg
+[67.283s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/INS.msg
+[67.284s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/DVLBeam.msg
+[67.284s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/DVL.msg
+[67.284s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/ThrusterState.msg
+[67.284s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/DebugPhysics.msg
+[67.284s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/Event.msg
+[67.284s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/msg/EventArray.msg
+[67.284s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/srv/SonarSettings.srv
+[67.285s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/srv/SonarSettings2.srv
+[67.285s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/srv/Respawn.srv
+[67.285s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2_interface.so
+[67.316s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/libstonefish_ros2_interface.so" to ""
+[67.316s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/include
+[67.316s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/include/stonefish_ros2
+[67.317s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/include/stonefish_ros2/ROS2ScenarioParser.h
+[67.317s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/include/stonefish_ros2/ROS2SimulationManager.h
+[67.317s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/include/stonefish_ros2/ROS2GraphicalSimulationApp.h
+[67.317s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/include/stonefish_ros2/ROS2Interface.h
+[67.317s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/include/include/stonefish_ros2/ROS2ConsoleSimulationApp.h
+[67.317s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/stonefish_ros2/stonefish_simulator
+[67.317s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/stonefish_ros2/stonefish_simulator" to ""
+[67.317s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/stonefish_ros2/stonefish_simulator_nogpu
+[67.318s] -- Set non-toolchain portion of runtime path of "/home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/lib/stonefish_ros2/stonefish_simulator_nogpu" to ""
+[67.318s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/launch
+[67.318s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/launch/stonefish_simulator.launch.py
+[67.318s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/launch/stonefish_simulator_nogpu.launch.py
+[67.318s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/ament_index/resource_index/package_run_dependencies/stonefish_ros2
+[67.318s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/ament_index/resource_index/parent_prefix_path/stonefish_ros2
+[67.318s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/environment/ament_prefix_path.sh
+[67.318s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/environment/ament_prefix_path.dsv
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/environment/path.sh
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/environment/path.dsv
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/local_setup.bash
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/local_setup.sh
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/local_setup.zsh
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/local_setup.dsv
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/package.dsv
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/ament_index/resource_index/packages/stonefish_ros2
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/export_stonefish_ros2__rosidl_generator_cExport.cmake
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/export_stonefish_ros2__rosidl_generator_cExport-noconfig.cmake
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/export_stonefish_ros2__rosidl_typesupport_fastrtps_cExport.cmake
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/export_stonefish_ros2__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/export_stonefish_ros2__rosidl_generator_cppExport.cmake
+[67.319s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/export_stonefish_ros2__rosidl_typesupport_fastrtps_cppExport.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/export_stonefish_ros2__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2__rosidl_typesupport_introspection_cExport.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2__rosidl_typesupport_cExport.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2__rosidl_typesupport_cExport-noconfig.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2__rosidl_typesupport_introspection_cppExport.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2__rosidl_typesupport_cppExport.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2__rosidl_typesupport_cppExport-noconfig.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/export_stonefish_ros2__rosidl_generator_pyExport.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/export_stonefish_ros2__rosidl_generator_pyExport-noconfig.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/rosidl_cmake-extras.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/ament_cmake_export_dependencies-extras.cmake
+[67.320s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/ament_cmake_export_include_directories-extras.cmake
+[67.321s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/ament_cmake_export_libraries-extras.cmake
+[67.321s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/ament_cmake_export_targets-extras.cmake
+[67.321s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[67.321s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[67.321s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2Config.cmake
+[67.321s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/cmake/stonefish_ros2Config-version.cmake
+[67.321s] -- Installing: /home/ale/tutorials/stonefish-learning/stonefish_ws/install/stonefish_ros2/share/stonefish_ros2/package.xml
+[67.322s] Invoked command in '/home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ale/tutorials/stonefish-learning/stonefish_ws/build/stonefish_ros2

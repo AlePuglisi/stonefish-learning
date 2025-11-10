@@ -1,0 +1,21 @@
+[0.419s] Invoking command in '/home/ale/tutorials/stonefish-learning/stonefish_ws/src/bluerov2_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ale/tutorials/stonefish-learning/stonefish_ws/build/bluerov2_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ale/tutorials/stonefish-learning/stonefish_ws/install/bluerov2_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bluerov2_control build --build-base /home/ale/tutorials/stonefish-learning/stonefish_ws/build/bluerov2_control/build install --record /home/ale/tutorials/stonefish-learning/stonefish_ws/build/bluerov2_control/install.log --single-version-externally-managed install_data
+[0.570s] running egg_info
+[0.579s] writing ../../build/bluerov2_control/bluerov2_control.egg-info/PKG-INFO
+[0.579s] writing dependency_links to ../../build/bluerov2_control/bluerov2_control.egg-info/dependency_links.txt
+[0.579s] writing entry points to ../../build/bluerov2_control/bluerov2_control.egg-info/entry_points.txt
+[0.580s] writing requirements to ../../build/bluerov2_control/bluerov2_control.egg-info/requires.txt
+[0.580s] writing top-level names to ../../build/bluerov2_control/bluerov2_control.egg-info/top_level.txt
+[0.592s] reading manifest file '../../build/bluerov2_control/bluerov2_control.egg-info/SOURCES.txt'
+[0.592s] writing manifest file '../../build/bluerov2_control/bluerov2_control.egg-info/SOURCES.txt'
+[0.592s] running build
+[0.592s] running build_py
+[0.592s] running install
+[0.598s] running install_lib
+[0.605s] running install_data
+[0.606s] running install_egg_info
+[0.612s] removing '/home/ale/tutorials/stonefish-learning/stonefish_ws/install/bluerov2_control/lib/python3.12/site-packages/bluerov2_control-0.0.0-py3.12.egg-info' (and everything under it)
+[0.612s] Copying ../../build/bluerov2_control/bluerov2_control.egg-info to /home/ale/tutorials/stonefish-learning/stonefish_ws/install/bluerov2_control/lib/python3.12/site-packages/bluerov2_control-0.0.0-py3.12.egg-info
+[0.612s] running install_scripts
+[0.669s] Installing odom2tf script to /home/ale/tutorials/stonefish-learning/stonefish_ws/install/bluerov2_control/lib/bluerov2_control
+[0.669s] writing list of installed files to '/home/ale/tutorials/stonefish-learning/stonefish_ws/build/bluerov2_control/install.log'
+[0.687s] Invoked command in '/home/ale/tutorials/stonefish-learning/stonefish_ws/src/bluerov2_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ale/tutorials/stonefish-learning/stonefish_ws/build/bluerov2_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ale/tutorials/stonefish-learning/stonefish_ws/install/bluerov2_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bluerov2_control build --build-base /home/ale/tutorials/stonefish-learning/stonefish_ws/build/bluerov2_control/build install --record /home/ale/tutorials/stonefish-learning/stonefish_ws/build/bluerov2_control/install.log --single-version-externally-managed install_data
