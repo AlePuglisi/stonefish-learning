@@ -1,0 +1,4 @@
+# ignore ws build
+/build
+/log
+/install
