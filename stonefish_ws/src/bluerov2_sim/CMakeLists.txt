@@ -22,7 +22,7 @@ install(DIRECTORY launch
 )
 
 # Install data and scenarios folders
-install(DIRECTORY data scenarios urdf
+install(DIRECTORY data scenarios urdf cfg
   DESTINATION share/${PROJECT_NAME}
 )
 

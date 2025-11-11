@@ -67,6 +67,14 @@ def generate_launch_description():
         executable='robot_state_publisher',
         parameters=[{'robot_description': robot_description_command}]
     )   
+
+    rviz_node =  Node(
+            package='rviz2',
+            namespace='',
+            executable='rviz2',
+            name='rviz2',
+            arguments=['-d' + os.path.join(get_package_share_directory('bluerov2_sim'), 'cfg', 'bluerov2_rviz.rviz')]
+        )
     
     return LaunchDescription([
         robot_name_arg,
@@ -75,6 +83,8 @@ def generate_launch_description():
         odom2tf_node, 
         joy_node,
         static_tf_node,
+        rviz_node, 
+
         TimerAction(
             period=5.0,
             actions=[robot_state_publisher_node],
