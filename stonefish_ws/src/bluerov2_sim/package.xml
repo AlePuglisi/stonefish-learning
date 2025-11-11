@@ -12,7 +12,9 @@
   <depend>rclcpp</depend>
   <depend>stonefish_ros2</depend>
   <depend>std_msgs</depend>
-
+  <depend>urdf</depend>
+  <depend>xacro</depend>
+  
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 

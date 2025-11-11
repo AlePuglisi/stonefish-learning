@@ -25,7 +25,7 @@ class OdomToTf(Node):
 
         t.header.stamp = Time(seconds=msg.header.stamp.sec, nanoseconds=msg.header.stamp.nanosec).to_msg()
         t.header.frame_id = 'world_ned'
-        t.child_frame_id = 'bluerov/base_link'
+        t.child_frame_id = 'odom'
 
         t.transform.translation.x = msg.pose.pose.position.x
         t.transform.translation.y = msg.pose.pose.position.y

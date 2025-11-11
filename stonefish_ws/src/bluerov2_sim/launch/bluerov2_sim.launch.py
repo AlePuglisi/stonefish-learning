@@ -1,11 +1,17 @@
 import os
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, GroupAction, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, GroupAction, IncludeLaunchDescription, TimerAction
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+from launch.substitutions import Command
+from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
+    description_path = get_package_share_directory('bluerov2_sim')
+    xacro_path = os.path.join(description_path, "urdf", "bluerov2.urdf.xacro")
+    robot_description_command = Command(['xacro ', xacro_path])
+
     # Declare launch arguments
     robot_name_arg = DeclareLaunchArgument(
         'robot_name',
@@ -43,11 +49,24 @@ def generate_launch_description():
             output='screen',
         )
     
+    static_tf_node = Node(
+            package="tf2_ros",
+            executable="static_transform_publisher",
+            output="screen" ,
+            arguments=["0", "0", "0", "-1.57", "0", "-1.57", "odom", "base_visual"]
+        )  
+    
     joy_node = Node(
             package='joy',
             executable='joy_node',
             output='screen',
-        )     
+        )  
+    
+    robot_state_publisher_node = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        parameters=[{'robot_description': robot_description_command}]
+    )   
     
     return LaunchDescription([
         robot_name_arg,
@@ -55,7 +74,12 @@ def generate_launch_description():
 
         odom2tf_node, 
         joy_node,
-
+        static_tf_node,
+        TimerAction(
+            period=5.0,
+            actions=[robot_state_publisher_node],
+        )
+        
         # Node(
         #     package='cola2_stonefish',
         #     executable='bluerov2_logitechF310teleop.py',

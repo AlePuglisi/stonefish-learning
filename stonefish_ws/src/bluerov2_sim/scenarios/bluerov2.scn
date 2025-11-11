@@ -33,7 +33,7 @@
         <look name="gray" gray="1" roughness="0.2" metalness="0.0"/>
 		<look name="manipulator" rgb="0.2 0.15 0.1" roughness="0.6" metalness="0.8"/>
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
-		<look name="propeller" gray="1.0" roughness="0.3" metalness="0.0"/>
+		<look name="propeller" rgb="0.0 0.1 0.85" roughness="0.3" metalness="0.0"/>
     </looks>    
 
 	<static name="Cyl" type="cylinder">
@@ -551,7 +551,7 @@
 		<!--   SENSORS   -->
 		<sensor name="Odometry" type="odometry" rate="10.0">
 			<link name="Vehicle"/>
-			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.214"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			<!-- <ros_publisher topic="/$(arg robot_name)/dynamics/odometry"/> -->
 			<ros_publisher topic="/bluerov/navigator/odometry"/>
 		</sensor>

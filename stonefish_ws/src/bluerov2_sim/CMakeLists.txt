@@ -10,6 +10,8 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(stonefish_ros2 REQUIRED)  # Add this line
+find_package(urdf REQUIRED)
+find_package(xacro REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -20,7 +22,7 @@ install(DIRECTORY launch
 )
 
 # Install data and scenarios folders
-install(DIRECTORY data scenarios
+install(DIRECTORY data scenarios urdf
   DESTINATION share/${PROJECT_NAME}
 )
 
