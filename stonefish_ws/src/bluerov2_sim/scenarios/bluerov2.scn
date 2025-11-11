@@ -36,11 +36,25 @@
 		<look name="propeller" rgb="0.0 0.1 0.85" roughness="0.3" metalness="0.0"/>
     </looks>    
 
-	<static name="Cyl" type="cylinder">
+	<!-- <static name="Cyl" type="cylinder">
 		<dimensions radius="0.4" height="10"/>
 		<material name="Normal"/>
 		<look name="gray"/>
 		<world_transform xyz="0.0 4.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static> -->
+
+	<static name="WindBase" type="model">
+		<physical>
+			<mesh filename="wind_turbine/wind_turbine_base_ned.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 -1.57 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine/wind_turbine_base_ned.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 -1.57 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="yellow"/>
+		<world_transform xyz="0.0 30.0 -5.0" rpy="0.0 0.0 0.52"/>
 	</static>
 
 	<robot name="bluerov2" fixed="false" self_collisions="false">
