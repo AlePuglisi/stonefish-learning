@@ -89,15 +89,5 @@ def generate_launch_description():
             period=5.0,
             actions=[robot_state_publisher_node],
         )
-        
-        # Node(
-        #     package='cola2_stonefish',
-        #     executable='bluerov2_logitechF310teleop.py',
-        #     output='screen',
-        # ),
-        #     Node(
-        #     package='cola2_stonefish',
-        #     executable='odom2tf.py',
-        #     output='screen',
-        # ),  
+    
         ])

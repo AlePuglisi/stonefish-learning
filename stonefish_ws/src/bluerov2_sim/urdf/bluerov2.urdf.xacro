@@ -133,6 +133,103 @@
       </visual>
     </link>
 
+    <link name="ductLeftFront">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/duct_left_front.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="ductRightFront">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/duct_right_front.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="ductLeftUpFront">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/duct_left_up_front.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="ductRightUpFront">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/duct_right_up_front.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="ductLeftRear">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/duct_left_rear.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="ductRightRear">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/duct_right_rear.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="ductLeftUpRear">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/duct_left_up_rear.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+    <link name="ductRightUpRear">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/duct_right_up_rear.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+
     <joint name="base_sideRUp" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <parent link="base_visual" />
@@ -194,4 +291,45 @@
       <child link="base" /> 
     </joint>
 
+    <joint name="base_ductLeftFront" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="base_visual" />
+      <child link="ductLeftFront" /> 
+    </joint>
+    <joint name="base_ductLeftRear" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="base_visual" />
+      <child link="ductLeftRear" /> 
+    </joint>
+    <joint name="base_ductLeftUpFront" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="base_visual" />
+      <child link="ductLeftUpFront" /> 
+    </joint>
+    <joint name="base_ductLeftUpRear" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="base_visual" />
+      <child link="ductLeftUpRear" /> 
+    </joint>
+    <joint name="base_ductRightUpFront" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="base_visual" />
+      <child link="ductRightUpFront" /> 
+    </joint>
+    <joint name="base_ductRightUpRear" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="base_visual" />
+      <child link="ductRightUpRear" /> 
+    </joint>
+    <joint name="base_ductRightFront" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="base_visual" />
+      <child link="ductRightFront" /> 
+    </joint>
+    <joint name="base_ductRightRear" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="base_visual" />
+      <child link="ductRightRear" /> 
+    </joint>
+    
 </robot>
