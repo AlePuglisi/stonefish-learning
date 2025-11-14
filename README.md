@@ -67,7 +67,7 @@ You just need to move to the stonefish_ws directory in your machine, and launch 
 colcon build 
 ```
 
-The first time it may take a while in order to build also the stonefish_ros2 packages, which depends on the Stonefish library that you have [already installed](https://github.com/AlePuglisi/stonefish/blob/master/INSTALLATION_TROUBLESHOOTING.md#installation). 
+The first time it may take a while in order to build also the stonefish_ros2 package, which depends on the Stonefish library that you have [already installed](https://github.com/AlePuglisi/stonefish/blob/master/INSTALLATION_TROUBLESHOOTING.md#installation). 
 
 
 ## Building or Running ERRORS...
@@ -79,12 +79,14 @@ Most of this errors are solved thanks to the issues opened on the official Stone
 
 This section briefly describe each example. Experiment with it to get a better understanding !
 
-## Basic Physics Simulation with simple objects (falling_test)
+## Basic C++ Examples
+
+### Physics Simulation with Simple Objects (falling_test)
 <details> 
 <summary> Description </summary>
 </details>
 
-## Basic Underwater Simulation with Robot and Sensors (underwater_test)
+### Underwater Simulation with Robot and Sensors (underwater_test)
 <details> 
 <summary> Description </summary>
 </details>
