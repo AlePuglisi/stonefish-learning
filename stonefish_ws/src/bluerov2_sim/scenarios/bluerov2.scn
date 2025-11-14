@@ -34,6 +34,7 @@
 		<look name="manipulator" rgb="0.2 0.15 0.1" roughness="0.6" metalness="0.8"/>
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
 		<look name="propeller" rgb="0.0 0.1 0.85" roughness="0.3" metalness="0.0"/>
+		<look name="windTurbinePile" gray="1.0" roughness="0.1" texture="wind_turbine/textures/WindTurbine.png"/>
     </looks>    
 
 	<!-- <static name="Cyl" type="cylinder">
@@ -54,11 +55,40 @@
 		</visual>
 		<material name="Neutral"/>
 		<look name="yellow"/>
-		<world_transform xyz="0.0 30.0 10.0" rpy="1.57 0.0 0.0"/>
+		<world_transform xyz="30.0 0.0 10.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="WindPile" type="model">
+		<physical>
+			<mesh filename="wind_turbine/wind_turbine_pile.obj" scale="3.5" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine/wind_turbine_pile.obj" scale="3.5"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="windTurbinePile"/>
+		<world_transform xyz="10 -11.5 -12.5" rpy="0.0 0.0 -1.047"/>
 	</static>
 
 	<robot name="bluerov2" fixed="false" self_collisions="false">
+
 		<base_link name="Vehicle" type="compound" physics="submerged">
+
+			<external_part name="Base" type="model" physics="submerged" buoyant="false">
+				<!--<physical>
+					<mesh filename="bluerov/camera_hull_phy.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical> -->
+				<physical>
+					<mesh filename="bluerov2/base.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</physical>
+				<material name="Polyamid"/>
+				<!-- <mass value="0.05"/> -->
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
 
 			<external_part name="SideR" type="model" physics="submerged" buoyant="false">
 				<!--<physical>
@@ -116,21 +146,6 @@
 				</physical>
 				<material name="Polyamid"/>
 				<!-- <mass value="0.015"/> -->
-				<look name="black"/>
-				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</external_part>
-			
-			<external_part name="Base" type="model" physics="submerged" buoyant="false">
-				<!--<physical>
-					<mesh filename="bluerov/camera_hull_phy.obj" scale="1.0"/>
-					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-				</physical> -->
-				<physical>
-					<mesh filename="bluerov2/base.obj" scale="1.0"/>
-					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-				</physical>
-				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -427,8 +442,8 @@
 
 		<!--   THRUSTERS   -->
 		<!-- T1 -->
-		<actuator name="Thruster_R_FORWARD_FRONT" type="thruster">
-			<origin rpy="0.0 0.0 0.7853981633974483" xyz="-0.10335 0.13007 0.027378"/>
+		<actuator name="Thruster_L_FORWARD_FRONT" type="thruster">
+			<origin rpy="0.0 0.0 0.7853981633974483" xyz="0.13007 -0.10335 0.027378"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="false">
@@ -444,8 +459,8 @@
 		</actuator>
 
 		<!-- T2 -->
-		<actuator name="Thruster_L_FORWARD_FRONT" type="thruster">
-			<origin rpy="0.0 0.0 -3.9269908169872414" xyz="0.10224 0.13007 0.027084"/>
+		<actuator name="Thruster_R_FORWARD_FRONT" type="thruster">
+			<origin rpy="0.0 0.0 -3.9269908169872414" xyz="0.13007 0.10224 0.027084"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="true">
@@ -461,8 +476,8 @@
 		</actuator>
 
 		<!-- T3 -->
-		<actuator name="Thruster_R_FORWARD_REAR" type="thruster">
-			<origin rpy="0.0 0.0 -0.7853981633974483" xyz="-0.10196 -0.15372 0.026784"/>
+		<actuator name="Thruster_L_FORWARD_REAR" type="thruster">
+			<origin rpy="0.0 0.0 -0.7853981633974483" xyz="-0.15372 -0.10196 0.026784"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="1600.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="false">
@@ -478,8 +493,8 @@
 		</actuator>
 
 		<!-- T4 -->
-		<actuator name="Thruster_L_FORWARD_REAR" type="thruster">
-			<origin rpy="0.0 0.0 3.9269908169872414" xyz="0.10288 -0.15091 0.027475"/>
+		<actuator name="Thruster_R_FORWARD_REAR" type="thruster">
+			<origin rpy="0.0 0.0 3.9269908169872414" xyz="-0.15091 0.10288 0.027475"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="1600.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="true">
@@ -495,8 +510,8 @@
 		</actuator>
 
 		<!-- T5 -->
-		<actuator name="Thruster_R_UP_FRONT" type="thruster">
-			<origin rpy="0.0 -1.5707963267948966 0.0" xyz="-0.218 0.117 -0.037726"/>
+		<actuator name="Thruster_L_UP_FRONT" type="thruster">
+			<origin rpy="-1.5707963267948966 0.0 0.0" xyz="0.117 -0.218 -0.037726"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="true">
@@ -512,8 +527,8 @@
 		</actuator>
 
 		<!-- T6 -->
-		<actuator name="Thruster_L_UP_FRONT" type="thruster">
-			<origin rpy="0.0 -1.5707963267948966 0." xyz="0.218 0.117 -0.037726"/>
+		<actuator name="Thruster_R_UP_FRONT" type="thruster">
+			<origin rpy="-1.5707963267948966 0.0  0.0" xyz="0.117 0.218 -0.037726"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="false">
@@ -529,8 +544,8 @@
 		</actuator>
 
 		<!-- T7 -->
-		<actuator name="Thruster_R_UP_REAR" type="thruster">
-			<origin rpy="0.0 -1.5707963267948966 0.0" xyz="-0.218 -0.123 -0.037726"/>
+		<actuator name="Thruster_L_UP_REAR" type="thruster">
+			<origin rpy="-1.5707963267948966 0.0 0.0" xyz="-0.123 -0.218 -0.037726"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="false">
@@ -546,8 +561,8 @@
 		</actuator>
 
 		<!-- T8 -->
-		<actuator name="Thruster_L_UP_REAR" type="thruster">
-			<origin rpy="0.0 -1.5707963267948966 0." xyz="0.218 -0.123 -0.037726"/>
+		<actuator name="Thruster_R_UP_REAR" type="thruster">
+			<origin rpy="-1.5707963267948966 0.0 0." xyz="-0.123 0.218 -0.037726"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="true">
@@ -587,7 +602,7 @@
 		</sensor> -->
                
 		<sensor name="INS" rate="100.0" type="ins">
-			<output_frame rpy="0.0 0.0 0.0" xyz="-0.2 -0.4 0.3"/>
+			<output_frame rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			<noise angular_velocity="0.00001745" linear_acceleration="0.00005"/>
 			<external_sensors dvl="dvl" gps="gps" pressure="pressure"/>
 			<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -615,22 +630,22 @@
 		
 		<sensor name="camera" rate="10.0" type="camera">
 			<specs resolution_x="1200" resolution_y="800" horizontal_fov="90.0"/>
-			<origin xyz="0.0 0.2 -0.03" rpy="1.6 0.0 3.14"/>
+			<origin xyz="0.2 0 -0.03" rpy="1.57 0 1.57"/>
 			<link name="Vehicle"/>
 			<ros_publisher topic="/bluerov/camera"/>
 		</sensor>
 			
 		<sensor name="FLS" type="fls" rate="10.0">
 			<specs beams="512" bins="500" horizontal_fov="130.0" vertical_fov="20.0"/>
-			<settings range_min="0.5" range_max="10.0" gain="1.1"/>
+			<settings range_min="0.5" range_max="20.0" gain="1.1"/>
 			<noise multiplicative="0.01" additive="0.02"/>
 			<display colormap="hot"/>
-			<origin xyz="0.0 0.15 0.1" rpy="1.6 0.0 3.14"/>
+			<origin xyz="0.2 0 0.1" rpy="1.308 0 1.57"/>
 			<link name="Vehicle"/>
 			<ros_publisher topic="/bluerov/fls"/>
 		</sensor>
 
-		<world_transform rpy="0.0 0.0 0.0" xyz="0 0 0.25"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 0 0.25"/>
 
 		<!--   ROS SUBSCRIBERS / PUBLISHER THRUST/FORCES   -->
 		<ros_subscriber thrusters="/bluerov/controller/thruster_setpoints_sim" forces="/bluerov/controller/thruster_manager/input_stamped"/>
