@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<scenario>
+
+	<environment>
+		<ned latitude="41.7777" longitude="3.0333"/>
+		<ocean>
+			<water density="1031.0" jerlov="0.15"/>
+		</ocean>
+		<atmosphere>
+			<sun azimuth="20.0" elevation="50.0"/>
+		</atmosphere>
+	</environment>
+
+	<materials>
+		<material name="Neutral" density="1000.0" restitution="0.5"/>
+
+		<friction_table>
+			<friction material1="Neutral" material2="Neutral" static="0.5" dynamic="0.2"/>
+		</friction_table>
+	</materials>
+
+    <looks>
+		<look name="dinner_plate_jelly" gray="0.5" roughness="0.1" texture="texture/dinner_plate_jelly.png"/>
+    </looks>    
+
+	<!-- <static name="Cyl" type="cylinder">
+		<dimensions radius="0.4" height="10"/>
+		<material name="Normal"/>
+		<look name="gray"/>
+		<world_transform xyz="0.0 4.0 0.0" rpy="0.0 0.0 0.0"/>
+	</static> -->
+
+	<animated name="DinnerPlateJelly" type="model" collisions="false">
+		<physical>
+			<mesh filename="mesh/dinner_plate_jelly_phy.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="mesh/dinner_plate_jelly.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="dinner_plate_jelly"/>
+		<trajectory type="spline" playback="boomerang">
+			<keypoint time="0.0" xyz="0.0 0.0 10.0" rpy="0.0 0.0 0.0"/>
+			<keypoint time="20.0" xyz="0.0 2.0 8.0" rpy="0.0 0.0 0.1"/>
+			<keypoint time="40.0" xyz="1.0 2.0 6.0" rpy="0.0 0.0 0.2"/>
+		</trajectory>
+	</animated>
+
+</scenario>
