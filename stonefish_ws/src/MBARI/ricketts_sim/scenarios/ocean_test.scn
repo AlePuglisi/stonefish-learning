@@ -20,7 +20,7 @@
 	</materials>
 
     <looks>
-		<look name="dinner_plate_jelly" gray="0.5" roughness="0.1" texture="texture/dinner_plate_jelly.png"/>
+		<look name="dinner_plate_jelly" gray="0.5" roughness="0.1" texture="texture/dinner_plate_jelly/dinner_plate_jelly.png"/>
     </looks>    
 
 	<!-- <static name="Cyl" type="cylinder">
@@ -32,11 +32,11 @@
 
 	<animated name="DinnerPlateJelly" type="model" collisions="false">
 		<physical>
-			<mesh filename="mesh/dinner_plate_jelly_phy.obj" scale="1.0"/>
+			<mesh filename="mesh/dinner_plate_jelly/dinner_plate_jelly_phy.obj" scale="1.0"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="mesh/dinner_plate_jelly.obj" scale="1.0"/>
+			<mesh filename="mesh/dinner_plate_jelly/dinner_plate_jelly.obj" scale="1.0"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Neutral"/>
