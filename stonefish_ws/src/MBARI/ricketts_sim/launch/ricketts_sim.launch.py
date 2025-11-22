@@ -32,7 +32,7 @@ def generate_launch_description():
                         FindPackageShare('ricketts_sim'), 'data'
                     ]),
                     'scenario_desc': PathJoinSubstitution([
-                        FindPackageShare('ricketts_sim'), 'scenarios', 'ocean_test.scn'
+                        FindPackageShare('ricketts_sim'), 'scenarios', 'ricketts.scn'
                     ]),
                     'simulation_rate': '100.0',
                     'window_res_x': '1200',
