@@ -1,70 +1,20 @@
 <?xml version="1.0"?>
 <scenario>
 
-	<environment>
-		<ned latitude="41.7777" longitude="3.0333"/>
-		<ocean>
-			<water density="1031.0" jerlov="0.15"/>
-		</ocean>
-		<atmosphere>
-			<sun azimuth="20.0" elevation="50.0"/>
-		</atmosphere>
-	</environment>
-
-	<materials>
-		<material name="Neutral" density="1000.0" restitution="0.5"/>
-		<material name="Foam" density="180.0" restitution="0.5"/>
-		<material name="Polyamid" density="1100.0" restitution="0.1"/>
-
-		<friction_table>
-			<friction material1="Neutral" material2="Neutral" static="0.5" dynamic="0.2"/>
-			<friction material1="Neutral" material2="Foam" static="0.5" dynamic="0.2"/>
-			<friction material1="Polyamid" material2="Foam" static="0.5" dynamic="0.2"/>
-			<friction material1="Foam" material2="Foam" static="0.5" dynamic="0.2"/>
-			<friction material1="Neutral" material2="Polyamid" static="0.2" dynamic="0.05"/>
-			<friction material1="Polyamid" material2="Polyamid" static="0.1" dynamic="0.05"/>
-		</friction_table>
-	</materials>
-
-    <looks>
-        <look name="black" gray="0.01" roughness="0.2" metalness="0.0"/>
-		<look name="blue" rgb="0.0 0.3 0.8" roughness="0.0"/>
-        <look name="yellow" rgb="1.0 0.9 0.0" roughness="0.3"/>
-        <look name="gray" gray="1" roughness="0.2" metalness="0.0"/>
-		<look name="manipulator" rgb="0.2 0.15 0.1" roughness="0.6" metalness="0.8"/>
-        <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
-		<look name="propeller" rgb="0.0 0.1 0.85" roughness="0.3" metalness="0.0"/>
-
-		<look name="float_texture" gray="1.0" roughness="1.0" texture="texture/rov_doc_ricketts/doc_ricketts_float.png"/>
-		<look name="logo_texture" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_logo.png"/>
-		<look name="frame_texture" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_frame.png"/>
-		<look name="equipment_texture" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_equipment.png"/>
-		<look name="thrusters_texture" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_thrusters.png"/>
-    </looks>    
-
-	<!-- <static name="TestMesh" type="model">
-		<physical>
-			<mesh filename="test_mesh/sea_sponge_phy.obj" scale="1" convex="true"/>
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-		</physical>
-		<visual>
-			<mesh filename="test_mesh/sea_sponge.obj" scale="1"/>
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-		</visual>
-		<material name="Neutral"/>
-		<look name="SeaSponge"/>
-		<world_transform xyz="0 0 -10" rpy="0.0 0.0 0"/>
-	</static> -->
-
-	<robot name="ricketts" fixed="false" self_collisions="false">
-
-		<base_link name="Vehicle" type="compound" physics="submerged">
+	<robot name="$(arg robot_name)" fixed="false" self_collisions="false">
+		
+		<!--   BASE COMPOUND   -->
+		<base_link name="float" type="compound" physics="submerged">
 
 			<external_part name="float" type="model" physics="submerged" buoyant="true">
 				<physical>
 					<mesh filename="mesh/rov_doc_ricketts/float.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
+				<visual>
+					<mesh filename="mesh/rov_doc_ricketts/float.obj" scale="1.0"/>
+					<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+				</visual>
 				<material name="Polyamid"/>
 				<look name="float_texture"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -75,6 +25,10 @@
 					<mesh filename="mesh/rov_doc_ricketts/float_logo.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
+				<visual>
+					<mesh filename="mesh/rov_doc_ricketts/float_logo.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
 				<material name="Polyamid"/>
 				<look name="logo_texture"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -85,6 +39,10 @@
 					<mesh filename="mesh/rov_doc_ricketts/frame.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
+				<visual>
+					<mesh filename="mesh/rov_doc_ricketts/frame.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				</visual>
 				<material name="Polyamid"/>
 				<look name="frame_texture"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -110,7 +68,7 @@
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<!--   FOAM   -->
+			<!--   FOAMS   -->
 			<internal_part name="LeftFoam" type="cylinder" physics="submerged" buoyant="true">
 				<dimensions radius="0.3" height="0.8"/>
 				<origin rpy="0.0 1.57 0.0" xyz="-0.86 -0.55 -1.04"/>
@@ -137,14 +95,20 @@
 
 		</base_link>
 
-		<!--   THRUSTERS   -->
+		<!--   TODO: ROBOT ARM   -->
 
 
-		<!--   SENSORS   -->
+		<!--   TODO: THRUSTERS   -->
+
+		
+		<!--   TODO: ACTUATORS   -->
+
+
+		<!--   TODO: SENSORS   -->
 
 		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 0 0.25"/>
 
-		<!--   ROS SUBSCRIBERS / PUBLISHER THRUST/FORCES   -->
+		<!--   TODO: ROS SUBSCRIBERS / PUBLISHER THRUST/FORCES   -->
 		<!-- <ros_subscriber thrusters="/bluerov/controller/thruster_setpoints_sim" forces="/bluerov/controller/thruster_manager/input_stamped"/>
 		<ros_publisher thrusters="/bluerov/controller/thruster_state" forces="/bluerov/controller/thruster_manager/output"/> -->
 		
