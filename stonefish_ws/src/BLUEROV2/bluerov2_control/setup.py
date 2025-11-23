@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'odom2tf = bluerov2_control.odom2tf:main',
+            'bluerov2_joy_teleop = bluerov2_control.bluerov2_joy_teleop:main',
         ],
     },
 )

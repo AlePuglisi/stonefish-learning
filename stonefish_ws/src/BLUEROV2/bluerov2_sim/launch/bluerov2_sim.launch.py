@@ -32,7 +32,7 @@ def generate_launch_description():
                         FindPackageShare('bluerov2_sim'), 'data'
                     ]),
                     'scenario_desc': PathJoinSubstitution([
-                        FindPackageShare('bluerov2_sim'), 'scenarios', 'bluerov2.scn'
+                        FindPackageShare('bluerov2_sim'), 'scenarios', 'ocean.scn'
                     ]),
                     'simulation_rate': '100.0',
                     'window_res_x': '1200',
@@ -61,6 +61,12 @@ def generate_launch_description():
             executable='joy_node',
             output='screen',
         )  
+
+    bluerov2_joy_teleop_node = Node(
+            package='bluerov2_control',
+            executable='bluerov2_joy_teleop',
+            output='screen',
+        )
     
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
@@ -82,6 +88,7 @@ def generate_launch_description():
 
         odom2tf_node, 
         joy_node,
+        bluerov2_joy_teleop_node,
         static_tf_node,
         rviz_node, 
 
