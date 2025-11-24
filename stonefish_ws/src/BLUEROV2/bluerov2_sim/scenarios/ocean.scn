@@ -36,7 +36,7 @@
     <!--   Inlcude Addiitonal world actuators/sensors (lights, cameras, etc) not attached to Robots  -->
 
     <!--   Inlcude Robots  -->
-    <include file="$(find bluerov2_sim)/scenarios/bluerov2.scn"/>
+    <include file="$(find bluerov2_sim)/scenarios/bluerov2_test.scn"/>
     <!-- <include file="$(find bluerov2_sim)/scenarios/bluerov2_multilink.scn"/> -->
 
 

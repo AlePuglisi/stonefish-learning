@@ -16,10 +16,12 @@ class JoystickController(Node):
         # Axis Index 
 
         self.axes_index_ = {
-            "analog_left_LR":  0,   # left analog stick ( Left = +1 | Right = -1 )
-            "analog_left_UD":  1,   # left analog stick ( Up   = +1 | Down  = -1 )
-            "analog_right_LR": 3,   # right analog stick ( Left = +1 | Right = -1 )
-            "analog_right_UD": 4    # right analog stick ( Up   = +1 | Down  = -1 )
+            "analog_left_LR":  0,   # left analog stick        ( Left = +1 | Right = -1 )
+            "analog_left_UD":  1,   # left analog stick        ( Up   = +1 | Down  = -1 )
+            "analog_right_LR": 3,   # right analog stick       ( Left = +1 | Right = -1 )
+            "analog_right_UD": 4,   # right analog stick       ( Up   = +1 | Down  = -1 )
+            "arrow_LR": 6,          # arrow buttons left/right ( Left = +1 | Right = -1 )
+            "arrow_UD": 7           # arrow buttons up/down    ( Up   = +1 | Down  = -1 )
         }
 
         # Buttons Index 
@@ -67,8 +69,8 @@ class JoystickController(Node):
         rov_control_msg = Float64MultiArray()
         rov_control_msg.data = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0,0.0,0.0]  # Adjust as needed
         
-        # Check if R2 and L2 are pressed simultaneously
-        if buttons[self.buttons_index_["L2"]] and buttons[self.buttons_index_["R2"]]:
+        # Check if options is pressed 
+        if buttons[self.buttons_index_["options"]]:
             # Special case: R2 and L2 pressed simultaneously
             if self.depth_control_mode:
                 self.depth_control_mode = False
@@ -78,12 +80,35 @@ class JoystickController(Node):
                 rov_control_msg.data = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0,0.0,0.0]  # Adjust as needed
                 self.depth_control_mode = True
 
+        elif axes[self.axes_index_["arrow_UD"]] == 1 :
+            rov_control_msg.data = [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            
+        elif buttons[self.buttons_index_["L2"]] and buttons[self.buttons_index_["R2"]]:
+            rov_control_msg.data = [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    -100.0,
+                    -100.0,
+                    -100.0,
+                    -100.0
+                ]
         else:
             # Map left analog stick to vertical motion (up/down) and horizontal motion (left/right)
-            vertical         = axes[self.axes_index_["analog_left_UD"]]
-            horizontal       = axes[self.axes_index_["analog_left_LR"]]
-            side             = axes[self.axes_index_["analog_right_LR"]]
-            forward_backward = axes[self.axes_index_["analog_right_UD"]]*(-1)
+            vertical         = axes[self.axes_index_["analog_left_UD"]] * 10
+            horizontal       = axes[self.axes_index_["analog_left_LR"]] * 10
+            side             = axes[self.axes_index_["analog_right_LR"]] *10 
+            forward_backward = axes[self.axes_index_["analog_right_UD"]]*(-1) *10
 
             depth = 0
 
@@ -91,8 +116,8 @@ class JoystickController(Node):
                 depth = 0.0
             else:
                 depth = vertical * (-1)
-                
-            # Create a Float64MultiArray message with 6 values
+
+            # Create a Float64MultiArray message with 8 values
             if side < -self.deadzone_threshold_ or horizontal < -self.deadzone_threshold_:
                 rov_control_msg.data = [
                     horizontal,
@@ -116,7 +141,7 @@ class JoystickController(Node):
                     depth*(-1)
                 ]
 
-        #self.get_logger().info(f"Publishing: {rov_control_msg.data}")
+        self.get_logger().info(f"Publishing: {rov_control_msg.data}")
 
         # Publish the control message
         self.rov_control_pub.publish(rov_control_msg)

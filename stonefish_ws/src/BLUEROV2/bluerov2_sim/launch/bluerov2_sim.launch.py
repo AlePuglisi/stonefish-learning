@@ -59,6 +59,12 @@ def generate_launch_description():
     joy_node = Node(
             package='joy',
             executable='joy_node',
+            parameters=[{
+                'deadzone': 0.1,            # Default is 0.05
+                'autorepeat_rate': 5.0,     # Hz, set to 0.0 to disable autorepeat
+                'sticky_buttons': False,
+                'coalesce_interval_ms': 1,  # Milliseconds between published messages
+            }],
             output='screen',
         )  
 
