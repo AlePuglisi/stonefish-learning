@@ -293,41 +293,39 @@
 
 		<!--   THRUSTERS   -->
 		<!-- T1 -->
-		<actuator name="Thruster_L_FORWARD_FRONT" type="propeller">
+		<actuator name="Thruster_L_FORWARD_FRONT" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 0.0 0.7853981633974483" xyz="0.13007 -0.10335 0.027378"/>
-    		<!-- <specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/> -->
-			<specs thrust_coeff="0.167" torque_coeff="0.016" max_rpm="3600.0" inverted="true"/>
-			<propeller diameter="0.07" right="true">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true" max_rpm="${1000.0/60.0*2.0*pi}">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
-			<!-- <rotor_dynamics type="mechanical_pi">
-				<kp value="10.0"/>
-				<ki value="0.5"/>
+			<rotor_dynamics type="mechanical_pi">
+				<kp value="100.0"/>
+				<ki value="0.0"/>
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
 				<thrust_coeff forward="0.48" reverse="0.48"/>
 				<torque_coeff value="0.1"/>
-			</thrust_model> -->
-
+			</thrust_model>
 		</actuator>
 
 		<!-- T2 -->
 		<actuator name="Thruster_R_FORWARD_FRONT" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 0.0 -3.9269908169872414" xyz="0.13007 0.10224 0.027084"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
-			<propeller diameter="0.07" right="false">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true" max_rpm="${1000.0/60.0*2.0*pi}">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
 			<rotor_dynamics type="mechanical_pi">
 				<kp value="10.0"/>
-				<ki value="0.5"/>
+				<ki value="0.0"/>
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
@@ -340,15 +338,15 @@
 		<actuator name="Thruster_L_FORWARD_REAR" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 0.0 -0.7853981633974483" xyz="-0.15372 -0.10196 0.026784"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
-			<propeller diameter="0.07" right="false">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true" max_rpm="${1000.0/60.0*2.0*pi}">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
 			<rotor_dynamics type="mechanical_pi">
-				<kp value="10.0"/>
-				<ki value="0.5"/>
+				<kp value="100.0"/>
+				<ki value="0.0"/>
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
@@ -361,15 +359,15 @@
 		<actuator name="Thruster_R_FORWARD_REAR" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 0.0 3.9269908169872414" xyz="-0.15091 0.10288 0.027475"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
-			<propeller diameter="0.07" right="false">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true" max_rpm="${1000.0/60.0*2.0*pi}">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
 			<rotor_dynamics type="mechanical_pi">
-				<kp value="10.0"/>
-				<ki value="0.5"/>
+				<kp value="100.0"/>
+				<ki value="0.0"/>
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
@@ -382,15 +380,15 @@
 		<actuator name="Thruster_L_UP_FRONT" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 1.5707963267948966 0.0" xyz="0.117 -0.218 -0.037726"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
-			<propeller diameter="0.07" right="false">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true" max_rpm="${1000.0/60.0*2.0*pi}">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
 			<rotor_dynamics type="mechanical_pi">
 				<kp value="100.0"/>
-				<ki value="0.5"/>
+				<ki value="0.0"/>
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
@@ -403,15 +401,15 @@
 		<actuator name="Thruster_R_UP_FRONT" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 1.5707963267948966 0.0" xyz="0.117 0.218 -0.037726"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
-			<propeller diameter="0.07" right="false">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true" max_rpm="${1000.0/60.0*2.0*pi}">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
 			<rotor_dynamics type="mechanical_pi">
 				<kp value="100.0"/>
-				<ki value="0.5"/>
+				<ki value="0.0"/>
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
@@ -424,15 +422,15 @@
 		<actuator name="Thruster_L_UP_REAR" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 1.5707963267948966 0.0" xyz="-0.123 -0.218 -0.037726"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
-			<propeller diameter="0.07" right="false">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true" max_rpm="${1000.0/60.0*2.0*pi}">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
 			<rotor_dynamics type="mechanical_pi">
 				<kp value="100.0"/>
-				<ki value="0.5"/>
+				<ki value="0.0"/>
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">
@@ -445,15 +443,15 @@
 		<actuator name="Thruster_R_UP_REAR" type="thruster">
 			<link name="Vehicle"/>
 			<origin rpy="0.0 1.5707963267948966 0.0" xyz="-0.123 0.218 -0.037726"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
-			<propeller diameter="0.07" right="false">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true" max_rpm="${1000.0/60.0*2.0*pi}">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
 			<rotor_dynamics type="mechanical_pi">
 				<kp value="100.0"/>
-				<ki value="0.5"/>
+				<ki value="0.0"/>
 				<ilimit value="2.0"/>
 			</rotor_dynamics>
 			<thrust_model type="fluid_dynamics">

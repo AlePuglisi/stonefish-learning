@@ -82,10 +82,10 @@ class JoystickController(Node):
 
         elif axes[self.axes_index_["arrow_UD"]] == 1 :
             rov_control_msg.data = [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
                     0.0,
                     0.0,
                     0.0,
@@ -98,17 +98,17 @@ class JoystickController(Node):
                     0.0,
                     0.0,
                     0.0,
-                    -100.0,
-                    -100.0,
-                    -100.0,
-                    -100.0
+                    -1.0,
+                    -1.0,
+                    -1.0,
+                    -1.0
                 ]
         else:
             # Map left analog stick to vertical motion (up/down) and horizontal motion (left/right)
-            vertical         = axes[self.axes_index_["analog_left_UD"]] * 10
-            horizontal       = axes[self.axes_index_["analog_left_LR"]] * 10
-            side             = axes[self.axes_index_["analog_right_LR"]] *10 
-            forward_backward = axes[self.axes_index_["analog_right_UD"]]*(-1) *10
+            vertical         = axes[self.axes_index_["analog_left_UD"]] 
+            horizontal       = axes[self.axes_index_["analog_left_LR"]] 
+            side             = axes[self.axes_index_["analog_right_LR"]]  
+            forward_backward = axes[self.axes_index_["analog_right_UD"]]*(-1) 
 
             depth = 0
 
