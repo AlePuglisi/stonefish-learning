@@ -13,50 +13,87 @@ class JoystickController(Node):
         self.joy_sub = self.create_subscription(Joy, '/joy', self.joy_callback, 10)
         self.rov_control_pub = self.create_publisher(Float64MultiArray, '/bluerov/controller/thruster_setpoints_sim', 10)
 
-        # Specify which joystick controls vertical and horizontal motion
-        self.vertical_joystick_index = 4  # Assuming left analog stick
-        self.horizontal_joystick_index = 0  # Assuming left analog stick
+        # Axis Index 
 
-        # Specify which joystick controls forward/backward and turning motion
-        self.forward_backward_joystick_index = 1  # Assuming right analog stick
-        self.turn_left_right_joystick_index = 3  # Assuming right analog stick
+        self.axes_index_ = {
+            "analog_left_LR":  0,   # left analog stick ( Left = +1 | Right = -1 )
+            "analog_left_UD":  1,   # left analog stick ( Up   = +1 | Down  = -1 )
+            "analog_right_LR": 3,   # right analog stick ( Left = +1 | Right = -1 )
+            "analog_right_UD": 4    # right analog stick ( Up   = +1 | Down  = -1 )
+        }
+
+        # Buttons Index 
+        self.buttons_index_ = {
+            "x":        0,
+            "circle":   1,
+            "triangle": 2,
+            "square":   3,
+            "L1":       4,
+            "R1":       5,  
+            "L2":       6,
+            "R2":       7,
+            "share":    8,
+            "options":  9,
+            "ps":       10,
+            "L3":       11,
+            "R3":       12
+        }
+
+        self.deadzone_threshold_ = 0.1
+
+
 
         # Initialize the last joystick ID
         self.last_joystick_id = None
 
         self.depth_control_mode = False
 
+    # def is_inside_deadzone(self, axes):
+        
+    #     for state in axes: 
+    #         if state > -self.deadzone_threshold_ and state < self.deadzone_threshold_:
+    #             return False
+            
+    #     return True
+
     def joy_callback(self, data):
         # Extract joystick values
         axes = data.axes
         buttons = data.buttons
 
+        #self.get_logger().info(f"axes:    {axes}")
+        #self.get_logger().info(f"buttons: {buttons}")
+
+        rov_control_msg = Float64MultiArray()
+        rov_control_msg.data = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0,0.0,0.0]  # Adjust as needed
+        
         # Check if R2 and L2 are pressed simultaneously
-        if buttons[4] == 1 and buttons[5] == 1:
+        if buttons[self.buttons_index_["L2"]] and buttons[self.buttons_index_["R2"]]:
             # Special case: R2 and L2 pressed simultaneously
             if self.depth_control_mode:
                 self.depth_control_mode = False
                 self.get_logger().info("DEPTH CONTROL MODE DISABLED!")
             else:
                 self.get_logger().info("DEPTH CONTROL MODE ENABLED!")
-                rov_control_msg = Float64MultiArray()
                 rov_control_msg.data = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0,0.0,0.0]  # Adjust as needed
                 self.depth_control_mode = True
 
         else:
             # Map left analog stick to vertical motion (up/down) and horizontal motion (left/right)
-            vertical = axes[self.vertical_joystick_index]
-            horizontal = axes[self.horizontal_joystick_index]
-            side = axes[self.turn_left_right_joystick_index]
-            forward_backward = axes[self.forward_backward_joystick_index]*(-1)
+            vertical         = axes[self.axes_index_["analog_left_UD"]]
+            horizontal       = axes[self.axes_index_["analog_left_LR"]]
+            side             = axes[self.axes_index_["analog_right_LR"]]
+            forward_backward = axes[self.axes_index_["analog_right_UD"]]*(-1)
+
             depth = 0
+
             if self.depth_control_mode or forward_backward != 0 or side != 0:
                 depth = 0.0
             else:
                 depth = vertical * (-1)
+                
             # Create a Float64MultiArray message with 6 values
-            if side < 0 or horizontal < 0:
-                rov_control_msg = Float64MultiArray()
+            if side < -self.deadzone_threshold_ or horizontal < -self.deadzone_threshold_:
                 rov_control_msg.data = [
                     horizontal,
                     side*(-1),
@@ -67,8 +104,7 @@ class JoystickController(Node):
                     depth,
                     depth*(-1)
                 ]
-            else:
-                rov_control_msg = Float64MultiArray()
+            elif side > self.deadzone_threshold_ or horizontal > self.deadzone_threshold_:
                 rov_control_msg.data = [
                     side,
                     horizontal*(-1) ,
@@ -79,7 +115,9 @@ class JoystickController(Node):
                     depth,
                     depth*(-1)
                 ]
-            
+
+        #self.get_logger().info(f"Publishing: {rov_control_msg.data}")
+
         # Publish the control message
         self.rov_control_pub.publish(rov_control_msg)
 

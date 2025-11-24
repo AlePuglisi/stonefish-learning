@@ -88,7 +88,7 @@ def generate_launch_description():
 
         odom2tf_node, 
         joy_node,
-        bluerov2_joy_teleop_node,
+        #bluerov2_joy_teleop_node,
         static_tf_node,
         rviz_node, 
 
