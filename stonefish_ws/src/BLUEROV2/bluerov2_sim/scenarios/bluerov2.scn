@@ -343,39 +343,39 @@
 
 			<!--   FOAM   -->
 			<internal_part name="RightFoamFront" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.045" height="0.135"/>
-				<origin rpy="0.0 0.0 0.0" xyz="-0.1 -0.05 -0.1"/>
+				<dimensions radius="0.042" height="0.135"/>
+				<origin rpy="0.0 1.57 0.0" xyz="0.08 -0.12 -0.07"/>
 				<material name="Foam"/>
 				<!-- <mass value="0.025"/> -->
 				<look name="manipulator"/>
-				<compound_transform rpy="1.6 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 
 			<internal_part name="LeftFoamFront" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.045" height="0.135"/>
-				<origin rpy="0.0 0.0 0.0" xyz="0.1 -0.05 -0.1"/>
+				<dimensions radius="0.042" height="0.135"/>
+				<origin rpy="0.0 1.57 0.0" xyz="0.08 0.12 -0.07"/>
 				<material name="Foam"/>
 				<!-- <mass value="0.025"/> -->
 				<look name="manipulator"/>
-				<compound_transform rpy="1.6 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 			
 			<internal_part name="LeftFoamRear" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.045" height="0.135"/>
-				<origin rpy="0.0 0.0 0.0" xyz="0.1 -0.05 0.1"/>
+				<dimensions radius="0.042" height="0.135"/>
+				<origin rpy="0.0 1.57 0.0" xyz="-0.08 -0.12 -0.07"/>
 				<material name="Foam"/>
 				<!-- <mass value="0.025"/> -->
 				<look name="manipulator"/>
-				<compound_transform rpy="1.6 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 
 			<internal_part name="RightFoamRear" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.045" height="0.135"/>
-				<origin rpy="0.0 0.0 0.0" xyz="-0.1 -0.05 0.1"/>
+				<dimensions radius="0.042" height="0.135"/>
+				<origin rpy="0.0 1.57 0.0" xyz="-0.08 0.12 -0.07"/>
 				<material name="Foam"/>
 				<!-- <mass value="0.025"/> -->
 				<look name="manipulator"/>
-				<compound_transform rpy="1.6 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part>
 
 		</base_link>
@@ -449,9 +449,10 @@
 			<link name="Vehicle"/>
 		</actuator>
 
+		<!-- -1.5707963267948966 -->
 		<!-- T5 -->
 		<actuator name="Thruster_L_UP_FRONT" type="thruster">
-			<origin rpy="-1.5707963267948966 0.0 0.0" xyz="0.117 -0.218 -0.037726"/>
+			<origin rpy="0.0 1.5707963267948966 0.0" xyz="0.117 -0.218 -0.037726"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="true">
@@ -468,7 +469,7 @@
 
 		<!-- T6 -->
 		<actuator name="Thruster_R_UP_FRONT" type="thruster">
-			<origin rpy="-1.5707963267948966 0.0  0.0" xyz="0.117 0.218 -0.037726"/>
+			<origin rpy="0.0 1.5707963267948966 0.0" xyz="0.117 0.218 -0.037726"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="false">
@@ -485,7 +486,7 @@
 
 		<!-- T7 -->
 		<actuator name="Thruster_L_UP_REAR" type="thruster">
-			<origin rpy="-1.5707963267948966 0.0 0.0" xyz="-0.123 -0.218 -0.037726"/>
+			<origin rpy="0.0 1.5707963267948966 0.0" xyz="-0.123 -0.218 -0.037726"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="false">
@@ -502,7 +503,7 @@
 
 		<!-- T8 -->
 		<actuator name="Thruster_R_UP_REAR" type="thruster">
-			<origin rpy="-1.5707963267948966 0.0 0." xyz="-0.123 0.218 -0.037726"/>
+			<origin rpy="0.0 1.5707963267948966 0.0" xyz="-0.123 0.218 -0.037726"/>
     		<specs max_setpoint="1000.0" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="true">

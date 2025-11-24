@@ -37,6 +37,7 @@
 
     <!--   Inlcude Robots  -->
     <include file="$(find bluerov2_sim)/scenarios/bluerov2.scn"/>
+    <!-- <include file="$(find bluerov2_sim)/scenarios/bluerov2_multilink.scn"/> -->
 
 
 </scenario>
