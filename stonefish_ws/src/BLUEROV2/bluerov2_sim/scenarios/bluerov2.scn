@@ -16,76 +16,51 @@
 		<base_link name="Vehicle" type="compound" physics="submerged">
 
 			<external_part name="Base" type="model" physics="submerged" buoyant="false">
-				<!--<physical>
-					<mesh filename="bluerov/camera_hull_phy.obj" scale="1.0"/>
-					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-				</physical> -->
 				<physical>
 					<mesh filename="bluerov2/base.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<external_part name="SideR" type="model" physics="submerged" buoyant="false">
-				<!--<physical>
-					<mesh filename="bluerov/side_r_phy.obj" scale="1.0"/>
-					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-				</physical>-->
 				<physical>
 					<mesh filename="bluerov2/right_side.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.025"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<external_part name="SideL" type="model" physics="submerged" buoyant="false">
-				<!--<physical>
-					<mesh filename="bluerov/side_l_phy.obj" scale="1.0"/>
-					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-				</physical> -->
 				<physical>
-					<mesh filename="bluerov2/left_side.obj" scale="1.0"/>
+					<mesh filename="bluerov2/left_side_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.025"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<external_part name="SideR_UP" type="model" physics="submerged" buoyant="false">
-				<!--<physical>
-					<mesh filename="bluerov/side_r_phy.obj" scale="1.0"/>
-					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-				</physical>-->
 				<physical>
 					<mesh filename="bluerov2/right_sideUP.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.015"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<external_part name="SideL_UP" type="model" physics="submerged" buoyant="false">
-				<!--<physical>
-					<mesh filename="bluerov/side_l_phy.obj" scale="1.0"/>
-					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-				</physical> -->
 				<physical>
 					<mesh filename="bluerov2/left_sideUP.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.015"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -97,7 +72,6 @@
 				</physical>
 				<material name="Polyamid"/>
 				<look name="black"/>
-				<!-- <mass value="0.04"/> -->
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
@@ -108,7 +82,6 @@
 				</physical>
 				<material name="Polyamid"/>
 				<look name="transparent"/>
-				<!-- <mass value="0.01"/> -->
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
@@ -118,7 +91,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.01"/> -->
 				<look name="blue"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -129,7 +101,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.01"/> -->
 				<look name="blue"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -140,7 +111,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -152,7 +122,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -163,7 +132,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -174,7 +142,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -185,7 +152,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -196,7 +162,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -207,7 +172,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -218,7 +182,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -229,7 +192,6 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polyamid"/>
-				<!-- <mass value="0.05"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -300,7 +262,6 @@
 				</physical>
 
 				<material name="Polyamid"/>
-				<!-- <mass value="0.01"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -312,7 +273,6 @@
 				</physical>
 
 				<material name="Polyamid"/>
-				<!-- <mass value="0.01"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -324,7 +284,6 @@
 				</physical>
 
 				<material name="Polyamid"/>
-				<!-- <mass value="0.01"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -336,7 +295,6 @@
 				</physical>
 
 				<material name="Polyamid"/>
-				<!-- <mass value="0.01"/> -->
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -346,7 +304,6 @@
 				<dimensions radius="0.042" height="0.135"/>
 				<origin rpy="0.0 1.57 0.0" xyz="0.08 -0.12 -0.07"/>
 				<material name="Foam"/>
-				<!-- <mass value="0.025"/> -->
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
@@ -355,7 +312,6 @@
 				<dimensions radius="0.042" height="0.135"/>
 				<origin rpy="0.0 1.57 0.0" xyz="0.08 0.12 -0.07"/>
 				<material name="Foam"/>
-				<!-- <mass value="0.025"/> -->
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
@@ -364,7 +320,6 @@
 				<dimensions radius="0.042" height="0.135"/>
 				<origin rpy="0.0 1.57 0.0" xyz="-0.08 -0.12 -0.07"/>
 				<material name="Foam"/>
-				<!-- <mass value="0.025"/> -->
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
@@ -373,7 +328,6 @@
 				<dimensions radius="0.042" height="0.135"/>
 				<origin rpy="0.0 1.57 0.0" xyz="-0.08 0.12 -0.07"/>
 				<material name="Foam"/>
-				<!-- <mass value="0.025"/> -->
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part>
@@ -384,26 +338,18 @@
 		<!-- T1 -->
 		<actuator name="Thruster_L_FORWARD_FRONT" type="thruster">
 			<origin rpy="0.0 0.0 0.7853981633974483" xyz="0.13007 -0.10335 0.027378"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
-			<propeller diameter="0.07" right="false">
+			<propeller diameter="0.07" right="true">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
-			<!-- <rotor_dynamics type="zero_order"/>
+			<rotor_dynamics type="first_order">
+				<time_constant value="1.0"/>
+			</rotor_dynamics>
 			<thrust_model type="quadratic">
 				<thrust_coeff value="1.0"/>
-			</thrust_model> -->
-			<rotor_dynamics type="mechanical_pi">
-				<!-- <rotor_inertia value="0.05"/> -->
-				<kp value="10.0"/>
-				<ki value="0.5"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.48" reverse="0.48"/>
-				<torque_coeff value="0.1"/>
 			</thrust_model>
 			<link name="Vehicle"/>
 		</actuator>
@@ -411,26 +357,18 @@
 		<!-- T2 -->
 		<actuator name="Thruster_R_FORWARD_FRONT" type="thruster">
 			<origin rpy="0.0 0.0 -3.9269908169872414" xyz="0.13007 0.10224 0.027084"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
-			<propeller diameter="0.07" right="false">
+			<propeller diameter="0.07" right="true">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
-			<!-- <rotor_dynamics type="zero_order"/>
+			<rotor_dynamics type="first_order">
+				<time_constant value="1.0"/>
+			</rotor_dynamics>
 			<thrust_model type="quadratic">
 				<thrust_coeff value="1.0"/>
-			</thrust_model> -->
-			<rotor_dynamics type="mechanical_pi">
-				<!-- <rotor_inertia value="0.05"/> -->
-				<kp value="10.0"/>
-				<ki value="0.5"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.48" reverse="0.48"/>
-				<torque_coeff value="0.1"/>
 			</thrust_model>
 			<link name="Vehicle"/>
 		</actuator>
@@ -438,26 +376,17 @@
 		<!-- T3 -->
 		<actuator name="Thruster_L_FORWARD_REAR" type="thruster">
 			<origin rpy="0.0 0.0 -0.7853981633974483" xyz="-0.15372 -0.10196 0.026784"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
-			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="1600.0" inverted="true"/> -->
-			<propeller diameter="0.07" right="false">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
-			<!-- <rotor_dynamics type="zero_order"/>
+			<rotor_dynamics type="first_order">
+				<time_constant value="1.0"/>
+			</rotor_dynamics>
 			<thrust_model type="quadratic">
 				<thrust_coeff value="1.0"/>
-			</thrust_model> -->
-			<rotor_dynamics type="mechanical_pi">
-				<!-- <rotor_inertia value="0.05"/> -->
-				<kp value="10.0"/>
-				<ki value="0.5"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.48" reverse="0.48"/>
-				<torque_coeff value="0.1"/>
 			</thrust_model>
 			<link name="Vehicle"/>
 		</actuator>
@@ -465,26 +394,17 @@
 		<!-- T4 -->
 		<actuator name="Thruster_R_FORWARD_REAR" type="thruster">
 			<origin rpy="0.0 0.0 3.9269908169872414" xyz="-0.15091 0.10288 0.027475"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
-			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="1600.0" inverted="true"/> -->
-			<propeller diameter="0.07" right="false">
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
-			<!-- <rotor_dynamics type="zero_order"/>
+			<rotor_dynamics type="first_order">
+				<time_constant value="1.0"/>
+			</rotor_dynamics>
 			<thrust_model type="quadratic">
 				<thrust_coeff value="1.0"/>
-			</thrust_model> -->
-			<rotor_dynamics type="mechanical_pi">
-				<!-- <rotor_inertia value="0.05"/> -->
-				<kp value="10.0"/>
-				<ki value="0.5"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.48" reverse="0.48"/>
-				<torque_coeff value="0.1"/>
 			</thrust_model>
 			<link name="Vehicle"/>
 		</actuator>
@@ -493,26 +413,18 @@
 		<!-- T5 -->
 		<actuator name="Thruster_L_UP_FRONT" type="thruster">
 			<origin rpy="0.0 1.5707963267948966 0.0" xyz="0.117 -0.218 -0.037726"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
-			<propeller diameter="0.07" right="false">
+			<propeller diameter="0.07" right="true">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
-			<!-- <rotor_dynamics type="zero_order"/>
+			<rotor_dynamics type="first_order">
+				<time_constant value="1.0"/>
+			</rotor_dynamics>
 			<thrust_model type="quadratic">
 				<thrust_coeff value="1.0"/>
-			</thrust_model> -->
-			<rotor_dynamics type="mechanical_pi">
-				<!-- <rotor_inertia value="0.05"/> -->
-				<kp value="10.0"/>
-				<ki value="0.5"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.48" reverse="0.48"/>
-				<torque_coeff value="0.1"/>
 			</thrust_model>
 			<link name="Vehicle"/>
 		</actuator>
@@ -520,26 +432,18 @@
 		<!-- T6 -->
 		<actuator name="Thruster_R_UP_FRONT" type="thruster">
 			<origin rpy="0.0 1.5707963267948966 0.0" xyz="0.117 0.218 -0.037726"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
-			<propeller diameter="0.07" right="false">
+			<propeller diameter="0.07" right="true">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
-			<!-- <rotor_dynamics type="zero_order"/>
+			<rotor_dynamics type="first_order">
+				<time_constant value="1.0"/>
+			</rotor_dynamics>
 			<thrust_model type="quadratic">
 				<thrust_coeff value="1.0"/>
-			</thrust_model> -->
-			<rotor_dynamics type="mechanical_pi">
-				<!-- <rotor_inertia value="0.05"/> -->
-				<kp value="10.0"/>
-				<ki value="0.5"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.48" reverse="0.48"/>
-				<torque_coeff value="0.1"/>
 			</thrust_model>
 			<link name="Vehicle"/>
 		</actuator>
@@ -547,26 +451,18 @@
 		<!-- T7 -->
 		<actuator name="Thruster_L_UP_REAR" type="thruster">
 			<origin rpy="0.0 1.5707963267948966 0.0" xyz="-0.123 -0.218 -0.037726"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
-			<propeller diameter="0.07" right="false">
+			<propeller diameter="0.07" right="true">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
-			<!-- <rotor_dynamics type="zero_order"/>
+			<rotor_dynamics type="first_order">
+				<time_constant value="1.0"/>
+			</rotor_dynamics>
 			<thrust_model type="quadratic">
 				<thrust_coeff value="1.0"/>
-			</thrust_model> -->
-			<rotor_dynamics type="mechanical_pi">
-				<!-- <rotor_inertia value="0.05"/> -->
-				<kp value="10.0"/>
-				<ki value="0.5"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.48" reverse="0.48"/>
-				<torque_coeff value="0.1"/>
 			</thrust_model>
 			<link name="Vehicle"/>
 		</actuator>
@@ -574,26 +470,18 @@
 		<!-- T8 -->
 		<actuator name="Thruster_R_UP_REAR" type="thruster">
 			<origin rpy="0.0 1.5707963267948966 0.0" xyz="-0.123 0.218 -0.037726"/>
-    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="false"/>
+    		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
-			<propeller diameter="0.07" right="false">
+			<propeller diameter="0.07" right="true">
 				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
-			<!-- <rotor_dynamics type="zero_order"/>
+			<rotor_dynamics type="first_order">
+				<time_constant value="1.0"/>
+			</rotor_dynamics>
 			<thrust_model type="quadratic">
 				<thrust_coeff value="1.0"/>
-			</thrust_model> -->
-			<rotor_dynamics type="mechanical_pi">
-				<!-- <rotor_inertia value="0.05"/> -->
-				<kp value="10.0"/>
-				<ki value="0.5"/>
-				<ilimit value="2.0"/>
-			</rotor_dynamics>
-			<thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.48" reverse="0.48"/>
-				<torque_coeff value="0.1"/>
 			</thrust_model>
 			<link name="Vehicle"/>
 		</actuator>

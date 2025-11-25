@@ -103,6 +103,17 @@ class JoystickController(Node):
                     -1.0,
                     -1.0
                 ]
+        elif buttons[self.buttons_index_["L1"]] and buttons[self.buttons_index_["R1"]]:
+            rov_control_msg.data = [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
         else:
             # Map left analog stick to vertical motion (up/down) and horizontal motion (left/right)
             vertical         = axes[self.axes_index_["analog_left_UD"]] 
