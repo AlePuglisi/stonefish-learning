@@ -82,10 +82,10 @@ class JoystickController(Node):
 
         elif axes[self.axes_index_["arrow_UD"]] == 1 :
             rov_control_msg.data = [
-                    0.0,
-                    0.0,
-                    -1.0,
-                    -1.0,
+                    0.5,
+                    0.5,
+                    -0.5,
+                    -0.5,
                     0.0,
                     0.0,
                     0.0,
@@ -93,10 +93,10 @@ class JoystickController(Node):
                 ]
         elif axes[self.axes_index_["arrow_UD"]] == -1 :
             rov_control_msg.data = [
-                    -1.0,
-                    -1.0,
-                    0.0,
-                    0.0,
+                    -0.5,
+                    -0.5,
+                    0.5,
+                    0.5,
                     0.0,
                     0.0,
                     0.0,

@@ -7,11 +7,11 @@
 		<!-- Subsea Buoyancy Foam: R-3318 -->
 		<material name="Foam" density="288.0" restitution="0.3"/>
 		<!-- Fake Buoyancy Foam -->
-		<material name="InternalFoam" density="100.0" restitution="0.3"/>
+		<material name="InternalFoam" density="50.0" restitution="0.3"/>
 		<!-- BlueROV2 Base Frames -->
-		<material name="Polyethylene" density="1600.0" restitution="0.75"/>
+		<material name="Polyethylene" density="1800.0" restitution="0.75"/>
 		<!-- BlueROV2 Thrusters Duct -->
-		<material name="Polycarbonate" density="800.0" restitution="0.75"/>
+		<material name="Polycarbonate" density="1000.0" restitution="0.75"/>
 		<!-- BlueROV2 Tubes -->
 		<material name="Acrylic" density="1300.0" restitution="0.9"/>
 
