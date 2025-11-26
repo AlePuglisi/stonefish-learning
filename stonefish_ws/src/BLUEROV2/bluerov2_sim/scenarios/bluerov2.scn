@@ -20,7 +20,7 @@
 					<mesh filename="bluerov2/base.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polyethylene"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -30,7 +30,7 @@
 					<mesh filename="bluerov2/right_side.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polyethylene"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -40,7 +40,7 @@
 					<mesh filename="bluerov2/left_side_v2.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polyethylene"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -50,7 +50,7 @@
 					<mesh filename="bluerov2/right_sideUP.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polyethylene"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -60,7 +60,7 @@
 					<mesh filename="bluerov2/left_sideUP.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polyethylene"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -70,7 +70,7 @@
 					<mesh filename="bluerov2/first_cylinder.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Acrylic"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -80,7 +80,7 @@
 					<mesh filename="bluerov2/dome.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Acrylic"/>
 				<look name="transparent"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -90,7 +90,7 @@
 					<mesh filename="bluerov2/left_foam.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Foam"/>
 				<look name="blue"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -100,98 +100,98 @@
 					<mesh filename="bluerov2/right_foam.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Foam"/>
 				<look name="blue"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="SecondCylinder" type="model" physics="submerged" buoyant="true">
+			<external_part name="SecondCylinder" type="model" physics="submerged" buoyant="false">
 				<physical>
 					<mesh filename="bluerov2/second_cylinder.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Acrylic"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<!--   DUCTS   -->
-			<external_part name="DuctL_FORWARD_FRONT" type="model" physics="submerged" buoyant="true">
+			<external_part name="DuctL_FORWARD_FRONT" type="model" physics="submerged" buoyant="false">
 				<physical>
-					<mesh filename="bluerov2/duct_left_front.obj" scale="1.0"/>
+					<mesh filename="bluerov2/duct_left_front_42.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polycarbonate"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="DuctL_FORWARD_REAR" type="model" physics="submerged" buoyant="true">
+			<external_part name="DuctL_FORWARD_REAR" type="model" physics="submerged" buoyant="false">
 				<physical>
-					<mesh filename="bluerov2/duct_left_rear.obj" scale="1.0"/>
+					<mesh filename="bluerov2/duct_left_rear_48.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polycarbonate"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="DuctL_UP_FRONT" type="model" physics="submerged" buoyant="true">
+			<external_part name="DuctL_UP_FRONT" type="model" physics="submerged" buoyant="false">
 				<physical>
 					<mesh filename="bluerov2/duct_left_up_front.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polycarbonate"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="DuctL_UP_REAR" type="model" physics="submerged" buoyant="true">
+			<external_part name="DuctL_UP_REAR" type="model" physics="submerged" buoyant="false">
 				<physical>
 					<mesh filename="bluerov2/duct_left_up_rear.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polycarbonate"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="DuctR_FORWARD_FRONT" type="model" physics="submerged" buoyant="true">
+			<external_part name="DuctR_FORWARD_FRONT" type="model" physics="submerged" buoyant="false">
 				<physical>
-					<mesh filename="bluerov2/duct_right_front.obj" scale="1.0"/>
+					<mesh filename="bluerov2/duct_right_front_42.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polycarbonate"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="DuctR_FORWARD_REAR" type="model" physics="submerged" buoyant="true">
+			<external_part name="DuctR_FORWARD_REAR" type="model" physics="submerged" buoyant="false">
 				<physical>
-					<mesh filename="bluerov2/duct_right_rear.obj" scale="1.0"/>
+					<mesh filename="bluerov2/duct_right_rear_48.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polycarbonate"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="DuctR_UP_FRONT" type="model" physics="submerged" buoyant="true">
+			<external_part name="DuctR_UP_FRONT" type="model" physics="submerged" buoyant="false">
 				<physical>
 					<mesh filename="bluerov2/duct_right_up_front.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polycarbonate"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="DuctR_UP_REAR" type="model" physics="submerged" buoyant="true">
+			<external_part name="DuctR_UP_REAR" type="model" physics="submerged" buoyant="false">
 				<physical>
 					<mesh filename="bluerov2/duct_right_up_rear.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
+				<material name="Polycarbonate"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -199,57 +199,55 @@
 			<!--   WEIGHTS   -->
 			<!-- <external_part name="WeightMiddleMiddle" type="model" physics="submerged" buoyant="false">
 				<physical>
-					<mesh filename="bluerov2/weight_middle_middle.obj" scale="1.0"/>
+					<mesh filename="bluerov2/weights/weight_middle_middle.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
-
+				<material name="Neutral"/>
+    			<mass value="0.2"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<external_part name="WeightMiddleUP" type="model" physics="submerged" buoyant="false">
 				<physical>
-					<mesh filename="bluerov2/weight_middle_up.obj" scale="1.0"/>
+					<mesh filename="bluerov2/weights/weight_middle_up.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
-
+				<material name="Neutral"/>
+    			<mass value="0.2"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<external_part name="WeightMiddleDown" type="model" physics="submerged" buoyant="false">
 				<physical>
-					<mesh filename="bluerov2/weight_middle_down.obj" scale="1.0"/>
+					<mesh filename="bluerov2/weights/weight_middle_down.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Polyamid"/>
-
+				<material name="Neutral"/>
+    			<mass value="0.2"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<external_part name="WeightRight" type="model" physics="submerged" buoyant="false">
 				<physical>
-					<mesh filename="bluerov2/weight_right.obj" scale="1.0"/>
+					<mesh filename="bluerov2/weights/weight_right.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-
-				<material name="Polyamid"/>
-
+    			<mass value="0.2"/>
+				<material name="Neutral"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<external_part name="WeightLeft" type="model" physics="submerged" buoyant="false">
 				<physical>
-					<mesh filename="bluerov2/weight_left.obj" scale="1.0"/>
+					<mesh filename="bluerov2/weights/weight_left.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-
-				<material name="Polyamid"/>
-
+    			<mass value="0.2"/>
+				<material name="Neutral"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part> -->
@@ -261,7 +259,7 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 
-				<material name="Polyamid"/>
+				<material name="Polyethylene"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -272,7 +270,7 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 
-				<material name="Polyamid"/>
+				<material name="Polyethylene"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -283,7 +281,7 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 
-				<material name="Polyamid"/>
+				<material name="Polyethylene"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
@@ -294,40 +292,40 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 
-				<material name="Polyamid"/>
+				<material name="Polyethylene"/>
 				<look name="black"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
 			<!--   FOAM   -->
 			<internal_part name="RightFoamFront" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.042" height="0.135"/>
-				<origin rpy="0.0 1.57 0.0" xyz="0.08 -0.12 -0.07"/>
-				<material name="Foam"/>
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.0 1.57 0.0" xyz="0.1 -0.125 -0.07"/>
+				<material name="InternalFoam"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 
 			<internal_part name="LeftFoamFront" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.042" height="0.135"/>
-				<origin rpy="0.0 1.57 0.0" xyz="0.08 0.12 -0.07"/>
-				<material name="Foam"/>
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.0 1.57 0.0" xyz="0.1 0.125 -0.07"/>
+				<material name="InternalFoam"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 			
 			<internal_part name="LeftFoamRear" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.042" height="0.135"/>
-				<origin rpy="0.0 1.57 0.0" xyz="-0.08 -0.12 -0.07"/>
-				<material name="Foam"/>
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.0 1.57 0.0" xyz="-0.1 -0.125 -0.07"/>
+				<material name="InternalFoam"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 
 			<internal_part name="RightFoamRear" type="cylinder" physics="submerged" buoyant="true">
-				<dimensions radius="0.042" height="0.135"/>
-				<origin rpy="0.0 1.57 0.0" xyz="-0.08 0.12 -0.07"/>
-				<material name="Foam"/>
+				<dimensions radius="0.05" height="0.15"/>
+				<origin rpy="0.0 1.57 0.0" xyz="-0.1 0.125 -0.07"/>
+				<material name="InternalFoam"/>
 				<look name="manipulator"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part>
@@ -337,11 +335,11 @@
 		<!--   THRUSTERS   -->
 		<!-- T1 -->
 		<actuator name="Thruster_L_FORWARD_FRONT" type="thruster">
-			<origin rpy="0.0 0.0 0.7853981633974483" xyz="0.13007 -0.10335 0.027378"/>
+			<origin rpy="0.0 0.0 ${42*pi/180}" xyz="0.12445 -0.1036 0.02744"/>
     		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
+				<mesh filename="bluerov2/Propeller.obj" scale="1.05"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -356,11 +354,11 @@
 
 		<!-- T2 -->
 		<actuator name="Thruster_R_FORWARD_FRONT" type="thruster">
-			<origin rpy="0.0 0.0 -3.9269908169872414" xyz="0.13007 0.10224 0.027084"/>
+			<origin rpy="0.0 0.0 -${48*pi/180}" xyz="0.12525 0.1031 0.027898"/>
     		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<!-- <specs thrust_coeff="0.52" torque_coeff="0.001" max_rpm="3278.0" inverted="true"/> -->
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
+				<mesh filename="bluerov2/Propeller.obj" scale="1.05"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -375,10 +373,10 @@
 
 		<!-- T3 -->
 		<actuator name="Thruster_L_FORWARD_REAR" type="thruster">
-			<origin rpy="0.0 0.0 -0.7853981633974483" xyz="-0.15372 -0.10196 0.026784"/>
+			<origin rpy="0.0 0.0 -${42*pi/180 + pi} " xyz="-0.15099 -0.099122 0.027183"/>
     		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
+				<mesh filename="bluerov2/Propeller.obj" scale="1.05"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -393,10 +391,10 @@
 
 		<!-- T4 -->
 		<actuator name="Thruster_R_FORWARD_REAR" type="thruster">
-			<origin rpy="0.0 0.0 3.9269908169872414" xyz="-0.15091 0.10288 0.027475"/>
+			<origin rpy="0.0 0.0 ${48*pi/180 + pi}" xyz="-0.15174 0.098539 0.026725"/>
     		<specs max_setpoint="${1000.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
+				<mesh filename="bluerov2/Propeller.obj" scale="1.05"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>

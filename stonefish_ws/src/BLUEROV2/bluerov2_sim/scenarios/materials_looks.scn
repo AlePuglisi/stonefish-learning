@@ -3,16 +3,42 @@
 
     <materials>
 		<material name="Neutral" density="1000.0" restitution="0.5"/>
-		<material name="Foam" density="180.0" restitution="0.5"/>
-		<material name="Polyamid" density="1100.0" restitution="0.1"/>
+
+		<!-- Subsea Buoyancy Foam: R-3318 -->
+		<material name="Foam" density="288.0" restitution="0.3"/>
+		<!-- Fake Buoyancy Foam -->
+		<material name="InternalFoam" density="100.0" restitution="0.3"/>
+		<!-- BlueROV2 Base Frames -->
+		<material name="Polyethylene" density="1600.0" restitution="0.75"/>
+		<!-- BlueROV2 Thrusters Duct -->
+		<material name="Polycarbonate" density="800.0" restitution="0.75"/>
+		<!-- BlueROV2 Tubes -->
+		<material name="Acrylic" density="1300.0" restitution="0.9"/>
 
 		<friction_table>
 			<friction material1="Neutral" material2="Neutral" static="0.5" dynamic="0.2"/>
 			<friction material1="Neutral" material2="Foam" static="0.5" dynamic="0.2"/>
-			<friction material1="Polyamid" material2="Foam" static="0.5" dynamic="0.2"/>
+			<friction material1="Neutral" material2="Polyethylene" static="0.5" dynamic="0.2"/>
+			<friction material1="Neutral" material2="Polycarbonate" static="0.5" dynamic="0.2"/>
+			<friction material1="Neutral" material2="Acrylic" static="0.5" dynamic="0.2"/>
+			<friction material1="Neutral" material2="InternalFoam" static="0.5" dynamic="0.2"/>
+
 			<friction material1="Foam" material2="Foam" static="0.5" dynamic="0.2"/>
-			<friction material1="Neutral" material2="Polyamid" static="0.2" dynamic="0.05"/>
-			<friction material1="Polyamid" material2="Polyamid" static="0.1" dynamic="0.05"/>
+			<friction material1="Foam" material2="Acrylic" static="0.5" dynamic="0.2"/>
+			<friction material1="Foam" material2="Polyethylene" static="0.5" dynamic="0.2"/>
+			<friction material1="Foam" material2="Polycarbonate" static="0.5" dynamic="0.2"/>
+			<friction material1="Foam" material2="Acrylic" static="0.5" dynamic="0.2"/>
+			<friction material1="Foam" material2="InternalFoam" static="0.5" dynamic="0.2"/>
+
+			<friction material1="Polyethylene" material2="Polyethylene" static="0.5" dynamic="0.2"/>
+			<friction material1="Polyethylene" material2="Polycarbonate" static="0.5" dynamic="0.2"/>	
+			<friction material1="Polyethylene" material2="Acrylic" static="0.5" dynamic="0.2"/>
+			<friction material1="Polyethylene" material2="InternalFoam" static="0.5" dynamic="0.2"/>
+
+			<friction material1="Acrylic" material2="Acrylic" static="0.5" dynamic="0.2"/>
+			<friction material1="Acrylic" material2="InternalFoam" static="0.5" dynamic="0.2"/>
+
+			<friction material1="InternalFoam" material2="InternalFoam" static="0.5" dynamic="0.2"/>
 		</friction_table>
 	</materials>
 
