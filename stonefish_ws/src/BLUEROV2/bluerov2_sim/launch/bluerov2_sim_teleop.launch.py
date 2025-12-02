@@ -56,6 +56,24 @@ def generate_launch_description():
             arguments=["0", "0", "0", "-1.57", "0", "-1.57", "odom", "base_visual"]
         )  
     
+    joy_node = Node(
+            package='joy',
+            executable='joy_node',
+            parameters=[{
+                'deadzone': 0.1,            # Default is 0.05
+                'autorepeat_rate': 5.0,     # Hz, set to 0.0 to disable autorepeat
+                'sticky_buttons': False,
+                'coalesce_interval_ms': 1,  # Milliseconds between published messages
+            }],
+            output='screen',
+        )  
+
+    bluerov2_joy_teleop_node = Node(
+            package='bluerov2_control',
+            executable='bluerov2_joy_teleop',
+            output='screen',
+        )
+    
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
@@ -75,7 +93,8 @@ def generate_launch_description():
         namespace_action,
 
         odom2tf_node, 
-        #bluerov2_joy_teleop_node,
+        joy_node,
+        bluerov2_joy_teleop_node,
         static_tf_node,
         rviz_node, 
 

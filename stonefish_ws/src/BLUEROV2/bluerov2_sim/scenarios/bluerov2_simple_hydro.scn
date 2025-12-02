@@ -75,12 +75,13 @@
 		</base_link>
 
 		<!--   THRUSTERS   -->
+
 		<!-- T1 -->
-		<actuator name="Thruster_L_FORWARD_FRONT" type="thruster">
-			<origin rpy="0.0 0.0 ${42*pi/180}" xyz="0.12445 -0.1036 0.02744"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.05"/>
+		<actuator name="Thruster_R_FORWARD_FRONT" type="thruster">
+			<origin rpy="0.0 0.0 -${42*pi/180}" xyz="0.12525 0.1031 0.027898"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
+				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -101,11 +102,11 @@
 		</actuator>
 
 		<!-- T2 -->
-		<actuator name="Thruster_R_FORWARD_FRONT" type="thruster">
-			<origin rpy="0.0 0.0 -${42*pi/180}" xyz="0.12525 0.1031 0.027898"/>
+		<actuator name="Thruster_L_FORWARD_FRONT" type="thruster">
+			<origin rpy="0.0 0.0 ${42*pi/180}" xyz="0.12445 -0.1036 0.02744"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.05"/>
+				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -126,11 +127,11 @@
 		</actuator>
 
 		<!-- T3 -->
-		<actuator name="Thruster_L_FORWARD_REAR" type="thruster">
-			<origin rpy="0.0 0.0 -${48*pi/180 + pi} " xyz="-0.15099 -0.099122 0.027183"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.05"/>
+		<actuator name="Thruster_R_FORWARD_REAR" type="thruster">
+			<origin rpy="0.0 0.0 ${48*pi/180 + pi}" xyz="-0.15174 0.098539 0.026725"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
+				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -151,11 +152,11 @@
 		</actuator>
 
 		<!-- T4 -->
-		<actuator name="Thruster_R_FORWARD_REAR" type="thruster">
-			<origin rpy="0.0 0.0 ${48*pi/180 + pi}" xyz="-0.15174 0.098539 0.026725"/>
+		<actuator name="Thruster_L_FORWARD_REAR" type="thruster">
+			<origin rpy="0.0 0.0 -${48*pi/180 + pi} " xyz="-0.15099 -0.099122 0.027183"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.05"/>
+				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -175,13 +176,12 @@
 			<link name="base_link"/>
 		</actuator>
 
-
 		<!-- T5 -->
-		<actuator name="Thruster_L_UP_FRONT" type="thruster">
-			<origin rpy="0.0 ${pi/2} 0.0" xyz="0.117 -0.218 -0.037726"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+		<actuator name="Thruster_R_UP_FRONT" type="thruster">
+			<origin rpy="0.0 ${pi/2} 0.0" xyz="0.117 0.218 -0.037726"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
+				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -202,11 +202,11 @@
 		</actuator>
 
 		<!-- T6 -->
-		<actuator name="Thruster_R_UP_FRONT" type="thruster">
-			<origin rpy="0.0 ${pi/2} 0.0" xyz="0.117 0.218 -0.037726"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
+		<actuator name="Thruster_L_UP_FRONT" type="thruster">
+			<origin rpy="0.0 ${pi/2} 0.0" xyz="0.117 -0.218 -0.037726"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
+				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -227,11 +227,11 @@
 		</actuator>
 
 		<!-- T7 -->
-		<actuator name="Thruster_L_UP_REAR" type="thruster">
-			<origin rpy="0.0 ${pi/2} 0.0" xyz="-0.123 -0.218 -0.037726"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
+		<actuator name="Thruster_R_UP_REAR" type="thruster">
+			<origin rpy="0.0 ${pi/2} 0.0" xyz="-0.123 0.218 -0.037726"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
+				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -252,11 +252,11 @@
 		</actuator>
 
 		<!-- T8 -->
-		<actuator name="Thruster_R_UP_REAR" type="thruster">
-			<origin rpy="0.0 ${pi/2} 0.0" xyz="-0.123 0.218 -0.037726"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+		<actuator name="Thruster_L_UP_REAR" type="thruster">
+			<origin rpy="0.0 ${pi/2} 0.0" xyz="-0.123 -0.218 -0.037726"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/Propeller.obj" scale="1.0"/>
+				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -275,6 +275,7 @@
 			</thrust_model> -->
 			<link name="base_link"/>
 		</actuator>
+
 
 		<!--   SENSORS   -->
 		<sensor name="Odometry" type="odometry" rate="10.0">
