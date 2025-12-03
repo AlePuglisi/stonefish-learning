@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="bluerov2" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:include filename="materials.xacro" />
+
+    <link name="bluerov2_base">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/simple_hydro/bluerov2_base.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+
+    <link name="camera_dome">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/dome.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="glass"/>
+      </visual>
+    </link>
+
+    <link name="foams">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://bluerov2_sim/data/bluerov2/stl/simple_hydro/foams.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="blue"/>
+      </visual>
+    </link>
+
+
+    <joint name="base_foams" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="bluerov2_base" />
+      <child link="foams" /> 
+    </joint>
+
+    <joint name="base_sideR" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="bluerov2_base" />
+      <child link="camera_dome" /> 
+    </joint>
+    
+</robot>

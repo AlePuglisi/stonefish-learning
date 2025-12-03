@@ -9,7 +9,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
     description_path = get_package_share_directory('bluerov2_sim')
-    xacro_path = os.path.join(description_path, "urdf", "bluerov2.urdf.xacro")
+    xacro_path = os.path.join(description_path, "urdf", "bluerov2_simple_hydro.urdf.xacro")
     robot_description_command = Command(['xacro ', xacro_path])
 
     # Declare launch arguments
@@ -53,7 +53,7 @@ def generate_launch_description():
             package="tf2_ros",
             executable="static_transform_publisher",
             output="screen" ,
-            arguments=["0", "0", "0", "-1.57", "0", "-1.57", "odom", "base_visual"]
+            arguments=["0", "0", "0", "0", "0", "0", "odom", "bluerov2_base"]
         )  
     
     joy_node = Node(

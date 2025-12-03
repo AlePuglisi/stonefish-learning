@@ -3,7 +3,7 @@
 
     <xacro:include filename="materials.xacro" />
 
-    <link name="base_visual">
+    <link name="bluerov2_base">
       <visual>
         <origin
           xyz="0 0 0"
@@ -232,103 +232,103 @@
 
     <joint name="base_sideRUp" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="sideRUp" /> 
     </joint>
 
     <joint name="base_sideLUp" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="sideLUp" /> 
     </joint>
 
     <joint name="base_sideR" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="sideR" /> 
     </joint>
 
     <joint name="base_sideL" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="sideL" /> 
     </joint>
 
     <joint name="base_firstCylinder" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="firstCylinder" /> 
     </joint>
 
     <joint name="base_cameraDome" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="cameraDome" /> 
     </joint>
 
     <joint name="base_rightFoamEnclosure" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="rightFoamEnclosure" /> 
     </joint>
 
     <joint name="base_leftFoamEnclosure" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="leftFoamEnclosure" /> 
     </joint>
 
     <joint name="base_secondCylinder" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="secondCylinder" /> 
     </joint>
 
     <link name="base"/>
-    <joint name="base_visual_base" type="fixed">
+    <joint name="bluerov2_base_base" type="fixed">
       <origin rpy="1.57 -1.57 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="base" /> 
     </joint>
 
     <joint name="base_ductLeftFront" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="ductLeftFront" /> 
     </joint>
     <joint name="base_ductLeftRear" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="ductLeftRear" /> 
     </joint>
     <joint name="base_ductLeftUpFront" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="ductLeftUpFront" /> 
     </joint>
     <joint name="base_ductLeftUpRear" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="ductLeftUpRear" /> 
     </joint>
     <joint name="base_ductRightUpFront" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="ductRightUpFront" /> 
     </joint>
     <joint name="base_ductRightUpRear" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="ductRightUpRear" /> 
     </joint>
     <joint name="base_ductRightFront" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="ductRightFront" /> 
     </joint>
     <joint name="base_ductRightRear" type="fixed">
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <parent link="base_visual" />
+      <parent link="bluerov2_base" />
       <child link="ductRightRear" /> 
     </joint>
     
