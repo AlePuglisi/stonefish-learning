@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<scenario>
+
+	<static name="WindBase" type="model">
+		<physical>
+			<mesh filename="wind_turbine/wind_turbine_base.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine/wind_turbine_base.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="yellow"/>
+		<world_transform xyz="30.0 0.0 10.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+	<static name="WindPile" type="model">
+		<physical>
+			<mesh filename="wind_turbine/wind_turbine_pile.obj" scale="3.5" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine/wind_turbine_pile.obj" scale="3.5"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="windTurbinePile"/>
+		<world_transform xyz="10 -11.5 -12.5" rpy="0.0 0.0 -1.047"/>
+	</static>
+
+</scenario>

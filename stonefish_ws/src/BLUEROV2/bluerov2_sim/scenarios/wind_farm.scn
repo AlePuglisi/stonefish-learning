@@ -1,32 +1,339 @@
 <?xml version="1.0"?>
 <scenario>
 
-	<static name="WindBase" type="model">
+    <looks>
+        <look name="PileUp" gray="1.0" roughness="0.2" metalness="0.0" texture="wind_turbine_complex/texture/UpPile.png"/>
+        <look name="PileSub" gray="1.0" roughness="0.2" metalness="0.0" texture="wind_turbine_complex/texture/SubPile.png"/>
+        <look name="Base" gray="1.0" roughness="0.2" metalness="0.0" texture="wind_turbine_complex/texture/Base.png"/>
+        <look name="PileSubCyl30" gray="1.0" roughness="0.2" metalness="0.0" texture="wind_turbine_complex/texture/PileSubCyl30.png"/>
+        <look name="HCylSub" gray="1.0" roughness="0.2" metalness="0.0" texture="wind_turbine_complex/texture/HCylSub.png"/>
+		<look name="HCylUp" gray="1.0" roughness="0.2" metalness="0.0" texture="wind_turbine_complex/texture/HCylUp.png"/>
+		<look name="White" rgb="1.0 1.0 1.0" roughness="1.0" metalness="0.0"/>
+		<look name="Black" rgb="0.0 0.0 0.0" roughness="1.0" metalness="0.0"/>
+    </looks>   
+
+	<static name="Base1" type="model">
 		<physical>
-			<mesh filename="wind_turbine/wind_turbine_base.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_complex/mesh/Base1.obj" scale="1.0" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine/wind_turbine_base.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_complex/mesh/Base1.obj" scale="1.0"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Neutral"/>
-		<look name="yellow"/>
-		<world_transform xyz="30.0 0.0 10.0" rpy="0.0 0.0 0.0"/>
+		<look name="Base"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileSub1" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileSub1.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileSub1.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="PileSub"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileUp1" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileUp1.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileUp1.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="PileUp"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileSubCyl301" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileSubCyl301.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileSubCyl301.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="PileSubCyl30"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PilePieces1" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PilePieces1.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PilePieces1.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="White"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
 	</static>
 
-	<static name="WindPile" type="model">
+
+	<static name="HCylSub1to2" type="model">
 		<physical>
-			<mesh filename="wind_turbine/wind_turbine_pile.obj" scale="3.5" convex="true"/>
+			<mesh filename="wind_turbine_complex/mesh/HCylSub1to2.obj" scale="1.0" convex="false"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine/wind_turbine_pile.obj" scale="3.5"/>
+			<mesh filename="wind_turbine_complex/mesh/HCylSub1to2.obj" scale="1.0"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Neutral"/>
-		<look name="windTurbinePile"/>
-		<world_transform xyz="10 -11.5 -12.5" rpy="0.0 0.0 -1.047"/>
+		<look name="HCylSub"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
 	</static>
+	<static name="HCylUp1to2" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/HCylUp1to2.obj" scale="1.0" convex="false"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/HCylUp1to2.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="HCylUp"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+
+
+	<static name="Base2" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/Base2.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/Base2.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="Base"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileSub2" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileSub2.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileSub2.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="PileSub"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileUp2" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileUp2.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileUp2.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="PileUp"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileSubCyl302" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileSubCyl302.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileSubCyl302.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="PileSubCyl30"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PilePieces2" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PilePieces2.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PilePieces2.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="White"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+
+	<static name="HCylSub2to3" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/HCylSub2to3.obj" scale="1.0" convex="false"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/HCylSub2to3.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="HCylSub"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="HCylUp2to3" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/HCylUp2to3.obj" scale="1.0" convex="false"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/HCylUp2to3.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="HCylUp"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+
+
+	<static name="Base3" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/Base3.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/Base3.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="Base"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileSub3" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileSub3.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileSub3.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="PileSub"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileUp3" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileUp3.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileUp3.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="PileUp"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileSubCyl303" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileSubCyl303.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileSubCyl303.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="PileSubCyl30"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PilePieces3" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PilePieces3.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PilePieces3.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="White"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+
+	<static name="HCylSub1to3" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/HCylSub1to3.obj" scale="1.0" convex="false"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/HCylSub1to3.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="HCylSub"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="HCylUp1to3" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/HCylUp1to3.obj" scale="1.0" convex="false"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/HCylUp1to3.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="HCylUp"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+
+
+
+	<!-- <static name="PileSub1Mussels" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileSub1Mussels.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileSub1Mussels.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="Black"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileSub2Mussels" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileSub2Mussels.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileSub2Mussels.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="Black"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+	<static name="PileSub3Mussels" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/PileSub3Mussels.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/PileSub3Mussels.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="Black"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static> -->
 
 </scenario>
