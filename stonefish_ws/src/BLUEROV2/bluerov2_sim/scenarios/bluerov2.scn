@@ -677,7 +677,7 @@
 		</sensor>
 			
 		<sensor name="FLS" type="fls" rate="10.0">
-			<specs beams="512" bins="500" horizontal_fov="130.0" vertical_fov="20.0"/>
+			<specs beams="512" bins="500" horizontal_fov="130.0" vertical_fov="20.0" output_format="uint32"/>
 			<settings range_min="0.5" range_max="20.0" gain="1.1"/>
 			<noise multiplicative="0.01" additive="0.02"/>
 			<display colormap="hot"/>

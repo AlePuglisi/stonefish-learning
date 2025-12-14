@@ -78,7 +78,7 @@
 #include <entities/solids/Sphere.h>
 
 UnderwaterTestManager::UnderwaterTestManager(sf::Scalar stepsPerSecond)
-: SimulationManager(stepsPerSecond, sf::SolverType::SOLVER_SI, sf::CollisionFilteringType::COLLISION_EXCLUSIVE)
+: SimulationManager(stepsPerSecond, sf::Solver::SI, sf::CollisionFilter::EXCLUSIVE)
 {
 }
 
@@ -158,8 +158,8 @@ void UnderwaterTestManager::BuildScenario()
 
     //Create underwater vehicle body
     //Externals
-    sf::BodyPhysicsSettings phy;
-    phy.mode = sf::BodyPhysicsMode::SUBMERGED;
+    sf::PhysicsSettings phy;
+    phy.mode = sf::PhysicsMode::SUBMERGED;
     phy.collisions = true;
 
     // sf::Sphere* sph = new sf::Sphere("Sphere", phy, 0.5, sf::I4(), "Steel", "yellow");
@@ -254,14 +254,19 @@ void UnderwaterTestManager::BuildScenario()
 
     //Create sensors
     sf::Odometry* odom = new sf::Odometry("Odom");
+
     sf::Pressure* press = new sf::Pressure("Pressure");
     press->setNoise(1.0);
+
     sf::DVL* dvl = new sf::DVL("DVL", 30.0, false);
     dvl->setNoise(0.0, 0.02, 0.05, 0.0, 0.02);
+
     sf::IMU* imu = new sf::IMU("IMU");
     imu->setNoise(sf::V0(), sf::Vector3(0.05, 0.05, 0.1), 0.0, sf::Vector3(0.01, 0.01, 0.02));
+
     sf::Compass* fog = new sf::Compass("FOG");
     fog->setNoise(0.01);
+
     sf::GPS* gps = new sf::GPS("GPS");
     gps->setNoise(0.5);
     //sf::Multibeam2* mb = new sf::Multibeam2("Multibeam", 1000, 300, 50.0, 40.0, 0.1, 10.0, 10.0);
@@ -269,10 +274,11 @@ void UnderwaterTestManager::BuildScenario()
     //sf::DepthCamera* dc = new sf::DepthCamera("DepthCam", 1000, 350, 50.0, 0.1, 10.0, 10.0);
     //dc->setDisplayOnScreen(true);
 
-    sf::FLS* fls = new sf::FLS("FLS", 512, 500, 120.0, 30.0, 0.5, 20.0, sf::ColorMap::PERULA);
+    sf::FLS* fls = new sf::FLS("FLS", 256, 500, 150.0, 30.0, 1.0, 20.0, sf::ColorMap::GREEN_BLUE, sf::SonarOutputFormat::U8);
     fls->setGain(1.1); 
     fls->setNoise(0.05, 0.05);
     fls->setDisplayOnScreen(true, 800, 250, 0.35f);
+    //fls->InstallNewDataHandler(std::bind(&UnderwaterTestManager::FLSDataCallback, this, std::placeholders::_1));
 
     //sf::SSS* sss = new sf::SSS("SSS", 800, 400, 70.0, 1.5, 50.0, 1.0, 100.0, sf::ColorMap::GREEN_BLUE);
     //sss->setDisplayOnScreen(true, 710, 5, 0.6f);
@@ -349,6 +355,30 @@ void UnderwaterTestManager::BuildScenario()
     
 #endif
 } 
+
+void UnderwaterTestManager::FLSDataCallback(sf::FLS* fls)
+{
+    auto format = fls->getOutputFormat();
+    switch (format)
+    {
+        case sf::SonarOutputFormat::U8:
+            PrintData<GLubyte>(fls->getImageDataPointer(), 10);
+            break;
+
+        case sf::SonarOutputFormat::U16:
+            PrintData<GLushort>(fls->getImageDataPointer(), 10);
+            break;
+
+        case sf::SonarOutputFormat::U32:
+            PrintData<GLuint>(fls->getImageDataPointer(), 10);
+            break;
+
+        case sf::SonarOutputFormat::F32:
+            PrintData<GLfloat>(fls->getImageDataPointer(), 10);
+            break;
+    }
+    std::cout << std::endl;
+}
 
 void UnderwaterTestManager::SimulationStepCompleted(sf::Scalar timeStep)
 {

@@ -20,15 +20,22 @@
 //  Stonefish
 //
 //  Created by Patryk Cieslak on 04/03/2014.
-//  Copyright(c) 2014-2019 Patryk Cieslak. All rights reserved.
+//  Copyright(c) 2014-2025 Patryk Cieslak. All rights reserved.
 //
 
 #ifndef __Stonefish__UnderwaterTestManager__
 #define __Stonefish__UnderwaterTestManager__
 
 #include <core/SimulationManager.h>
+#include <iostream>
 
-//#define PARSED_SCENARIO
+
+namespace sf
+{
+    class FLS;
+    class MSIS;
+    class SSS;
+}
 
 class UnderwaterTestManager : public sf::SimulationManager
 {
@@ -37,6 +44,18 @@ public:
     
     void BuildScenario();
     void SimulationStepCompleted(sf::Scalar timeStep);
+    
+private:
+    void FLSDataCallback(sf::FLS* fls);
+    // void MSISDataCallback(sf::MSIS* msis);
+    // void SSSDataCallback(sf::SSS* sss);
+
+    template <typename T>
+    void PrintData(void* data, size_t length)
+    {
+        for (size_t i=0; i<length; ++i)
+            std::cout << std::to_string(((T*)data)[i]) << ", ";
+    }
 };
 
 #endif
