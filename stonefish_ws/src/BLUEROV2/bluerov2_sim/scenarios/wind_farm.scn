@@ -336,4 +336,18 @@
 		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
 	</static> -->
 
+	<static name="WindPile" type="model">
+		<physical>
+			<mesh filename="wind_turbine/wind_turbine_pile.obj" scale="3.5" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine/wind_turbine_pile.obj" scale="3.5"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="windTurbinePile"/>
+		<world_transform xyz="17.5 -22 -10" rpy="0.0 0.0 -${pi/6}"/>
+	</static>
+
 </scenario>

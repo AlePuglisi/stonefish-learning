@@ -274,7 +274,46 @@
 				<thrust_coeff value="0.5"/>
 			</thrust_model> -->
 			<link name="base_link"/>
+			
 		</actuator>
+
+		<!--   LIGHTS   -->		
+		<light name="Light_LD">
+			<specs radius="0.01" cone_angle="40.0" illuminance="10000.0"/>
+			<color temperature="5600.0"/>
+			<!-- <color rgb="0.2 0.3 1.0"/> -->
+			<!-- <origin xyz="0.215 -0.19 0.09" rpy="0.0 ${pi/2 - pi*20/180} 0.0"/> -->
+			<origin xyz="0.1675 -0.19 0.072" rpy="0.0 ${pi/2 - pi*20/180} 0.0"/>
+			<link name="base_link"/>
+			<ros_service topic="/bluerov/lights/ld"/>
+		</light>
+		<light name="Light_LU">
+			<specs radius="0.01" cone_angle="40.0" illuminance="10000.0"/>
+			<color temperature="5600.0"/>
+			<!-- <color rgb="0.2 0.3 1.0"/> -->
+			<!-- <origin xyz="0.21 -0.188 -0.08" rpy="0.0 ${pi/2 - pi*10/180}  0.0"/> -->
+			<origin xyz="0.162 -0.188 -0.088" rpy="0.0 ${pi/2 - pi*10/180}  0.0"/>
+			<link name="base_link"/>
+			<ros_service topic="/bluerov/lights/lu"/>
+		</light>
+		<light name="Light_RD">
+			<specs radius="0.01" cone_angle="40.0" illuminance="10000.0"/>
+			<color temperature="5600.0"/>
+			<!-- <color rgb="0.2 0.3 1.0"/> -->
+			<!-- <origin xyz="0.215 0.19 0.09" rpy="0.0 ${pi/2 - pi*20/180} 0.0"/> -->
+			<origin xyz="0.1675 0.19 0.072" rpy="0.0 ${pi/2 - pi*20/180} 0.0"/>
+			<link name="base_link"/>
+			<ros_service topic="/bluerov/lights/rd"/>
+		</light>
+		<light name="Light_RU">
+			<specs radius="0.01" cone_angle="40.0" illuminance="10000.0"/>
+			<color temperature="5600.0"/>
+			<!-- <color rgb="0.2 0.3 1.0"/> -->
+			<!-- <origin xyz="0.21 0.188 -0.08" rpy="0.0 ${pi/2 - pi*10/180} 0.0"/> -->
+			<origin xyz="0.162 0.188 -0.088" rpy="0.0 ${pi/2 - pi*10/180} 0.0"/>
+			<link name="base_link"/>
+			<ros_service topic="/bluerov/lights/ru"/>
+		</light>
 
 
 		<!--   SENSORS   -->
