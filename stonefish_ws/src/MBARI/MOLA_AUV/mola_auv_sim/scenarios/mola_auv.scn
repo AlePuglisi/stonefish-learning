@@ -94,13 +94,13 @@
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</internal_part> 
 
-			<!-- <internal_part name="BallastBack" type="cylinder" physics="submerged" buoyant="false">
+			<internal_part name="BallastBack" type="cylinder" physics="submerged" buoyant="false">
 				<dimensions radius="0.1" height="0.0115"/>
 				<origin rpy="0.0 1.57 0.0" xyz="-0.335 0.0 0.0"/>
 				<material name="Ballast"/>
 				<look name="transparent"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part>  -->
+			</internal_part> 
 
 		</base_link>
 
@@ -108,7 +108,7 @@
 
 		<!-- T1 -->
 		<actuator name="ThrusterLFU" type="thruster">
-			<origin rpy="0.0 -${50*pi/180} -${140*pi/180}" xyz="0.300974 -0.180592 -0.111517"/>
+			<origin rpy="0.0 -${45*pi/180} -${135*pi/180}" xyz="0.3015 -0.1798 -0.11253"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.08" right="false">
 				<mesh filename="mola_auv/mesh/ccw.obj" scale="1.17"/>
@@ -127,10 +127,10 @@
 
 		<!-- T2 -->
 		<actuator name="ThrusterLFD" type="thruster">
-			<origin rpy="0.0 ${50*pi/180} -${140*pi/180}" xyz="0.301507 -0.179797 0.11253 "/>
+			<origin rpy="0.0 ${45*pi/180} -${135*pi/180}" xyz="0.3015 -0.1798 0.11253 "/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.08" right="false">
-				<mesh filename="mola_auv/mesh/ccw.obj" scale="1.17"/>
+				<mesh filename="mola_auv/mesh/cw.obj" scale="1.17"/>
 				<material name="Neutral"/>
 				<look name="MOLA_propeller"/>
 			</propeller>
@@ -146,7 +146,7 @@
 
 		<!-- T3 -->
 		<actuator name="ThrusterRFU" type="thruster">
-			<origin rpy="0.0 -${50*pi/180} -${220*pi/180}" xyz="0.301501 0.179798 -0.112534"/>
+			<origin rpy="0.0 -${45*pi/180} ${135*pi/180}" xyz="0.3015 0.1798 -0.11253"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.08" right="false">
 				<mesh filename="mola_auv/mesh/cw.obj" scale="1.17"/>
@@ -165,7 +165,7 @@
 
 		<!-- T4 -->
 		<actuator name="ThrusterRFD" type="thruster">
-			<origin rpy="0.0 ${50*pi/180} -${220*pi/180}" xyz="0.301502 0.179799 0.112534"/>
+			<origin rpy="0.0 ${45*pi/180} ${135*pi/180}" xyz="0.3015 0.1798 0.11253"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.08" right="false">
 				<mesh filename="mola_auv/mesh/ccw.obj" scale="1.17"/>
@@ -184,7 +184,7 @@
 
 		<!-- T5 -->
 		<actuator name="ThrusterLBU" type="thruster">
-			<origin rpy="0.0 ${50*pi/180} -${220*pi/180}" xyz="-0.300971 -0.18059 -0.111509"/>
+			<origin rpy="0.0 ${45*pi/180} ${135*pi/180}" xyz="-0.3015 -0.1798 -0.11253"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.08" right="false">
 				<mesh filename="mola_auv/mesh/ccw.obj" scale="1.17"/>
@@ -203,10 +203,10 @@
 
 		<!-- T6 -->
 		<actuator name="ThrusterLBD" type="thruster">
-			<origin rpy="0.0 -${50*pi/180} -${220*pi/180}" xyz="-0.300977 -0.180591 0.111514"/>
+			<origin rpy="0.0 -${45*pi/180} ${135*pi/180}" xyz="-0.3015 -0.1798 0.11253"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.08" right="false">
-				<mesh filename="mola_auv/mesh/ccw.obj" scale="1.17"/>
+				<mesh filename="mola_auv/mesh/cw.obj" scale="1.17"/>
 				<material name="Neutral"/>
 				<look name="MOLA_propeller"/>
 			</propeller>
@@ -222,7 +222,7 @@
 
 		<!-- T7 -->
 		<actuator name="ThrusterRBU" type="thruster">
-			<origin rpy="0.0 ${50*pi/180} -${140*pi/180}" xyz="-0.3015 0.179797 -0.112526"/>
+			<origin rpy="0.0 ${45*pi/180} -${135*pi/180}" xyz="-0.3015 0.1798 -0.11253"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.08" right="false">
 				<mesh filename="mola_auv/mesh/cw.obj" scale="1.17"/>
@@ -241,7 +241,7 @@
 
 		<!-- T8 -->
 		<actuator name="ThrusterRBD" type="thruster">
-			<origin rpy="0.0 -${50*pi/180} -${140*pi/180}" xyz="-0.301502 0.17979 0.112529"/>
+			<origin rpy="0.0 -${45*pi/180} -${135*pi/180}" xyz="-0.3015 0.1798 0.11253"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.08" right="false">
 				<mesh filename="mola_auv/mesh/ccw.obj" scale="1.17"/>
