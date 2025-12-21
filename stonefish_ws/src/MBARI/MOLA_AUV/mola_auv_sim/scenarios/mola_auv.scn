@@ -15,7 +15,7 @@
 
 		<base_link name="base_link" type="compound" physics="submerged">
 
-			<external_part name="Base" type="model" physics="submerged" buoyant="true">
+			<external_part name="Base" type="model" physics="submerged" buoyant="false">
 				<visual>
 					<mesh filename="mola_auv/mesh/base.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -24,16 +24,14 @@
 					<mesh filename="mola_auv/mesh/base_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
-				<material name="Foam"/>
+				<material name="Polyethylene"/>
 				<look name="MOLA_base"/>
-				<mass value="9.25"/>
-    			<inertia xyz="0.185 0.185 0.28"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="Frame" type="model" physics="submerged" buoyant="true">
+			<external_part name="Frame" type="model" physics="submerged" buoyant="false">
 				<visual>
-					<mesh filename="mola_auv/mesh/frame.obj" scale="1.0"/>
+					<mesh filename="mola_auv/mesh/frame_simple.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<physical>
@@ -45,19 +43,65 @@
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="CameraDome" type="model" physics="submerged" buoyant="false">
+			<external_part name="CameraDome" type="model" physics="submerged" buoyant="true">
 				<visual>
-					<mesh filename="mola_auv/mesh/dome.obj" scale="1.0"/>
+					<mesh filename="mola_auv/mesh/dome_simple.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<physical>
-					<mesh filename="mola_auv/mesh/dome.obj" scale="1.0"/>
+					<mesh filename="mola_auv/mesh/dome_simple.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Acrylic"/>
 				<look name="transparent"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
+
+			<internal_part name="Foam" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.11" height="0.6"/>
+				<origin rpy="0.0 1.57 0.0" xyz="0.0 0.0 0.0"/>
+				<material name="Foam"/>
+				<look name="transparent"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+
+			<internal_part name="FoamCylUL" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.025" height="0.6"/>
+				<origin rpy="0.0 1.57 0.0" xyz="0.0 -0.225 -0.2"/>
+				<material name="InternalFoam"/>
+				<look name="transparent"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="FoamCylUR" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.025" height="0.6"/>
+				<origin rpy="0.0 1.57 0.0" xyz="0.0 0.225 -0.2"/>
+				<material name="InternalFoam"/>
+				<look name="transparent"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="FoamCylDL" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.025" height="0.6"/>
+				<origin rpy="0.0 1.57 0.0" xyz="0.0 -0.225 0.2"/>
+				<material name="InternalFoam"/>
+				<look name="transparent"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+			<internal_part name="FoamCylDR" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.025" height="0.6"/>
+				<origin rpy="0.0 1.57 0.0" xyz="0.0 0.225 0.2"/>
+				<material name="InternalFoam"/>
+				<look name="transparent"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+
+			<!-- <internal_part name="BallastBack" type="cylinder" physics="submerged" buoyant="false">
+				<dimensions radius="0.1" height="0.0115"/>
+				<origin rpy="0.0 1.57 0.0" xyz="-0.335 0.0 0.0"/>
+				<material name="Ballast"/>
+				<look name="transparent"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part>  -->
+
 		</base_link>
 
 		<!--   THRUSTERS   -->
@@ -301,7 +345,7 @@
 			<ros_publisher topic="/mola_auv/fls"/>
 		</sensor>
 
-		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 0 0.25"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="0.0 0 2.0"/>
 
 		<!--   ROS SUBSCRIBERS / PUBLISHER THRUST/FORCES   -->
 		<ros_subscriber thrusters="/mola_auv/controller/thruster_setpoints_sim" forces="/mola_auv/controller/thruster_manager/input_stamped"/>
