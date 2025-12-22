@@ -11,7 +11,7 @@
 		<!-- BlueROV2 Base Frames -->
 		<material name="Polyethylene" density="400.0" restitution="0.75"/>
 		<!-- BlueROV2 Thrusters Duct -->
-		<material name="Polycarbonate" density="480.0" restitution="0.75"/>
+		<material name="Polycarbonate" density="435.0" restitution="0.75"/>
 		<!-- BlueROV2 Tubes -->
 		<material name="Acrylic" density="1100.0" restitution="0.9"/>
 
