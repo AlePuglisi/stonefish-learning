@@ -73,10 +73,10 @@ class WeightedJoystickController(Node):
         self.B = B
         
         # YOUR ACTUAL INERTIA VALUES (from the simulation)
-        mass = 30.0  # kg
-        Ixx = 0.823  # Roll inertia (VERY LOW!)
-        Iyy = 8.820  # Pitch inertia
-        Izz = 10.305 # Yaw inertia
+        mass = 29.8  # kg
+        Ixx = 0.674  # Roll inertia (VERY LOW!)
+        Iyy = 2.877  # Pitch inertia
+        Izz = 3.001 # Yaw inertia
         
         # Create weighting matrix that normalizes by inertia
         # This makes commands of equal magnitude produce equal angular accelerations
