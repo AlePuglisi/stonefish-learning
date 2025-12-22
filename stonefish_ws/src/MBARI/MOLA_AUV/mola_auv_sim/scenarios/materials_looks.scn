@@ -5,9 +5,9 @@
 		<material name="Neutral" density="1000.0" restitution="0.5"/>
 
 		<!-- Subsea Buoyancy Foam: R-3318 -->
-		<material name="Foam" density="60.0" restitution="0.3"/>
+		<material name="Foam" density="50.0" restitution="0.3"/>
 		<!-- Fake Buoyancy Foam -->
-		<material name="InternalFoam" density="50.0" restitution="0.3"/>
+		<material name="InternalFoam" density="40.0" restitution="0.3"/>
 		<!-- BlueROV2 Base Frames -->
 		<material name="Polyethylene" density="400.0" restitution="0.75"/>
 		<!-- BlueROV2 Thrusters Duct -->
@@ -15,7 +15,7 @@
 		<!-- BlueROV2 Tubes -->
 		<material name="Acrylic" density="1100.0" restitution="0.9"/>
 
-		<material name="Ballast" density="300.0" restitution="0.75"/>
+		<material name="Ballast" density="570.0" restitution="0.75"/>
 
 		<friction_table>
 			<friction material1="Neutral" material2="Neutral" static="0.5" dynamic="0.2"/>
@@ -54,7 +54,11 @@
     <looks>
         <look name="black" gray="0.01" roughness="0.2" metalness="0.0"/>
 		<look name="MOLA_propeller" rgb="0.898 0.769 0.145" roughness="0.3" metalness="0.0"/>
-		<look name="MOLA_base" gray="1.0" roughness="0.1" texture="mola_auv/texture/base.png"/>
+
+		<look name="MOLA_base" gray="1.0" roughness="0.5" texture="mola_auv/texture/base.png"/>
+		<look name="MOLA_lightR" gray="1.0" roughness="0.9" texture="mola_auv/texture/lightR.png"/>
+		<look name="MOLA_lightL" gray="1.0" roughness="0.9" texture="mola_auv/texture/lightL.png"/>
+
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
     </looks>   
 
