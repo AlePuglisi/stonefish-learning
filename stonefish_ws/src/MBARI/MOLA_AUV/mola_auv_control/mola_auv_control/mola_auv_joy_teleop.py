@@ -184,7 +184,7 @@ class WeightedJoystickController(Node):
         if buttons[self.buttons_index_["R1"]] == 1:
             self.get_logger().info("R1 pressed")
             msg = Float64()
-            if self.servo_state < pi:
+            if self.servo_state < pi/2:
                 self.servo_state += 0.05
             msg.data = self.servo_state
             self.mola_lightL_servo_pub.publish(msg)
