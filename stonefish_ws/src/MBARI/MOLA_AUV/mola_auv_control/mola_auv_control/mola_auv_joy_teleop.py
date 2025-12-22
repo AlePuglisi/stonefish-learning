@@ -4,6 +4,8 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
 from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import Float64
+from math import pi
 import numpy as np
 
 class WeightedJoystickController(Node):
@@ -21,6 +23,17 @@ class WeightedJoystickController(Node):
             10
         )
 
+        self.mola_lightL_servo_pub = self.create_publisher(
+            Float64, 
+            '/mola_auv/servo/lightL', 
+            10
+        )
+        self.mola_lightR_servo_pub = self.create_publisher(
+            Float64, 
+            '/mola_auv/servo/lightR', 
+            10
+        )
+
         # Joystick mapping
         self.forward_joy = 1
         self.side_joy = 0
@@ -28,9 +41,39 @@ class WeightedJoystickController(Node):
         self.yaw_joy = 3
         self.pitch_joy = 7
         self.roll_joy = 6
-        
+
+        # PS4 Joypad 
+        # Axes Index        
+        self.axes_index_ = {
+            "analog_left_LR":  0,   # left analog stick        ( Left = +1 | Right = -1 )
+            "analog_left_UD":  1,   # left analog stick        ( Up   = +1 | Down  = -1 )
+            "analog_right_LR": 3,   # right analog stick       ( Left = +1 | Right = -1 )
+            "analog_right_UD": 4,   # right analog stick       ( Up   = +1 | Down  = -1 )
+            "arrow_LR": 6,          # arrow buttons left/right ( Left = +1 | Right = -1 )
+            "arrow_UD": 7           # arrow buttons up/down    ( Up   = +1 | Down  = -1 )
+        }
+
+        # Buttons Index 
+        self.buttons_index_ = {
+            "x":        0,
+            "circle":   1,
+            "triangle": 2,
+            "square":   3,
+            "L1":       4,
+            "R1":       5,  
+            "L2":       6,
+            "R2":       7,
+            "share":    8,
+            "options":  9,
+            "ps":       10,
+            "L3":       11,
+            "R3":       12
+        }
+
         self.deadzone = 0.05
         
+        self.servo_state = 0.0
+
         # Build allocation matrix and compute weighted pseudo-inverse
         self.build_allocation_matrix()
         
@@ -112,6 +155,7 @@ class WeightedJoystickController(Node):
 
     def joy_callback(self, data: Joy):
         axes = data.axes
+        buttons = data.buttons
         
         # Extract commands
         surge = self.apply_deadzone(-axes[self.forward_joy])
@@ -137,6 +181,27 @@ class WeightedJoystickController(Node):
         msg.data = thruster_setpoints.tolist()
         self.rov_control_pub.publish(msg)
         
+        if buttons[self.buttons_index_["R1"]] == 1:
+            self.get_logger().info("R1 pressed")
+            msg = Float64()
+            if self.servo_state < pi:
+                self.servo_state += 0.05
+            msg.data = self.servo_state
+            self.mola_lightL_servo_pub.publish(msg)
+
+            msg.data = -self.servo_state
+            self.mola_lightR_servo_pub.publish(msg)
+        if buttons[self.buttons_index_["L1"]] == 1:
+            self.get_logger().info("L1 pressed")
+            msg = Float64()
+            if self.servo_state > 0:
+                self.servo_state -= 0.05
+            msg.data = self.servo_state
+            self.mola_lightL_servo_pub.publish(msg)
+            
+            msg.data = -self.servo_state
+            self.mola_lightR_servo_pub.publish(msg)
+
         # Debug
         if np.any(np.abs(command_vector) > 0.01):
             self.get_logger().info(

@@ -121,8 +121,8 @@
 			<parent name="base_link"/>
 			<child name="LightR"/>
 			<origin xyz="0.32 0.225 -0.19" rpy="0.0 0.0 0.0"/>
-			<axis xyz="0.0 0.0 1.0"/>
-			<limits min="0.0" max="${pi/2}"/>
+			<axis xyz="1.0 0.0 0.0"/>
+			<limits min="-${pi/2}" max="0.0"/>
 		</joint>
 
 		<link name="LightL" type="model" physics="submerged" buoyant="false">
@@ -143,7 +143,7 @@
 			<parent name="base_link"/>
 			<child name="LightL"/>
 			<origin xyz="0.32 -0.225 -0.19" rpy="0.0 0.0 0.0"/>
-			<axis xyz="0.0 0.0 1.0"/>
+			<axis xyz="1.0 0.0 0.0"/>
 			<limits min="0.0" max="${pi/2}"/>
 		</joint>
 
@@ -409,8 +409,8 @@
 		<ros_subscriber thrusters="/mola_auv/controller/thruster_setpoints_sim" forces="/mola_auv/controller/thruster_manager/input_stamped"/>
 		<ros_publisher thrusters="/mola_auv/controller/thruster_state" forces="/mola_auv/controller/thruster_manager/output"/>
 
-    	<ros_joint_subscriber joint_name="Base_LightL" topic="/mola_auv/motor/lightL" control_mode="position"/>
-   		<ros_joint_subscriber joint_name="Base_LightR" topic="/mola_auv/motor/lightR" control_mode="position"/>
+    	<ros_joint_subscriber joint_name="Base_LightL" topic="/mola_auv/servo/lightL" control_mode="position"/>
+   		<ros_joint_subscriber joint_name="Base_LightR" topic="/mola_auv/servo/lightR" control_mode="position"/>
 
 		<ros_base_link_transforms publish="true"/>
 	
