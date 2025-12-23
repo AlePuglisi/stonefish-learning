@@ -50,9 +50,9 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://mola_auv_sim/data/mola_auv/mesh/rviz/mola_auv_lightL.stl" scale="1.0 1.0 1.0"/>
+            filename="package://mola_auv_sim/data/mola_auv/mesh/rviz/mola_auv_lightL.obj" scale="1.0 1.0 1.0"/>
         </geometry>
-        <material name="light"/>
+        <!-- <material name="light"/> -->
       </visual>
     </link>
 
@@ -63,9 +63,9 @@
           rpy="0 0 0" />
         <geometry>
           <mesh
-            filename="package://mola_auv_sim/data/mola_auv/mesh/rviz/mola_auv_lightR.stl" scale="1.0 1.0 1.0"/>
+            filename="package://mola_auv_sim/data/mola_auv/mesh/rviz/mola_auv_lightR.obj" scale="1.0 1.0 1.0"/>
         </geometry>
-        <material name="light"/>
+        <!-- <material name="light"/> -->
       </visual>
     </link>
 
