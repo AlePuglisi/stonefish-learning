@@ -8,16 +8,16 @@ from launch.substitutions import Command
 from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
-    # description_path = get_package_share_directory('mola_auv_sim')
-    # xacro_path = os.path.join(description_path, "urdf", "mola_auv.urdf.xacro")
-    # robot_description_command = Command(['xacro ', xacro_path])
+    description_path = get_package_share_directory('mola_auv_sim')
+    xacro_path = os.path.join(description_path, "urdf", "mola_auv.urdf.xacro")
+    robot_description_command = Command(['xacro ', xacro_path])
 
-    # # Declare launch arguments
-    # robot_name_arg = DeclareLaunchArgument(
-    #     'robot_name',
-    #     default_value='mola_auv',
-    #     description='Name of the robot'
-    # )
+    # Declare launch arguments
+    robot_name_arg = DeclareLaunchArgument(
+        'robot_name',
+        default_value='mola_auv',
+        description='Name of the robot'
+    )
 
     # Group action with namespace
     namespace_action = GroupAction(
@@ -60,40 +60,53 @@ def generate_launch_description():
             }],
             output='screen',
         )  
-
-    bluerov2_joy_teleop_node = Node(
+    
+    odom2tf_node = Node(
+            package='mola_auv_control',
+            executable='odom2tf',
+            output='screen',
+        )
+    
+    static_tf_node = Node(
+            package="tf2_ros",
+            executable="static_transform_publisher",
+            output="screen" ,
+            arguments=["0", "0", "0", "0", "0", "0", "odom", "mola_auv_base"]
+        )  
+    
+    mola_auv_joy_teleop_node = Node(
             package='mola_auv_control',
             executable='mola_auv_joy_teleop',
             output='screen',
         )
     
-    # robot_state_publisher_node = Node(
-    #     package='robot_state_publisher',
-    #     executable='robot_state_publisher',
-    #     parameters=[{'robot_description': robot_description_command}]
-    # )   
+    robot_state_publisher_node = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        parameters=[{'robot_description': robot_description_command}]
+    )   
 
-    # rviz_node =  Node(
-    #         package='rviz2',
-    #         namespace='',
-    #         executable='rviz2',
-    #         name='rviz2',
-    #         arguments=['-d' + os.path.join(get_package_share_directory('bluerov2_sim'), 'cfg', 'bluerov2_rviz.rviz')]
-    #     )
+    rviz_node =  Node(
+            package='rviz2',
+            namespace='',
+            executable='rviz2',
+            name='rviz2',
+            arguments=['-d' + os.path.join(get_package_share_directory('mola_auv_sim'), 'cfg', 'mola_auv_sim.rviz')]
+        )
     
     return LaunchDescription([
-        #robot_name_arg,
+        robot_name_arg,
         namespace_action,
 
         odom2tf_node, 
         joy_node,
-        bluerov2_joy_teleop_node,
-        #static_tf_node,
-        #rviz_node, 
+        mola_auv_joy_teleop_node,
+        static_tf_node,
+        rviz_node, 
 
-        # TimerAction(
-        #     period=5.0,
-        #     actions=[robot_state_publisher_node],
-        # )
+        TimerAction(
+            period=5.0,
+            actions=[robot_state_publisher_node],
+        )
     
         ])

@@ -31,11 +31,11 @@
 
 			<external_part name="Frame" type="model" physics="submerged" buoyant="false">
 				<visual>
-					<mesh filename="mola_auv/mesh/frame_v2.obj" scale="1.0"/>
+					<mesh filename="mola_auv/mesh/frame.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<physical>
-					<mesh filename="mola_auv/mesh/frame_v2_phy.obj" scale="1.0"/>
+					<mesh filename="mola_auv/mesh/frame_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polycarbonate"/>
@@ -45,11 +45,11 @@
 
 			<external_part name="CameraDome" type="model" physics="submerged" buoyant="true">
 				<visual>
-					<mesh filename="mola_auv/mesh/dome_simple.obj" scale="1.0"/>
+					<mesh filename="mola_auv/mesh/dome.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<physical>
-					<mesh filename="mola_auv/mesh/dome_simple.obj" scale="1.0"/>
+					<mesh filename="mola_auv/mesh/dome.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Acrylic"/>
@@ -110,7 +110,7 @@
 				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</physical>
 			<visual>
-				<mesh filename="mola_auv/mesh/lightR_v2.obj" scale="1.0"/>
+				<mesh filename="mola_auv/mesh/lightR.obj" scale="1.0"/>
 				<origin rpy="0.0 0.0 0.0" xyz="0.005 0.0 0.0"/>
 			</visual>
 			<material name="Polyethylene"/>
@@ -132,7 +132,7 @@
 				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</physical>
 			<visual>
-				<mesh filename="mola_auv/mesh/lightL_v2.obj" scale="1.0"/>
+				<mesh filename="mola_auv/mesh/lightL.obj" scale="1.0"/>
 				<origin rpy="0.0 0.0 0.0" xyz="0.005 0.0 0.0"/>
 			</visual>
 			<material name="Polyethylene"/>

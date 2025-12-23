@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="mola_auv" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:include filename="materials.xacro" />
+
+    <link name="mola_auv_base">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://mola_auv_sim/data/mola_auv/mesh/rviz/mola_auv_base.obj" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <!-- <material name="base"/> -->
+      </visual>
+    </link>
+
+    <link name="mola_auv_frame">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://mola_auv_sim/data/mola_auv/mesh/rviz/mola_auv_frame.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+
+    <link name="mola_auv_dome">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://mola_auv_sim/data/mola_auv/mesh/rviz/mola_auv_dome.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="glass"/>
+      </visual>
+    </link>
+
+
+    <link name="mola_auv_lightL">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://mola_auv_sim/data/mola_auv/mesh/rviz/mola_auv_lightL.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="light"/>
+      </visual>
+    </link>
+
+    <link name="mola_auv_lightR">
+      <visual>
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://mola_auv_sim/data/mola_auv/mesh/rviz/mola_auv_lightR.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="light"/>
+      </visual>
+    </link>
+
+
+    <joint name="base_frame" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_frame" /> 
+    </joint>
+    <joint name="base_dome" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_dome" /> 
+    </joint>
+
+
+		<joint name="base_lightL" type="revolute">
+			<parent link="mola_auv_base"/>
+			<child link="mola_auv_lightL"/>
+			<origin xyz="0.32 -0.225 -0.19" rpy="0.0 0.0 0.0"/>
+			<axis xyz="1.0 0.0 0.0"/>
+			<limit lower="0.0" upper="${pi/2}" effort="1.0" velocity="1.0"/>
+		</joint>
+		<joint name="base_lightR" type="revolute">
+			<parent link="mola_auv_base"/>
+			<child link="mola_auv_lightR"/>
+			<origin xyz="0.32 0.225 -0.19" rpy="0.0 0.0 0.0"/>
+			<axis xyz="1.0 0.0 0.0"/>
+			<limit lower="-${pi/2}" upper="0.0" effort="1.0" velocity="1.0"/>
+		</joint>
+
+</robot>
