@@ -13,7 +13,11 @@
     </material>
 
     <material name="glass">
-        <color rgba="1.0 1.0 1.0 1"/>
+        <color rgba="1.0 1.0 1.0 0.5"/>
+    </material>
+
+    <material name="yellow">
+        <color rgba="0.898 0.769 0.145"/>
     </material>
 
     <material name="base">
