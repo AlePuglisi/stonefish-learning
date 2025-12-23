@@ -17,7 +17,7 @@
     </material>
 
     <material name="yellow">
-        <color rgba="0.898 0.769 0.145"/>
+        <color rgba="0.898 0.769 0.145 1.0"/>
     </material>
 
     <material name="base">

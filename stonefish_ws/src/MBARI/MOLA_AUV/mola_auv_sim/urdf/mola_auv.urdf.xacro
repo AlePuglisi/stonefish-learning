@@ -82,12 +82,17 @@
         <material name="yellow"/>
       </visual>
     </link>
-    <joint name="base_propLFU" type="continuous">
+    <!-- <joint name="base_propLFU" type="continuous">
       <origin rpy="0.0 -${45*pi/180} -${135*pi/180}" xyz="0.3 -0.182 -0.105"/>
       <parent link="mola_auv_base" />
       <child link="mola_auv_propLFU" /> 
 			<axis xyz="1.0 0.0 0.0"/>
 			<limit effort="1.0" velocity="1.0"/>
+    </joint> -->
+    <joint name="base_propLFU" type="fixed">
+      <origin rpy="0.0 -${45*pi/180} -${135*pi/180}" xyz="0.3 -0.182 -0.105"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_propLFU" /> 
     </joint>
 
     <!-- PROPELLER LFD -->
@@ -103,12 +108,17 @@
         <material name="yellow"/>
       </visual>
     </link>
-    <joint name="base_propLFD" type="continuous">
+    <!-- <joint name="base_propLFD" type="continuous">
       <origin rpy="0.0 ${45*pi/180} -${135*pi/180}" xyz="0.3 -0.182 0.105"/>
       <parent link="mola_auv_base" />
       <child link="mola_auv_propLFD" /> 
 			<axis xyz="1.0 0.0 0.0"/>
 			<limit effort="1.0" velocity="1.0"/>
+    </joint> -->
+    <joint name="base_propLFD" type="fixed">
+      <origin rpy="0.0 ${45*pi/180} -${135*pi/180}" xyz="0.3 -0.182 0.105"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_propLFD" /> 
     </joint>
 
    <!-- PROPELLER RFU -->
@@ -124,13 +134,19 @@
         <material name="yellow"/>
       </visual>
     </link>
-    <joint name="base_propRFU" type="continuous">
+    <!-- <joint name="base_propRFU" type="continuous">
       <origin rpy="0.0 -${45*pi/180} ${135*pi/180}" xyz="0.3 0.182 -0.105"/>
       <parent link="mola_auv_base" />
       <child link="mola_auv_propRFU" /> 
 			<axis xyz="1.0 0.0 0.0"/>
 			<limit effort="1.0" velocity="1.0"/>
+    </joint> -->
+    <joint name="base_propRFU" type="fixed">
+      <origin rpy="0.0 -${45*pi/180} ${135*pi/180}" xyz="0.3 0.182 -0.105"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_propRFU" /> 
     </joint>
+
 
    <!-- PROPELLER RFD -->
     <link name="mola_auv_propRFD">
@@ -145,12 +161,17 @@
         <material name="yellow"/>
       </visual>
     </link>
-    <joint name="base_propRFD" type="continuous">
+    <!-- <joint name="base_propRFD" type="continuous">
       <origin rpy="0.0 ${45*pi/180} ${135*pi/180}" xyz="0.3 0.182 0.105"/>
       <parent link="mola_auv_base" />
       <child link="mola_auv_propRFD" /> 
 			<axis xyz="1.0 0.0 0.0"/>
 			<limit effort="1.0" velocity="1.0"/>
+    </joint> -->
+    <joint name="base_propRFD" type="fixed">
+      <origin rpy="0.0 ${45*pi/180} ${135*pi/180}" xyz="0.3 0.182 0.105"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_propRFD" /> 
     </joint>
 
     <!-- PROPELLER LBU -->
@@ -166,12 +187,17 @@
         <material name="yellow"/>
       </visual>
     </link>
-    <joint name="base_propLBU" type="continuous">
+    <!-- <joint name="base_propLBU" type="continuous">
       <origin rpy="0.0 ${45*pi/180} ${135*pi/180}" xyz="-0.3 -0.182 -0.105"/>
       <parent link="mola_auv_base" />
       <child link="mola_auv_propLBU" /> 
 			<axis xyz="1.0 0.0 0.0"/>
 			<limit effort="1.0" velocity="1.0"/>
+    </joint> -->
+    <joint name="base_propLBU" type="fixed">
+      <origin rpy="0.0 ${45*pi/180} ${135*pi/180}" xyz="-0.3 -0.182 -0.105"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_propLBU" /> 
     </joint>
 
    <!-- PROPELLER LBD -->
@@ -187,12 +213,17 @@
         <material name="yellow"/>
       </visual>
     </link>
-    <joint name="base_propLBD" type="continuous">
+    <!-- <joint name="base_propLBD" type="continuous">
       <origin rpy="0.0 -${45*pi/180} ${135*pi/180}" xyz="-0.3 -0.182 0.105"/>
       <parent link="mola_auv_base" />
       <child link="mola_auv_propLBD" /> 
 			<axis xyz="1.0 0.0 0.0"/>
 			<limit effort="1.0" velocity="1.0"/>
+    </joint> -->
+    <joint name="base_propLBD" type="fixed">
+      <origin rpy="0.0 -${45*pi/180} ${135*pi/180}" xyz="-0.3 -0.182 0.105"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_propLBD" /> 
     </joint>
 
     <!-- PROPELLER RBU -->
@@ -208,13 +239,19 @@
         <material name="yellow"/>
       </visual>
     </link>
-    <joint name="base_propRBU" type="continuous">
+    <!-- <joint name="base_propRBU" type="continuous">
       <origin rpy="0.0 ${45*pi/180} -${135*pi/180}" xyz="-0.3 0.182 -0.105"/>
       <parent link="mola_auv_base" />
       <child link="mola_auv_propRBU" /> 
 			<axis xyz="1.0 0.0 0.0"/>
 			<limit effort="1.0" velocity="1.0"/>
+    </joint> -->
+    <joint name="base_propRBU" type="fixed">
+      <origin rpy="0.0 ${45*pi/180} -${135*pi/180}" xyz="-0.3 0.182 -0.105"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_propRBU" /> 
     </joint>
+
 
     <!-- PROPELLER RBD -->
     <link name="mola_auv_propRBD">
@@ -229,12 +266,17 @@
         <material name="yellow"/>
       </visual>
     </link>
-    <joint name="base_propRBD" type="continuous">
+    <!-- <joint name="base_propRBD" type="continuous">
       <origin rpy="0.0 -${45*pi/180} -${135*pi/180}" xyz="-0.3 0.182 0.105"/>
       <parent link="mola_auv_base" />
       <child link="mola_auv_propRBD" /> 
 			<axis xyz="1.0 0.0 0.0"/>
 			<limit effort="1.0" velocity="1.0"/>
+    </joint> -->
+    <joint name="base_propRBD" type="fixed">
+      <origin rpy="0.0 -${45*pi/180} -${135*pi/180}" xyz="-0.3 0.182 0.105"/>
+      <parent link="mola_auv_base" />
+      <child link="mola_auv_propRBD" /> 
     </joint>
 
 

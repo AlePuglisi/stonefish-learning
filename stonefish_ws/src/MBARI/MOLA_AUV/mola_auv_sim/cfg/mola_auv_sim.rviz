@@ -6,10 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /TF1
         - /TF1/Frames1
         - /RobotModel1
-        - /RobotModel1/Status1
-        - /RobotModel1/Links1
         - /Forward Looking Sonar (Cartesian)1
       Splitter Ratio: 0.5
     Tree Height: 267
@@ -93,6 +92,26 @@ Visualization Manager:
           Value: true
         mola_auv_frame:
           Value: true
+        mola_auv_lightL:
+          Value: true
+        mola_auv_lightR:
+          Value: true
+        mola_auv_propLBD:
+          Value: false
+        mola_auv_propLBU:
+          Value: false
+        mola_auv_propLFD:
+          Value: false
+        mola_auv_propLFU:
+          Value: false
+        mola_auv_propRBD:
+          Value: false
+        mola_auv_propRBU:
+          Value: false
+        mola_auv_propRFD:
+          Value: false
+        mola_auv_propRFU:
+          Value: false
         odom:
           Value: true
         world_ned:
@@ -109,6 +128,26 @@ Visualization Manager:
               mola_auv_dome:
                 {}
               mola_auv_frame:
+                {}
+              mola_auv_lightL:
+                {}
+              mola_auv_lightR:
+                {}
+              mola_auv_propLBD:
+                {}
+              mola_auv_propLBU:
+                {}
+              mola_auv_propLFD:
+                {}
+              mola_auv_propLFU:
+                {}
+              mola_auv_propRBD:
+                {}
+              mola_auv_propRBU:
+                {}
+              mola_auv_propRFD:
+                {}
+              mola_auv_propRFU:
                 {}
       Update Interval: 0
       Value: true
@@ -194,6 +233,46 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        mola_auv_propLBD:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mola_auv_propLBU:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mola_auv_propLFD:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mola_auv_propLFU:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mola_auv_propRBD:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mola_auv_propRBU:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mola_auv_propRFD:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mola_auv_propRFU:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Mass Properties:
         Inertia: false
         Mass: false
@@ -262,25 +341,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 2.6201798915863037
+      Distance: 2.52046537399292
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.3009231984615326
-        Y: -0.0601046048104763
-        Z: 2.248699903488159
+        X: -0.1973896324634552
+        Y: -0.10432575643062592
+        Z: 2.0241732597351074
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: true
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3003990948200226
+      Pitch: 0.4453989565372467
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz_default_plugins)
-      Yaw: 2.640399932861328
+      Yaw: 0.6503971815109253
     Saved: ~
 Window Geometry:
   Displays:

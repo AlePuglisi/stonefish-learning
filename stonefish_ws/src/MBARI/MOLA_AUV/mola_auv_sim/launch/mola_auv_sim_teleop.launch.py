@@ -6,11 +6,12 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch.substitutions import Command
 from ament_index_python.packages import get_package_share_directory
+import xacro 
 
 def generate_launch_description():
     description_path = get_package_share_directory('mola_auv_sim')
     xacro_path = os.path.join(description_path, "urdf", "mola_auv.urdf.xacro")
-    robot_description_command = Command(['xacro ', xacro_path])
+    robot_description = xacro.process_file(xacro_path).toxml()
 
     # Declare launch arguments
     robot_name_arg = DeclareLaunchArgument(
@@ -77,13 +78,19 @@ def generate_launch_description():
     mola_auv_joy_teleop_node = Node(
             package='mola_auv_control',
             executable='mola_auv_joy_teleop',
-            output='screen',
+            output='screen'
         )
-    
+
+    mola_auv_joint_states_node = Node(
+            package='mola_auv_control',
+            executable='mola_auv_joint_states_simple',
+            output='screen'
+        )
+  
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{'robot_description': robot_description_command}]
+        parameters=[{'robot_description': robot_description}]
     )   
 
     rviz_node =  Node(
@@ -103,7 +110,7 @@ def generate_launch_description():
         mola_auv_joy_teleop_node,
         static_tf_node,
         rviz_node, 
-
+        mola_auv_joint_states_node,
         TimerAction(
             period=5.0,
             actions=[robot_state_publisher_node],

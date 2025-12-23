@@ -25,9 +25,9 @@ setup(
     entry_points={
         'console_scripts': [
             'odom2tf = mola_auv_control.odom2tf:main',
-            'odom2tf_new = mola_auv_control.odom2tf_new:main',
+            'mola_auv_joint_states = mola_auv_control.mola_auv_joint_states:main',
+            'mola_auv_joint_states_simple = mola_auv_control.mola_auv_joint_states_simple:main',
             'mola_auv_joy_teleop = mola_auv_control.mola_auv_joy_teleop:main',
-            'mola_auv_joy_teleop_v0 = mola_auv_control.mola_auv_joy_teleop_v0:main',
         ],
     },
 )
