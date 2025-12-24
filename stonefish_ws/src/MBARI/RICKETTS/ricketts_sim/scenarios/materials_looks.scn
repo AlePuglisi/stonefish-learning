@@ -36,11 +36,11 @@
 
 		<look name="dinner_plate_jelly" rgb="0.52 0.72 0.89" roughness="0.3"/>
 
-		<look name="float_texture" gray="1.0" roughness="1.0" texture="texture/rov_doc_ricketts/doc_ricketts_float.png"/>
-		<look name="logo_texture" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_logo.png"/>
-		<look name="frame_texture" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_frame.png"/>
-		<look name="equipment_texture" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_equipment.png"/>
-		<look name="thrusters_texture" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_thrusters.png"/>
+		<look name="ricketts_float" gray="1.0" roughness="1.0" texture="texture/rov_doc_ricketts/ricketts_float.png"/>
+		<look name="ricketts_frame" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_frame.png"/>
+		<look name="ricketts_ducts" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_ducts.png"/>
+		<look name="ricketts_equipment" gray="1.0" roughness="0.1" texture="texture/rov_doc_ricketts/doc_ricketts_equipment.png"/>
+		<look name="ricketts_propeller" gray="1" roughness="1.0" metalness="0.0"/>
     </looks>    
 
 </scenario>

@@ -33,13 +33,11 @@
 
     <!--   Inlcude objects (obstacles, map features, dynamic objects, creatures)  -->
     <!-- <include file="$(find ricketts_sim)/scenarios/creatures_animated.scn"/> -->
-    <include file="$(find ricketts_sim)/scenarios/creatures_dynamics.scn"/>
+    <!-- <include file="$(find ricketts_sim)/scenarios/creatures_dynamics.scn"/> -->
 
     <!--   Inlcude Addiitonal world actuators/sensors (lights, cameras, etc) not attached to Robots  -->
 
     <!--   Inlcude Robots  -->
-    <include file="$(find ricketts_sim)/scenarios/ricketts.scn">
-        <arg name="robot_name" value="DocRicketts"/>
-    </include>
+    <include file="$(find ricketts_sim)/scenarios/ricketts_simple.scn"/>
 
 </scenario>
