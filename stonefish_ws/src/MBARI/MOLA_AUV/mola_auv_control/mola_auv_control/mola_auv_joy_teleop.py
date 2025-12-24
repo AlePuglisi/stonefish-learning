@@ -7,12 +7,11 @@ from std_msgs.msg import Float64MultiArray
 from std_msgs.msg import Float64
 from math import pi
 import numpy as np
+from std_srvs.srv import SetBool
 
 class WeightedJoystickController(Node):
-    """
-    Joystick controller using weighted pseudo-inverse to account for 
-    drastically different inertias in roll vs pitch/yaw
-    """
+    """ Joystick controller """ 
+
     def __init__(self):
         super().__init__('weighted_joystick_controller')
         
@@ -28,11 +27,28 @@ class WeightedJoystickController(Node):
             '/mola_auv/servo/lightL', 
             10
         )
+
+        self.lightL_switch_cli = self.create_client(SetBool, '/mola_auv/lights/left')
+
         self.mola_lightR_servo_pub = self.create_publisher(
             Float64, 
             '/mola_auv/servo/lightR', 
             10
         )
+
+        self.lightR_switch_cli = self.create_client(SetBool, '/mola_auv/lights/right')
+
+        # Wait for services to be available
+        while not self.lightL_switch_cli.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Waiting for left light service...')
+        while not self.lightR_switch_cli.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Waiting for right light service...')
+        
+        self.get_logger().info('Both light services are available')
+
+        # Track light state for toggling
+        self.lights_on = False
+        self.share_button_pressed = False  # For edge detection
 
         # Joystick mapping
         self.forward_joy = 1
@@ -153,7 +169,50 @@ class WeightedJoystickController(Node):
         sign = 1 if value > 0 else -1
         return sign * (abs(value) - self.deadzone) / (1.0 - self.deadzone)
 
+    def toggle_lights(self):
+        """Toggle lights on/off by calling both service clients"""
+        # Toggle state
+        self.lights_on = not self.lights_on
+        
+        # Create service request
+        request = SetBool.Request()
+        request.data = self.lights_on
+        
+        # Call left light service asynchronously
+        future_left = self.lightL_switch_cli.call_async(request)
+        future_left.add_done_callback(self.light_left_callback)
+        
+        # Call right light service asynchronously
+        future_right = self.lightR_switch_cli.call_async(request)
+        future_right.add_done_callback(self.light_right_callback)
+        
+        self.get_logger().info(f'Toggling lights {"ON" if self.lights_on else "OFF"}')
+
+    def light_left_callback(self, future):
+        """Callback for left light service response"""
+        try:
+            response = future.result()
+            if response.success:
+                self.get_logger().info(f'Left light: {response.message}')
+            else:
+                self.get_logger().warn(f'Left light failed: {response.message}')
+        except Exception as e:
+            self.get_logger().error(f'Left light service call failed: {str(e)}')
+
+    def light_right_callback(self, future):
+        """Callback for right light service response"""
+        try:
+            response = future.result()
+            if response.success:
+                self.get_logger().info(f'Right light: {response.message}')
+            else:
+                self.get_logger().warn(f'Right light failed: {response.message}')
+        except Exception as e:
+            self.get_logger().error(f'Right light service call failed: {str(e)}')
+
+
     def joy_callback(self, data: Joy):
+        """Callback for joystick commands"""
         axes = data.axes
         buttons = data.buttons
         
@@ -202,12 +261,19 @@ class WeightedJoystickController(Node):
             msg.data = -self.servo_state
             self.mola_lightR_servo_pub.publish(msg)
 
-        # Debug
-        if np.any(np.abs(command_vector) > 0.01):
-            self.get_logger().info(
-                f'CMD: Surge={surge:.2f} Sway={sway:.2f} Heave={heave:.2f} '
-                f'Roll={roll:.2f} Pitch={pitch:.2f} Yaw={yaw:.2f} | Max thrust={max_thrust:.2f}'
-            )
+        # Handle SHARE button for toggling lights (edge detection)
+        share_button_state = buttons[self.buttons_index_["share"]] == 1
+        if share_button_state and not self.share_button_pressed:
+            # Button just pressed (rising edge)
+            self.toggle_lights()
+        self.share_button_pressed = share_button_state
+
+        # # Debug
+        # if np.any(np.abs(command_vector) > 0.01):
+        #     self.get_logger().info(
+        #         f'CMD: Surge={surge:.2f} Sway={sway:.2f} Heave={heave:.2f} '
+        #         f'Roll={roll:.2f} Pitch={pitch:.2f} Yaw={yaw:.2f} | Max thrust={max_thrust:.2f}'
+        #     )
 
 
 def main(args=None):
