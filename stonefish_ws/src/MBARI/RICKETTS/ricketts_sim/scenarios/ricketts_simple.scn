@@ -195,7 +195,7 @@
 
 		<!-- T1 -->
 		<actuator name="ThrusterLU" type="thruster">
-			<origin rpy="${-15/180 * pi} 0 ${pi}" xyz="${0.3162 + 0.27} -0.6582 -1.0133"/>
+			<origin rpy="0.0 ${pi/2 + pi/12} ${-pi/2}" xyz="0.5862 -0.6582 -1.0133"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.37" right="true">
 				<mesh filename="ricketts/mesh/propeller.obj" scale="1.0"/>
@@ -214,9 +214,9 @@
 
 		<!-- T2 -->
 		<actuator name="ThrusterRU" type="thruster">
-			<origin rpy="${15/180 * pi} 0 ${pi}" xyz="${0.3162 + 0.27} 0.6582 -1.0133"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.37" right="false">
+			<origin rpy="0.0 ${75/180 * pi} ${-pi/2}" xyz="0.5862 0.6582 -1.0133"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.37" right="true">
 				<mesh filename="ricketts/mesh/propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="ricketts_propeller"/>
@@ -233,9 +233,9 @@
 
 		<!-- T3 -->
 		<actuator name="ThrusterBU" type="thruster">
-			<origin rpy="0.0 ${pi} 0.0" xyz="${-1.5534 + 0.27} 0.0 -0.9832"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.37" right="false">
+			<origin rpy="0.0 ${pi/2} 0.0" xyz="-1.2834 0.0 -0.9832"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.37" right="true">
 				<mesh filename="ricketts/mesh/propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="ricketts_propeller"/>
@@ -252,7 +252,7 @@
 
 		<!-- T4 -->
 		<actuator name="ThrusterFL" type="thruster">
-			<origin rpy="${-pi/4} ${pi/2} 0.0" xyz="${0.9864 + 0.27} -0.4709 -0.3321"/>
+			<origin rpy="0.0 0.0 ${pi/4}" xyz="1.2564 -0.4709 -0.3321"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.37" right="true">
 				<mesh filename="ricketts/mesh/propeller.obj" scale="1.0"/>
@@ -271,7 +271,7 @@
 
 		<!-- T5 -->
 		<actuator name="ThrusterFR" type="thruster">
-			<origin rpy="${pi/4} ${pi/2} 0" xyz="${0.9864 + 0.27} 0.4709 -0.3321"/>
+			<origin rpy="0.0 0.0 ${-pi/4}" xyz="1.2564 0.4709 -0.3321"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.37" right="true">
 				<mesh filename="ricketts/mesh/propeller.obj" scale="1.0"/>
@@ -290,9 +290,9 @@
 
 		<!-- T6 -->
 		<actuator name="ThrusterBL" type="thruster">
-			<origin rpy="${-pi/2 - pi/4} ${pi/2} 0" xyz="${-1.5343 + 0.27} -0.6001 -0.3321"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.37" right="false">
+			<origin rpy="0.0 0.0 ${pi/2 + pi/4}" xyz="-1.2834 -0.6001 -0.3321"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.37" right="true">
 				<mesh filename="ricketts/mesh/propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="ricketts_propeller"/>
@@ -309,9 +309,9 @@
 
 		<!-- T7 -->
 		<actuator name="ThrusterBR" type="thruster">
-			<origin rpy="${pi/2 + pi/4} ${pi/2} 0" xyz="${-1.5343 + 0.27}  0.6001 -0.3321"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.37" right="false">
+			<origin rpy="0.0 0.0 ${-pi/2 - pi/4}" xyz="-1.2643  0.6001 -0.3321"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.37" right="true">
 				<mesh filename="ricketts/mesh/propeller.obj" scale="1.0"/>
 				<material name="Neutral"/>
 				<look name="ricketts_propeller"/>

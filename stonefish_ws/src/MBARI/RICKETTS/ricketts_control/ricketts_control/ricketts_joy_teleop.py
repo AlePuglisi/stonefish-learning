@@ -16,33 +16,31 @@ class WeightedJoystickController(Node):
         super().__init__('weighted_joystick_controller')
         
         self.joy_sub = self.create_subscription(Joy, '/joy', self.joy_callback, 10)
+
         self.rov_control_pub = self.create_publisher(
             Float64MultiArray, 
             '/ricketts/controller/thruster_setpoints_sim', 
             10
         )
 
-        self.mola_lightL_servo_pub = self.create_publisher(
+        self.ricketts_camera_link_servo_pub = self.create_publisher(
             Float64, 
-            '/ricketts/servo/lightL', 
+            '/ricketts/servo/camera_link', 
+            10
+        )
+        self.ricketts_camera_servo_pub = self.create_publisher(
+            Float64, 
+            '/ricketts/servo/camera', 
             10
         )
 
-        self.lightL_switch_cli = self.create_client(SetBool, '/ricketts/lights/left')
+        # self.light_switch_cli = self.create_client(SetBool, '/ricketts/lights')
 
-        self.mola_lightR_servo_pub = self.create_publisher(
-            Float64, 
-            '/ricketts/servo/lightR', 
-            10
-        )
+        # # Wait for services to be available
+        # while not self.light_switch_cli.wait_for_service(timeout_sec=1.0):
+        #     self.get_logger().info('Waiting for left light service...')
 
-        self.lightR_switch_cli = self.create_client(SetBool, '/ricketts/lights/right')
 
-        # Wait for services to be available
-        while not self.lightL_switch_cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Waiting for left light service...')
-        while not self.lightR_switch_cli.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Waiting for right light service...')
         
         self.get_logger().info('Both light services are available')
 
@@ -97,21 +95,26 @@ class WeightedJoystickController(Node):
         self.get_logger().info(f'Using inertia-based weighting')
 
     def build_allocation_matrix(self):
-        """Build 6x8 thruster allocation matrix"""
+        """
+        Build 4x7 thruster allocation matrix for Ricketts
+        Maps [Surge, Sway, Heave, Yaw] to 7 thrusters
+        """
         
+        # Thruster configuration: [x, y, z, roll_deg, pitch_deg, yaw_deg]
+        # Note: pitch and yaw are combined in the origin rpy in your SCN
         # Thruster configuration: [x, y, z, pitch_deg, yaw_deg]
         thrusters = [
-            [0.3, -0.182, -0.105, -45, -135],  # T1_LFU
-            [0.3, -0.182, 0.105,  45, -135],  # T2_LFD
-            [0.3, 0.182, -0.105, -45, 135],  # T3_RFU
-            [0.3, 0.182, 0.105, 45, 135],  # T4_RFD
-            [-0.3, -0.182, -0.105, 45, 135], # T5_LBU
-            [-0.3, -0.182, 0.105, -45, 135], # T6_LBD
-            [-0.3, 0.182, -0.105,  45, -135], # T7_RBU
-            [-0.3, 0.182, 0.105, -45, -135], # T8_RBD
+            [0.5862, -0.182, -1.0133, 105, -90],   # T1_LU
+            [0.5862, -0.182, -1.0133,  75, -90],   # T2_RU
+            [-1.2834, 0.0, -0.9832, 90, 0],     # T3_BU
+            [1.2564, -0.4709, -0.3321, 0, 45],   # T4_FL
+            [1.2564, 0.4709, -0.3321, 0, -45],     # T5_FR
+            [-1.2834, -0.6001, -0.3321, 0, 135], # T6_BL
+            [-1.2643, 0.6001, -0.3321,  0, -135],  # T7_BR
         ]
         
-        B = np.zeros((6, 8))
+        # Build allocation matrix: 4 DOF (surge, sway, heave, yaw) x 7 thrusters
+        B = np.zeros((4, 7))
         
         for i, (x, y, z, pitch_deg, yaw_deg) in enumerate(thrusters):
             pitch = np.radians(pitch_deg)
@@ -123,45 +126,17 @@ class WeightedJoystickController(Node):
             fz = np.sin(pitch)
             
             # Torque
-            tx = y * fz - z * fy
-            ty = z * fx - x * fz
             tz = x * fy - y * fx
             
-            B[:, i] = [fx, fy, fz, tx, ty, tz]
+            B[:, i] = [fx, fy, fz, tz]
         
         self.B = B
         
-        # YOUR ACTUAL INERTIA VALUES (from the simulation)
-        mass = 29.8  # kg
-        Ixx = 0.674  # Roll inertia (VERY LOW!)
-        Iyy = 2.877  # Pitch inertia
-        Izz = 3.001 # Yaw inertia
+        # Compute pseudo-inverse
+        self.B_pinv = np.linalg.pinv(B)
         
-        # Create weighting matrix that normalizes by inertia
-        # This makes commands of equal magnitude produce equal angular accelerations
-        # W scales each DOF by sqrt(inertia) so that all DOFs are balanced
-        
-        # For forces, use mass
-        # For torques, use moment of inertia
-        W = np.diag([
-            1.0 / np.sqrt(mass),      # Surge (force)
-            1.0 / np.sqrt(mass),      # Sway (force)
-            1.0 / np.sqrt(mass),      # Heave (force)
-            1.0 / np.sqrt(Ixx),       # Roll (torque) - LARGE weight due to small Ixx
-            1.0 / np.sqrt(Iyy),       # Pitch (torque)
-            1.0 / np.sqrt(Izz)        # Yaw (torque)
-        ])
-        
-        # Compute weighted pseudo-inverse: B_weighted^+ = B^T * W^2 * (B * B^T * W^2)^-1
-        # Simpler form: (W*B)^+
-        BW = W @ B
-        self.B_pinv = np.linalg.pinv(BW)
-        
-        # Log the weighting ratios
-        self.get_logger().info(f'Weighting factors:')
-        self.get_logger().info(f'  Roll weight / Pitch weight = {np.sqrt(Iyy/Ixx):.2f}x')
-        self.get_logger().info(f'  Roll weight / Yaw weight = {np.sqrt(Izz/Ixx):.2f}x')
-        self.get_logger().info(f'This compensates for low roll inertia')
+        self.get_logger().info(f'Allocation matrix shape: {B.shape}')
+        self.get_logger().info(f'Pseudo-inverse shape: {self.B_pinv.shape}')
 
     def apply_deadzone(self, value):
         if abs(value) < self.deadzone:
@@ -220,12 +195,10 @@ class WeightedJoystickController(Node):
         surge = self.apply_deadzone(-axes[self.forward_joy])
         sway = self.apply_deadzone(axes[self.side_joy])
         heave = self.apply_deadzone(axes[self.depth_joy])
-        roll = self.apply_deadzone(axes[self.roll_joy]) if self.roll_joy < len(axes) else 0.0
-        pitch = self.apply_deadzone(axes[self.pitch_joy]) if self.pitch_joy < len(axes) else 0.0
         yaw = self.apply_deadzone(axes[self.yaw_joy])
         
-        # Command vector [Surge, Sway, Heave, Roll, Pitch, Yaw]
-        command_vector = np.array([surge, sway, heave, roll, pitch, yaw])
+        # Command vector [Surge, Sway, Heave, Yaw]
+        command_vector = np.array([surge, sway, heave, yaw])
         
         # Calculate thruster setpoints using weighted pseudo-inverse
         thruster_setpoints = self.B_pinv @ command_vector

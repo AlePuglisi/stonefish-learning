@@ -62,6 +62,12 @@ def generate_launch_description():
             output='screen',
         )  
     
+    ricketts_joy_teleop_node = Node(
+            package='ricketts_control',
+            executable='ricketts_joy_teleop',
+            output='screen'
+        )
+    
     # robot_state_publisher_node = Node(
     #     package='robot_state_publisher',
     #     executable='robot_state_publisher',
@@ -82,6 +88,7 @@ def generate_launch_description():
 
         #odom2tf_node, 
         joy_node,
+        ricketts_joy_teleop_node,
         # static_tf_node,
         # rviz_node, 
 
