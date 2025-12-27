@@ -59,6 +59,8 @@
 		<look name="MOLA_lightR" gray="1.0" roughness="0.9" texture="mola_auv/texture/lightR.png"/>
 		<look name="MOLA_lightL" gray="1.0" roughness="0.9" texture="mola_auv/texture/lightL.png"/>
 
+		<look name="sonar_oculus" gray="1.0" roughness="0.9" texture="mola_auv/texture/SonarOculus.png"/>
+
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
     </looks>   
 
