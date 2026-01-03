@@ -132,10 +132,10 @@ class WeightedJoystickController(Node):
         self.B = B
         
         # YOUR ACTUAL INERTIA VALUES (from the simulation)
-        mass = 29.8  # kg
-        Ixx = 0.674  # Roll inertia (VERY LOW!)
-        Iyy = 2.877  # Pitch inertia
-        Izz = 3.001 # Yaw inertia
+        mass = 29.637  # kg
+        Ixx = 0.668  # Roll inertia (VERY LOW!)
+        Iyy = 4.220  # Pitch inertia
+        Izz = 4.342 # Yaw inertia
         
         # Create weighting matrix that normalizes by inertia
         # This makes commands of equal magnitude produce equal angular accelerations
@@ -156,12 +156,16 @@ class WeightedJoystickController(Node):
         # Simpler form: (W*B)^+
         BW = W @ B
         self.B_pinv = np.linalg.pinv(BW)
-        
+
+        # self.B_pinv = np.linalg.pinv(B)
+        self.get_logger().info(f'Allocation matrix shape: {B.shape}')
+        self.get_logger().info(f'Pseudo-inverse shape: {self.B_pinv.shape}')
+
         # Log the weighting ratios
-        self.get_logger().info(f'Weighting factors:')
-        self.get_logger().info(f'  Roll weight / Pitch weight = {np.sqrt(Iyy/Ixx):.2f}x')
-        self.get_logger().info(f'  Roll weight / Yaw weight = {np.sqrt(Izz/Ixx):.2f}x')
-        self.get_logger().info(f'This compensates for low roll inertia')
+        # self.get_logger().info(f'Weighting factors:')
+        # self.get_logger().info(f'  Roll weight / Pitch weight = {np.sqrt(Iyy/Ixx):.2f}x')
+        # self.get_logger().info(f'  Roll weight / Yaw weight = {np.sqrt(Izz/Ixx):.2f}x')
+        # self.get_logger().info(f'This compensates for low roll inertia')
 
     def apply_deadzone(self, value):
         if abs(value) < self.deadzone:
@@ -233,13 +237,15 @@ class WeightedJoystickController(Node):
         # Normalize if needed
         max_thrust = np.max(np.abs(thruster_setpoints))
         if max_thrust > 1.0:
-            thruster_setpoints = thruster_setpoints / max_thrust
+            thruster_setpoints = 0.7 * thruster_setpoints / max_thrust
         
         # Publish
         msg = Float64MultiArray()
         msg.data = thruster_setpoints.tolist()
         self.rov_control_pub.publish(msg)
-        
+        # self.get_logger().info(f"Thrusters SetPoints: {thruster_setpoints}")   
+
+
         if buttons[self.buttons_index_["R1"]] == 1:
             self.get_logger().info("R1 pressed")
             msg = Float64()

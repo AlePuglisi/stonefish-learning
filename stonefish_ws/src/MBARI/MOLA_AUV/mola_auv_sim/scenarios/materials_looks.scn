@@ -5,7 +5,7 @@
 		<material name="Neutral" density="1000.0" restitution="0.5"/>
 
 		<!-- Subsea Buoyancy Foam: R-3318 -->
-		<material name="Foam" density="50.0" restitution="0.3"/>
+		<material name="Foam" density="30.0" restitution="0.3"/>
 		<!-- Fake Buoyancy Foam -->
 		<material name="InternalFoam" density="40.0" restitution="0.3"/>
 		<!-- BlueROV2 Base Frames -->
@@ -13,9 +13,9 @@
 		<!-- BlueROV2 Thrusters Duct -->
 		<material name="Polycarbonate" density="435.0" restitution="0.75"/>
 		<!-- BlueROV2 Tubes -->
-		<material name="Acrylic" density="1100.0" restitution="0.9"/>
+		<material name="Acrylic" density="300.0" restitution="0.9"/>
 
-		<material name="Ballast" density="570.0" restitution="0.75"/>
+		<material name="Ballast" density="410.0" restitution="0.75"/>
 
 		<friction_table>
 			<friction material1="Neutral" material2="Neutral" static="0.5" dynamic="0.2"/>

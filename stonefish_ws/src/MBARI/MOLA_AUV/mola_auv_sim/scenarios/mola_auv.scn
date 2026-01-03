@@ -33,13 +33,13 @@
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
-			<external_part name="CameraDome" type="model" physics="submerged" buoyant="true">
+			<external_part name="CameraDome" type="model" physics="submerged" buoyant="false">
 				<visual>
 					<mesh filename="mola_auv/mesh/dome.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<physical>
-					<mesh filename="mola_auv/mesh/dome.obj" scale="1.0"/>
+					<mesh filename="mola_auv/mesh/dome_phy.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Acrylic"/>
@@ -85,7 +85,7 @@
 			</internal_part> 
 
 			<internal_part name="BallastBack" type="cylinder" physics="submerged" buoyant="false">
-				<dimensions radius="0.1" height="0.0115"/>
+				<dimensions radius="0.11" height="0.03"/>
 				<origin rpy="0.0 1.57 0.0" xyz="-0.335 0.0 0.0"/>
 				<material name="Ballast"/>
 				<look name="transparent"/>
