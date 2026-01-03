@@ -33,6 +33,19 @@
 
     <!--   Inlcude objects (obstacles, map features, dynamic objects, creatures)  -->
     <!-- <include file="$(find mola_auv_sim)/scenarios/.scn"/> -->
+    <static name="SandFloor" type="model">
+        <physical>
+            <mesh filename="sand_floor/mesh/sand_floor.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <visual>
+            <mesh filename="sand_floor/mesh/sand_floor.obj" scale="1.0"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </visual>
+        <material name="Neutral"/>
+        <look name="sand_floor"/>
+        <world_transform xyz="0.0 0.0 8.0" rpy="0.0 0.0 0.0"/>
+    </static>     
 
     <!--   Inlcude Addiitonal world actuators/sensors (lights, cameras, etc) not attached to Robots  -->
 

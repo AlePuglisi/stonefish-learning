@@ -61,6 +61,8 @@
 
 		<look name="sonar_oculus" gray="1.0" roughness="0.9" texture="mola_auv/texture/SonarOculus.png"/>
 
+		<look name="sand_floor" gray="1.0" roughness="0.9" texture="sand_floor/texture/color.jpg" normal_map="sand_floor/texture/normal.png"/>
+
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
     </looks>   
 
