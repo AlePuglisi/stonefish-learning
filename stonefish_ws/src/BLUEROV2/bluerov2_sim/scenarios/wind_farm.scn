@@ -4,21 +4,23 @@
     <looks>
         <look name="PileUp" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_complex/texture/UpPile.png"/>
 
-        <look name="PileSub" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_complex/texture/SubPile.png"
+        <look name="PileSub" gray="1.0" roughness="1.0" metalness="0.1" texture="wind_turbine_complex/texture/SubPile.png"
 																		normal_map="wind_turbine_complex/texture/SubPile_Normal.png"/>
-        <look name="Base" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_complex/texture/Base.png"
-																		normal_map="wind_turbine_complex/texture/Base_Normal.png"/>
 
-        <look name="PileSubCyl30" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_complex/texture/PileSubCyl30.png"
-																		normal_map="wind_turbine_complex/texture/PileSubCyl30_Normal.png"/>
+        <look name="Base" gray="1.0" roughness="0.9" metalness="0.1" texture="wind_turbine_complex/texture/Base.png"/>
+																	 <!-- normal_map="wind_turbine_complex/texture/Base_Normal.png"/> -->
 
-        <look name="HCylSub" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_complex/texture/HCylSub.png"
+        <look name="PileSubCyl30" gray="1.0" roughness="1.0" metalness="0.1" texture="wind_turbine_complex/texture/PileSubCyl30.png"
+																			 normal_map="wind_turbine_complex/texture/PileSubCyl30_Normal.png"/>
+
+        <look name="HCylSub" gray="1.0" roughness="1.0" metalness="0.1" texture="wind_turbine_complex/texture/HCylSub.png"
 																		normal_map="wind_turbine_complex/texture/HCylSub_Normal.png"/>
 
 		<look name="HCylUp" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_complex/texture/HCylUp.png"/>
 
 		<look name="White" rgb="1.0 1.0 1.0" roughness="1.0" metalness="0.0"/>
 		<look name="Black" rgb="0.0 0.0 0.0" roughness="1.0" metalness="0.0"/>
+
     </looks>   
 
 	<static name="Base1" type="model">

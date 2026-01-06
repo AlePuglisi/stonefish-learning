@@ -379,7 +379,7 @@
 			<settings range_min="0.5" range_max="20.0" gain="1.1"/>
 			<noise multiplicative="0.03" additive="0.05"/>
 			<display colormap="hot"/>
-			<origin xyz="0.2 0 0.1" rpy="1.308 0 1.57"/>
+			<origin xyz="0.2 0 0.1" rpy="${pi/2} 0 ${pi/2}"/>
 			<link name="base_link"/>
 			<ros_publisher topic="/bluerov/fls"/>
 		</sensor>
