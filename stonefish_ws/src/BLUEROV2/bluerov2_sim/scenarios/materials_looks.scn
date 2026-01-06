@@ -50,6 +50,7 @@
 		<look name="manipulator" rgb="0.2 0.15 0.1" roughness="0.6" metalness="0.8"/>
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
 		<look name="propeller" rgb="0.0 0.1 0.85" roughness="0.3" metalness="0.0"/>
+		
 		<look name="windTurbinePile" gray="1.0" roughness="0.1" texture="wind_turbine/textures/WindTurbine.png"/>
 		<look name="SeaSponge" gray="1.0" roughness="0.1" texture="test_mesh/textures/sea_sponge.png"/>
     </looks>   
