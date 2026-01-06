@@ -34,7 +34,7 @@ class JoystickController(Node):
         self.get_logger().info('Both light services are available')
 
         # Track light state for toggling
-        self.lights_on = False
+        self.lights_on = True
         self.share_button_pressed = False  # For edge detection
 
         # PS4 Joypad 
