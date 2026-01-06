@@ -27,7 +27,7 @@ setup(
             'odom2tf = bluerov2_control.odom2tf:main',
             'odom2tf_new = bluerov2_control.odom2tf_new:main',
             'bluerov2_joy_teleop = bluerov2_control.bluerov2_joy_teleop:main',
-            'bluerov2_joy_teleop_v0 = bluerov2_control.bluerov2_joy_teleop_v0:main',
+            'bluerov2_joy_teleop_full = bluerov2_control.bluerov2_joy_teleop_full:main',
         ],
     },
 )
