@@ -32,7 +32,9 @@
     <include file="$(find mola_auv_sim)/scenarios/materials_looks.scn"/>
 
     <!--   Inlcude objects (obstacles, map features, dynamic objects, creatures)  -->
+       
     <!-- <include file="$(find mola_auv_sim)/scenarios/.scn"/> -->
+
     <static name="SandFloor" type="model">
         <physical>
             <mesh filename="sand_floor/mesh/sand_floor.obj" scale="1.0" convex="false"/>
@@ -59,7 +61,9 @@
         <material name="Neutral"/>
         <look name="calibChess14x10"/>
         <world_transform xyz="2.0 0.0 2.0" rpy="0.0 0.0 0.0"/>
-    </static>     
+    </static>   
+
+    <include file="$(find mola_auv_sim)/scenarios/corals.scn"/>
 
     <!--   Inlcude Addiitonal world actuators/sensors (lights, cameras, etc) not attached to Robots  -->
 

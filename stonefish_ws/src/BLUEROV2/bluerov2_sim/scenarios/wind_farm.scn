@@ -305,48 +305,6 @@
 		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
 	</static>
 
-
-
-	<!-- <static name="PileSub1Mussels" type="model">
-		<physical>
-			<mesh filename="wind_turbine_complex/mesh/PileSub1Mussels.obj" scale="1.0" convex="true"/>
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-		</physical>
-		<visual>
-			<mesh filename="wind_turbine_complex/mesh/PileSub1Mussels.obj" scale="1.0"/>
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-		</visual>
-		<material name="Neutral"/>
-		<look name="Black"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
-	</static>
-	<static name="PileSub2Mussels" type="model">
-		<physical>
-			<mesh filename="wind_turbine_complex/mesh/PileSub2Mussels.obj" scale="1.0" convex="true"/>
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-		</physical>
-		<visual>
-			<mesh filename="wind_turbine_complex/mesh/PileSub2Mussels.obj" scale="1.0"/>
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-		</visual>
-		<material name="Neutral"/>
-		<look name="Black"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
-	</static>
-	<static name="PileSub3Mussels" type="model">
-		<physical>
-			<mesh filename="wind_turbine_complex/mesh/PileSub3Mussels.obj" scale="1.0" convex="true"/>
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-		</physical>
-		<visual>
-			<mesh filename="wind_turbine_complex/mesh/PileSub3Mussels.obj" scale="1.0"/>
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-		</visual>
-		<material name="Neutral"/>
-		<look name="Black"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
-	</static> -->
-
 	<static name="WindPile" type="model">
 		<physical>
 			<mesh filename="wind_turbine/wind_turbine_pile.obj" scale="3.5" convex="true"/>
