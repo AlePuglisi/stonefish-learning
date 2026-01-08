@@ -15,7 +15,7 @@
 		<!-- BlueROV2 Tubes -->
 		<material name="Acrylic" density="300.0" restitution="0.9"/>
 
-		<material name="Ballast" density="410.0" restitution="0.75"/>
+		<material name="Ballast" density="408.0" restitution="0.75"/>
 
 		<friction_table>
 			<friction material1="Neutral" material2="Neutral" static="0.5" dynamic="0.2"/>
@@ -61,7 +61,7 @@
 
 		<look name="sonar_oculus" gray="1.0" roughness="0.9" texture="mola_auv/texture/SonarOculus.png"/>
 
-		<look name="sand_floor" gray="1.0" roughness="0.9" texture="sand_floor/texture/color.jpg" normal_map="sand_floor/texture/normal.png"/>
+		<look name="sand_floor" gray="1.0" roughness="0.9" texture="sand_floor/texture/color4k.jpg" normal_map="sand_floor/texture/normal4k.png"/>
 
 		<look name="calibChess14x10" gray="1.0" roughness="0.9" texture="calibration_marker/texture/chessBoard14x10.png"/>
 
