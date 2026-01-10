@@ -136,7 +136,7 @@
 		<world_transform xyz="3.0 3.0 7.8" rpy="0.0 0.0 0.0"/>
 	</static> -->
 
-	<static name="CoralRestoration01" type="model">
+	<!-- <static name="CoralRestoration01" type="model">
 		<physical>
 			<mesh filename="corals/mesh/coral_restoration_frame.obj" scale="2.0" convex="false"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -164,6 +164,6 @@
 		<material name="Neutral"/>
 		<look name="White"/>
 		<world_transform xyz="6.5 3.0 8.1" rpy="0.0 0.0 0.0"/>
-	</static>
+	</static> -->
 
 </scenario>

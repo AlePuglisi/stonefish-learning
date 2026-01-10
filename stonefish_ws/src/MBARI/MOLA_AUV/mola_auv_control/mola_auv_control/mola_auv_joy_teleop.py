@@ -9,6 +9,11 @@ from math import pi
 import numpy as np
 from std_srvs.srv import SetBool
 
+import cv2
+from cv_bridge import CvBridge
+from sensor_msgs.msg import Image
+import os 
+
 class WeightedJoystickController(Node):
     """ Joystick controller """ 
 
@@ -16,6 +21,18 @@ class WeightedJoystickController(Node):
         super().__init__('weighted_joystick_controller')
         
         self.joy_sub = self.create_subscription(Joy, '/joy', self.joy_callback, 10)
+
+        self.img_sub = self.create_subscription(
+            Image,
+            '/mola_auv/camera/image_color',
+            self.image_callback,
+            10)
+ 
+        self.cv_bridge = CvBridge() 
+        self.img_count = 1
+        self.cv_image = None
+        self.img_path = "/home/ale/tutorials/stonefish-learning/stonefish_ws/src/MBARI/MOLA_AUV/mola_auv_sim/data/images/"
+
         self.rov_control_pub = self.create_publisher(
             Float64MultiArray, 
             '/mola_auv/controller/thruster_setpoints_sim', 
@@ -134,8 +151,8 @@ class WeightedJoystickController(Node):
         # YOUR ACTUAL INERTIA VALUES (from the simulation)
         mass = 29.637  # kg
         Ixx = 0.668  # Roll inertia (VERY LOW!)
-        Iyy = 4.220  # Pitch inertia
-        Izz = 4.342 # Yaw inertia
+        Iyy = 2.359  # Pitch inertia
+        Izz = 2.478 # Yaw inertia
         
         # Create weighting matrix that normalizes by inertia
         # This makes commands of equal magnitude produce equal angular accelerations
@@ -215,18 +232,26 @@ class WeightedJoystickController(Node):
             self.get_logger().error(f'Right light service call failed: {str(e)}')
 
 
+    def image_callback(self, msg):
+        try:
+            self.cv_image = self.cv_bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+        except Exception as e:
+            self.get_logger().error(f"Error converting image: {e}")
+            return
+        
+        
     def joy_callback(self, data: Joy):
         """Callback for joystick commands"""
         axes = data.axes
         buttons = data.buttons
         
         # Extract commands
-        surge = self.apply_deadzone(-axes[self.forward_joy])
-        sway = self.apply_deadzone(axes[self.side_joy])
+        surge = -self.apply_deadzone(-axes[self.forward_joy])
+        sway = -self.apply_deadzone(axes[self.side_joy])
         heave = self.apply_deadzone(axes[self.depth_joy])
         roll = self.apply_deadzone(axes[self.roll_joy]) if self.roll_joy < len(axes) else 0.0
-        pitch = self.apply_deadzone(axes[self.pitch_joy]) if self.pitch_joy < len(axes) else 0.0
-        yaw = self.apply_deadzone(axes[self.yaw_joy])
+        pitch = -self.apply_deadzone(axes[self.pitch_joy]) if self.pitch_joy < len(axes) else 0.0
+        yaw = -self.apply_deadzone(axes[self.yaw_joy])
         
         # Command vector [Surge, Sway, Heave, Roll, Pitch, Yaw]
         command_vector = np.array([surge, sway, heave, roll, pitch, yaw])
@@ -237,7 +262,7 @@ class WeightedJoystickController(Node):
         # Normalize if needed
         max_thrust = np.max(np.abs(thruster_setpoints))
         if max_thrust > 1.0:
-            thruster_setpoints = 0.7 * thruster_setpoints / max_thrust
+            thruster_setpoints =  thruster_setpoints / max_thrust
         
         # Publish
         msg = Float64MultiArray()
@@ -273,6 +298,13 @@ class WeightedJoystickController(Node):
             # Button just pressed (rising edge)
             self.toggle_lights()
         self.share_button_pressed = share_button_state
+
+        if buttons[self.buttons_index_["triangle"]] == 1 and self.cv_image is not None:
+            # Button just pressed (rising edge)
+            full_img_path = self.img_path + 'camera_' + str(self.img_count) + ".jpg"
+            cv2.imwrite(full_img_path, self.cv_image)  
+            self.img_count += 1
+
 
         # # Debug
         # if np.any(np.abs(command_vector) > 0.01):

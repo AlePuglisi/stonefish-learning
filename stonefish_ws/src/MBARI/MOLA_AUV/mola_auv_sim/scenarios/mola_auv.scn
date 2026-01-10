@@ -338,9 +338,9 @@
 
 		<sensor name="dvl" type="dvl" rate="5.0">
 			<link name="base_link"/>
-			<origin rpy="0.0 0.0 0.0" xyz="-0.26 0.0 0.162"/>
-			<specs beam_angle="30.0"/>
-			<range velocity="9.0 9.0 9.0" altitude_min="0.5" altitude_max="81.0"/>
+			<origin rpy="0.0 ${pi} 0.0" xyz="-0.26 0.0 0.162"/>
+			<specs beam_angle="22.5"/>
+			<range velocity="9.0 9.0 9.0" altitude_min="0.05" altitude_max="40.0"/>
 			<noise velocity="0.0015" altitude="0.001"/>
 			<visual filename="mola_auv/mesh/dvl.obj" scale="1.0" look="black"/>
 			<ros_publisher topic="/mola_auv/navigator/dvl" altitude_topic="/mola_auv/navigator/altitude"/>
