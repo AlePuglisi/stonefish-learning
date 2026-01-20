@@ -15,6 +15,9 @@
 
         <look name="HCylSub" gray="1.0" roughness="1.0" metalness="0.1" texture="wind_turbine_complex/texture/HCylSub.png"
 																		normal_map="wind_turbine_complex/texture/HCylSub_Normal.png"/>
+															
+        <look name="BioFuel1_0" gray="1.0" roughness="1.0" metalness="0.1" texture="wind_turbine_complex/texture/Biofueling0.png"
+																		normal_map="wind_turbine_complex/texture/Biofueling0_Normal.png"/>
 
 		<look name="HCylUp" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_complex/texture/HCylUp.png"/>
 
@@ -77,7 +80,7 @@
 	</static>
 	<static name="PilePieces1" type="model">
 		<physical>
-			<mesh filename="wind_turbine_complex/mesh/PilePieces1.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_complex/mesh/PilePieces1.obj" scale="1.0" convex="false"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
@@ -172,7 +175,7 @@
 	</static>
 	<static name="PilePieces2" type="model">
 		<physical>
-			<mesh filename="wind_turbine_complex/mesh/PilePieces2.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_complex/mesh/PilePieces2.obj" scale="1.0" convex="false"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
@@ -266,7 +269,7 @@
 	</static>
 	<static name="PilePieces3" type="model">
 		<physical>
-			<mesh filename="wind_turbine_complex/mesh/PilePieces3.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_complex/mesh/PilePieces3.obj" scale="1.0" convex="false"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
@@ -317,6 +320,21 @@
 		<material name="Neutral"/>
 		<look name="windTurbinePile"/>
 		<world_transform xyz="17.5 -22 -10" rpy="0.0 0.0 -${pi/6}"/>
+	</static>
+
+
+	<static name="BioFuel1_0" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/BioFuel1_0.obj" scale="1.0" convex="false"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/BioFuel1_0.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="BioFuel1_0"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
 	</static>
 
 </scenario>

@@ -72,6 +72,16 @@
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 			</external_part>
 
+			<!--   FIX HYDRODYNAMICS AND THRUSTERS   -->
+
+			<internal_part name="BallastBottom" type="cylinder" physics="submerged" buoyant="false">
+				<dimensions radius="0.11" height="0.03"/>
+				<origin rpy="0.0 0.0 0.0" xyz="-0.335 0.0 0.0"/>
+				<material name="Ballast"/>
+				<look name="transparent"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</internal_part> 
+
 		</base_link>
 
 		<!--   THRUSTERS   -->
@@ -379,7 +389,7 @@
 			<settings range_min="0.5" range_max="20.0" gain="1.1"/>
 			<noise multiplicative="0.03" additive="0.05"/>
 			<display colormap="hot"/>
-			<origin xyz="0.2 0 0.1" rpy="${pi/2} 0 ${pi/2}"/>
+			<origin xyz="0.2 0 0.1" rpy="${pi/2 - pi/6} 0 ${pi/2}"/>
 			<link name="base_link"/>
 			<ros_publisher topic="/bluerov/fls"/>
 		</sensor>

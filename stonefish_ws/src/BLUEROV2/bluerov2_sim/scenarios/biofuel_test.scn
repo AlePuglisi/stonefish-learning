@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<scenario>
+
+    <looks>
+        <look name="BioFuel1_0" gray="1.0" roughness="1.0" metalness="0.1" texture="wind_turbine_complex/texture/Biofueling0.png"
+																		normal_map="wind_turbine_complex/texture/Biofueling0_Normal.png"/>
+    </looks>   
+
+	<static name="BioFuel1_0" type="model">
+		<physical>
+			<mesh filename="wind_turbine_complex/mesh/BioFuel1_0.obj" scale="1.0" convex="false"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_complex/mesh/BioFuel1_0.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Neutral"/>
+		<look name="BioFuel1_0"/>
+		<world_transform xyz="0.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+	</static>
+
+</scenario>    <!-- <include file="$(find bluerov2_sim)/scenarios/wind_farm.scn"/>
