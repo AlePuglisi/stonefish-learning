@@ -4,6 +4,9 @@
     <materials>
 		<material name="Neutral" density="1000.0" restitution="0.5"/>
 
+		<material name="Steel" density="1000.0" restitution="0.9"/>
+		<material name="Biofouling" density="100.0" restitution="0.2"/>
+
 		<!-- Subsea Buoyancy Foam: R-3318 -->
 		<material name="Foam" density="50.0" restitution="0.3"/>
 		<!-- Fake Buoyancy Foam -->
@@ -24,6 +27,8 @@
 			<friction material1="Neutral" material2="Polycarbonate" static="0.5" dynamic="0.2"/>
 			<friction material1="Neutral" material2="Acrylic" static="0.5" dynamic="0.2"/>
 			<friction material1="Neutral" material2="InternalFoam" static="0.5" dynamic="0.2"/>
+			<friction material1="Neutral" material2="Steel" static="0.5" dynamic="0.2"/>
+			<friction material1="Neutral" material2="Biofouling" static="0.5" dynamic="0.2"/>		
 
 			<friction material1="Foam" material2="Foam" static="0.5" dynamic="0.2"/>
 			<friction material1="Foam" material2="Acrylic" static="0.5" dynamic="0.2"/>
@@ -31,16 +36,32 @@
 			<friction material1="Foam" material2="Polycarbonate" static="0.5" dynamic="0.2"/>
 			<friction material1="Foam" material2="Acrylic" static="0.5" dynamic="0.2"/>
 			<friction material1="Foam" material2="InternalFoam" static="0.5" dynamic="0.2"/>
+			<friction material1="Foam" material2="Steel" static="0.5" dynamic="0.2"/>
+			<friction material1="Foam" material2="Biofouling" static="0.5" dynamic="0.2"/>		
 
 			<friction material1="Polyethylene" material2="Polyethylene" static="0.5" dynamic="0.2"/>
 			<friction material1="Polyethylene" material2="Polycarbonate" static="0.5" dynamic="0.2"/>	
 			<friction material1="Polyethylene" material2="Acrylic" static="0.5" dynamic="0.2"/>
 			<friction material1="Polyethylene" material2="InternalFoam" static="0.5" dynamic="0.2"/>
+			<friction material1="Polyethylene" material2="Steel" static="0.5" dynamic="0.2"/>
+			<friction material1="Polyethylene" material2="Biofouling" static="0.5" dynamic="0.2"/>		
 
 			<friction material1="Acrylic" material2="Acrylic" static="0.5" dynamic="0.2"/>
 			<friction material1="Acrylic" material2="InternalFoam" static="0.5" dynamic="0.2"/>
+			<friction material1="Acrylic" material2="Steel" static="0.5" dynamic="0.2"/>
+			<friction material1="Acrylic" material2="Biofouling" static="0.5" dynamic="0.2"/>		
 
 			<friction material1="InternalFoam" material2="InternalFoam" static="0.5" dynamic="0.2"/>
+			<friction material1="InternalFoam" material2="Steel" static="0.5" dynamic="0.2"/>
+			<friction material1="InternalFoam" material2="Biofouling" static="0.5" dynamic="0.2"/>		
+
+			<friction material1="Steel" material2="Steel" static="0.5" dynamic="0.2"/>
+			<friction material1="Steel" material2="Biofouling" static="0.5" dynamic="0.2"/>		
+
+			<friction material1="Biofouling" material2="Biofouling" static="0.5" dynamic="0.2"/>	
+
+
+
 		</friction_table>
 	</materials>
 

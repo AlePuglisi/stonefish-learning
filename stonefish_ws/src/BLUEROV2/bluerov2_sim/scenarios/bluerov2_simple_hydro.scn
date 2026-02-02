@@ -74,13 +74,13 @@
 
 			<!--   FIX HYDRODYNAMICS AND THRUSTERS   -->
 
-			<internal_part name="BallastBottom" type="cylinder" physics="submerged" buoyant="false">
+			<!-- <internal_part name="BallastBottom" type="cylinder" physics="submerged" buoyant="false">
 				<dimensions radius="0.11" height="0.03"/>
 				<origin rpy="0.0 0.0 0.0" xyz="-0.335 0.0 0.0"/>
 				<material name="Ballast"/>
 				<look name="transparent"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-			</internal_part> 
+			</internal_part>  -->
 
 		</base_link>
 

@@ -32,7 +32,7 @@
     <include file="$(find bluerov2_sim)/scenarios/materials_looks.scn"/>
 
     <!--   Inlcude objects (obstacles, map features, dynamic objects, creatures)  -->
-    <!-- <include file="$(find bluerov2_sim)/scenarios/wind_farm.scn"/> -->
+    <include file="$(find bluerov2_sim)/scenarios/wind_farm.scn"/>
     <include file="$(find bluerov2_sim)/scenarios/biofuel_test.scn"/>
 
     <!--   Inlcude Addiitonal world actuators/sensors (lights, cameras, etc) not attached to Robots  -->

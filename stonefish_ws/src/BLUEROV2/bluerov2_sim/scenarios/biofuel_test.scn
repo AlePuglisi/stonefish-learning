@@ -11,13 +11,9 @@
 			<mesh filename="wind_turbine_complex/mesh/BioFuel1_0.obj" scale="1.0" convex="false"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
-		<visual>
-			<mesh filename="wind_turbine_complex/mesh/BioFuel1_0.obj" scale="1.0"/>
-			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-		</visual>
-		<material name="Neutral"/>
+		<material name="Biofouling"/>
 		<look name="BioFuel1_0"/>
-		<world_transform xyz="0.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 ${pi} 0.0"/>
 	</static>
 
-</scenario>    <!-- <include file="$(find bluerov2_sim)/scenarios/wind_farm.scn"/>
+</scenario> 
