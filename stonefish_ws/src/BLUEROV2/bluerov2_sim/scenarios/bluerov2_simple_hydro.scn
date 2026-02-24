@@ -17,7 +17,7 @@
 
 			<external_part name="Base" type="model" physics="submerged" buoyant="false">
 				<visual>
-					<mesh filename="bluerov2/simple_hydro/bluerov2_base.obj" scale="1.0"/>
+					<mesh filename="bluerov2/simple_hydro/fixed/bluerov2_base.obj" scale="1.0"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<physical>
@@ -25,7 +25,7 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polycarbonate"/>
-				<look name="black"/>
+				<look name="bluerov2_base"/>
 				<mass value="9.25"/>
     			<inertia xyz="0.185 0.185 0.28"/>
 				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
@@ -88,10 +88,10 @@
 
 		<!-- T1 -->
 		<actuator name="Thruster_R_FORWARD_FRONT" type="thruster">
-			<origin rpy="0.0 0.0 -${42*pi/180}" xyz="0.12525 0.1031 0.027898"/>
+			<origin rpy="0.0 0.0 -${46*pi/180}" xyz="0.13 0.098 0.028"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="false">
-				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.0"/>
+				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.02"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -105,6 +105,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
+				<!-- <thrust_coeff forward="0.07" reverse="0.11"/> -->
 				<thrust_coeff forward="0.07" reverse="0.11"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
@@ -113,10 +114,10 @@
 
 		<!-- T2 -->
 		<actuator name="Thruster_L_FORWARD_FRONT" type="thruster">
-			<origin rpy="0.0 0.0 ${42*pi/180}" xyz="0.12445 -0.1036 0.02744"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.0"/>
+			<origin rpy="0.0 0.0 ${46*pi/180}" xyz="0.13 -0.098 0.028"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="false">
+				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.02"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -138,10 +139,10 @@
 
 		<!-- T3 -->
 		<actuator name="Thruster_R_FORWARD_REAR" type="thruster">
-			<origin rpy="0.0 0.0 ${48*pi/180 + pi}" xyz="-0.15174 0.098539 0.026725"/>
-    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
-			<propeller diameter="0.07" right="false">
-				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.0"/>
+			<origin rpy="0.0 0.0 ${48*pi/180 + pi}" xyz="-0.157 0.096 0.028"/>
+    		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
+			<propeller diameter="0.07" right="true">
+				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.02"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -163,10 +164,10 @@
 
 		<!-- T4 -->
 		<actuator name="Thruster_L_FORWARD_REAR" type="thruster">
-			<origin rpy="0.0 0.0 -${48*pi/180 + pi} " xyz="-0.15099 -0.099122 0.027183"/>
+			<origin rpy="0.0 0.0 -${48*pi/180 + pi} " xyz="-0.157 -0.096 0.028"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="false" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.0"/>
+				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.02"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -188,10 +189,10 @@
 
 		<!-- T5 -->
 		<actuator name="Thruster_R_UP_FRONT" type="thruster">
-			<origin rpy="0.0 ${pi/2} 0.0" xyz="0.117 0.218 -0.037726"/>
+			<origin rpy="0.0 ${pi/2} 0.0" xyz="0.117 0.218 -0.04"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.0"/>
+				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.01"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -213,10 +214,10 @@
 
 		<!-- T6 -->
 		<actuator name="Thruster_L_UP_FRONT" type="thruster">
-			<origin rpy="0.0 ${pi/2} 0.0" xyz="0.117 -0.218 -0.037726"/>
+			<origin rpy="0.0 ${pi/2} 0.0" xyz="0.117 -0.218 -0.04"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="false">
-				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.0"/>
+				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.01"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -238,10 +239,10 @@
 
 		<!-- T7 -->
 		<actuator name="Thruster_R_UP_REAR" type="thruster">
-			<origin rpy="0.0 ${pi/2} 0.0" xyz="-0.123 0.218 -0.037726"/>
+			<origin rpy="0.0 ${pi/2} 0.0" xyz="-0.123 0.218 -0.04"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="false">
-				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.0"/>
+				<mesh filename="bluerov2/simple_hydro/ccw.obj" scale="1.01"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -263,10 +264,10 @@
 
 		<!-- T8 -->
 		<actuator name="Thruster_L_UP_REAR" type="thruster">
-			<origin rpy="0.0 ${pi/2} 0.0" xyz="-0.123 -0.218 -0.037726"/>
+			<origin rpy="0.0 ${pi/2} 0.0" xyz="-0.123 -0.218 -0.04"/>
     		<specs max_setpoint="${3500.0/60.0*2.0*pi}" inverted_setpoint="true" normalized_setpoint="true"/>
 			<propeller diameter="0.07" right="true">
-				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.0"/>
+				<mesh filename="bluerov2/simple_hydro/cw.obj" scale="1.01"/>
 				<material name="Neutral"/>
 				<look name="propeller"/>
 			</propeller>
@@ -385,8 +386,8 @@
 		</sensor>
 			
 		<sensor name="FLS" type="fls" rate="10.0">
-			<specs beams="512" bins="500" horizontal_fov="130.0" vertical_fov="20.0"/>
-			<settings range_min="0.5" range_max="20.0" gain="1.1"/>
+			<specs beams="512" bins="500" horizontal_fov="130.0" vertical_fov="20.0" output_format="uint16"/> 
+			<settings range_min="0.1" range_max="15.0" gain="1.1"/>
 			<noise multiplicative="0.03" additive="0.05"/>
 			<display colormap="hot"/>
 			<origin xyz="0.2 0 0.1" rpy="${pi/2 - pi/6} 0 ${pi/2}"/>

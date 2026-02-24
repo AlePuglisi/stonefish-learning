@@ -16,7 +16,7 @@
 		<!-- BlueROV2 Thrusters Duct -->
 		<material name="Polycarbonate" density="1000.0" restitution="0.75"/>
 		<!-- BlueROV2 Tubes -->
-		<material name="Acrylic" density="400.0" restitution="0.9"/>
+		<material name="Acrylic" density="400.0" restitution="0.4"/>
 
 		<material name="Ballast" density="408.0" restitution="0.75"/>
 
@@ -73,7 +73,8 @@
 		<look name="manipulator" rgb="0.2 0.15 0.1" roughness="0.6" metalness="0.8"/>
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
 		<look name="propeller" rgb="0.0 0.1 0.85" roughness="0.3" metalness="0.0"/>
-		
+		<look name="bluerov2_base" gray="1.0" roughness="1.0" metalness="0.1" texture="bluerov2/simple_hydro/fixed/bluerov2_base_texture.png"/>
+
 		<look name="windTurbinePile" gray="1.0" roughness="0.1" texture="wind_turbine/textures/WindTurbine.png"/>
     </looks>   
 

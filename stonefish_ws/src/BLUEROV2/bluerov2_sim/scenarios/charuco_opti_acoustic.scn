@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<scenario>
+
+    <looks>
+        <look name="Calib" gray="1.0" roughness="1.0" metalness="0.1" texture="opti_acoustic_arucocalib/CharucoCalib.png"/>
+    </looks>   
+
+	<static name="Board" type="model">
+		<physical>
+			<mesh filename="opti_acoustic_arucocalib/BoardA3.obj" scale="1.0" convex="false"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<material name="Acrylic"/>
+		<look name="Calib"/>
+		<world_transform xyz="6.0 0.0 2.0"  rpy="0.0 0.0 ${pi}"/>
+	</static>
+	<static name="Bolts" type="model">
+		<physical>
+			<mesh filename="opti_acoustic_arucocalib/Bolts.obj" scale="1.0" convex="false"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<material name="Steel"/>
+		<look name="gray"/>
+		<world_transform xyz="6.0 0.0 2.0" rpy="0.0 0.0 ${pi}"/>
+	</static>
+
+</scenario> 

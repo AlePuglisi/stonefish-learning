@@ -35,6 +35,8 @@
     <include file="$(find bluerov2_sim)/scenarios/wind_farm.scn"/>
     <include file="$(find bluerov2_sim)/scenarios/biofuel_test.scn"/>
 
+    <include file="$(find bluerov2_sim)/scenarios/charuco_opti_acoustic.scn"/>
+
     <!--   Inlcude Addiitonal world actuators/sensors (lights, cameras, etc) not attached to Robots  -->
 
     <!--   Inlcude Robots  -->
