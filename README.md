@@ -7,7 +7,7 @@ This repo is not intended to substitute that documentation, but to store a set o
 Furthermore, additional "experiments" on the concept described on the official doc will be stored here. 
 
 > [!NOTE]
-> The building configuration in the `CMakeLists.txt` works in my machine, installing the dependency and the Stonefish package as described [here](https://github.com/AlePuglisi/stonefish/blob/master/INSTALLATION_TROUBLESHOOTING.md). <br/>
+> The building configuration in the `CMakeLists.txt` works in my machine, installing the dependency and the Stonefish package as described [here](INSTALLATION.md). <br/>
 > I hope that dependenacy issues and linker errors don't occur to those who refer to this examples ...
 
 
