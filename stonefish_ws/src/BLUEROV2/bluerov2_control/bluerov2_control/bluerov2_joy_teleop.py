@@ -88,69 +88,18 @@ class JoystickController(Node):
     def build_allocation_matrix(self):
         """Build 6x8 thruster allocation matrix"""
         
-        # Thruster configuration: [x, y, z, pitch_deg, yaw_deg]
-        thrusters = [
-            [0.124, 0.103, 0.0275, 0.0, -42],  # T1_RFF
-            [0.124, -0.103, 0.0275, 0.0, 42],  # T2_LFF
-            [-0.152, 0.099, 0.026,  0.0, 48 + 180],  # T3_RFR
-            [-0.152, -0.099, 0.026,  0.0, -(48 + 180)],  # T4_LFR
-            [0.117, 0.218, -0.037726, 90, 0.0], # T5_RUF
-            [0.117, -0.218, -0.037726, 90, 0.0], # T6_LUF
-            [-0.123, 0.218, -0.037726,  90, 0.0], # T7_RUR
-            [-0.123, -0.218, -0.037726,  90, 0.0], # T8_LUR
-        ]
-        
-        B = np.zeros((4, 8))
-        
-        for i, (x, y, z, pitch_deg, yaw_deg) in enumerate(thrusters):
-            pitch = np.radians(pitch_deg)
-            yaw = np.radians(yaw_deg)
-            
-            # Thrust direction
-            fx = np.cos(pitch) * np.cos(yaw)
-            fy = np.cos(pitch) * np.sin(yaw)
-            fz = np.sin(pitch)
-            
-            # Torque
-            tz = x * fy - y * fx
-            
-            B[:, i] = [fx, fy, fz, tz]
-        
-        self.B = B
-        
-        # YOUR ACTUAL INERTIA VALUES (from the simulation)
-        mass = 9.744  # kg
-        # Ixx = 0.264 # Roll inertia (VERY LOW!)
-        # Iyy = 0.415  # Pitch inertia
-        Izz = 0.489 # Yaw inertia
-        
-        # Create weighting matrix that normalizes by inertia
-        # This makes commands of equal magnitude produce equal angular accelerations
-        # W scales each DOF by sqrt(inertia) so that all DOFs are balanced
-        
-        # For forces, use mass
-        # For torques, use moment of inertia
-        W = np.diag([
-            1.0 / np.sqrt(mass),      # Surge (force)
-            1.0 / np.sqrt(mass),      # Sway (force)
-            1.0 / np.sqrt(mass),      # Heave (force)
-            1.0 / np.sqrt(Izz)        # Yaw (torque)
-        ])
-        
-        # Compute weighted pseudo-inverse: B_weighted^+ = B^T * W^2 * (B * B^T * W^2)^-1
-        # Simpler form: (W*B)^+
-        BW = W @ B
-        self.B_pinv = np.linalg.pinv(BW)
+        self.B = np.array([
+            [ 1,  1, -1, -1,  0,  0,  0,  0],  # Surge
+            [-1,  1, -1,  1,  0,  0,  0,  0],  # Sway
+            [ 0,  0,  0,  0,  1,  1,  1,  1],  # Heave
+            [-1,  1,  1, -1,  0,  0,  0,  0],  # Yaw
+        ], dtype=float)
 
-        # self.B_pinv = np.linalg.pinv(B)
-        self.get_logger().info(f'Allocation matrix shape: {B.shape}')
-        self.get_logger().info(f'Pseudo-inverse shape: {self.B_pinv.shape}')
+        self.B_pinv = np.linalg.pinv(self.B)
 
-        # Log the weighting ratios
-        # self.get_logger().info(f'Weighting factors:')
-        # self.get_logger().info(f'  Roll weight / Pitch weight = {np.sqrt(Iyy/Ixx):.2f}x')
-        # self.get_logger().info(f'  Roll weight / Yaw weight = {np.sqrt(Izz/Ixx):.2f}x')
-        # self.get_logger().info(f'This compensates for low roll inertia')
+        self.get_logger().info(f'B:\n{self.B}')
+        self.get_logger().info(f'B_pinv:\n{self.B_pinv}')
+
 
     def toggle_lights(self):
         """Toggle lights on/off by calling both service clients"""

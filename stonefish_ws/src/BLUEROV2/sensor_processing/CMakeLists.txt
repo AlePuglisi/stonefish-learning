@@ -7,6 +7,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED) 
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -34,8 +35,9 @@ install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 
 # add python executable
 install(PROGRAMS 
-            ${PROJECT_NAME}/scripts/imaging_sonar_optical_flow.py
+            scripts/imaging_sonar_optical_flow.py
         DESTINATION lib/${PROJECT_NAME})
+ament_python_install_package(${PROJECT_NAME})
 
 # install executable
 # install(TARGETS sonar_optical_flow_node DESTINATION lib/${PROJECT_NAME})

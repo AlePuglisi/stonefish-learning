@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<scenario>	    
+<scenario>	 
     <!--   Define environment state (water type, currents, atmosphere, ...)   -->
 	<environment>
 		<ned latitude="41.7777" longitude="3.0333"/>
@@ -11,14 +11,14 @@
 
 			<particles enabled="true"/>
 
-            <current type="uniform">
+            <!-- <current type="uniform">
                 <velocity xyz="10.0 10.0 0.0"/>
             </current>
             <current type="jet">
                 <center xyz="0.0 0.0 3.0"/>
                 <outlet radius="100.0"/>
                 <velocity xyz="0.0 2.0 0.0"/>
-            </current>
+            </current> -->
             
 		</ocean>
 
@@ -31,18 +31,22 @@
     <!--   Inlcude utils (materials and looks)  -->
     <include file="$(find bluerov2_sim)/scenarios/materials_looks.scn"/>
 
-    <!--   Inlcude objects (obstacles, map features, dynamic objects, creatures)  -->
-    <include file="$(find bluerov2_sim)/scenarios/floater.scn"/>
-    <!-- <include file="$(find bluerov2_sim)/scenarios/biofuel_test.scn"/> -->
+    <static name="SandFloor" type="model">
+        <physical>
+            <mesh filename="sand_floor/mesh/sand_floor.obj" scale="0.3" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="sand_floor"/>
+        <world_transform xyz="0.0 0.0 8.0" rpy="0.0 0.0 0.0"/>
+    </static>     
 
-    <include file="$(find bluerov2_sim)/scenarios/charuco_opti_acoustic.scn"/>
+    <!--   Define environment state (water type, currents, atmosphere, ...)   -->
+    <include file="$(find bluerov2_sim)/scenarios/corals.scn"/>
 
     <!--   Inlcude Addiitonal world actuators/sensors (lights, cameras, etc) not attached to Robots  -->
 
     <!--   Inlcude Robots  -->
     <include file="$(find bluerov2_sim)/scenarios/bluerov2_simple_hydro.scn"/>
-    <!-- <include file="$(find bluerov2_sim)/scenarios/bluerov2.scn"/> -->
-
-
 
 </scenario>

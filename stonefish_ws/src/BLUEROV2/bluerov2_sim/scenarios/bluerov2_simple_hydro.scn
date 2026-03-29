@@ -106,7 +106,7 @@
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
 				<!-- <thrust_coeff forward="0.07" reverse="0.11"/> -->
-				<thrust_coeff forward="0.07" reverse="0.11"/>
+				<thrust_coeff forward="0.07" reverse="0.07"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<link name="base_link"/>
@@ -131,7 +131,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.11"/>
+				<thrust_coeff forward="0.07" reverse="0.07"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<link name="base_link"/>
@@ -150,7 +150,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.11"/>
+				<thrust_coeff forward="0.07" reverse="0.07"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -175,7 +175,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.11"/>
+				<thrust_coeff forward="0.07" reverse="0.07"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -200,7 +200,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.11"/>
+				<thrust_coeff forward="0.07" reverse="0.07"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -225,7 +225,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.11"/>
+				<thrust_coeff forward="0.07" reverse="0.07"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -250,7 +250,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.11"/>
+				<thrust_coeff forward="0.07" reverse="0.07"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -275,7 +275,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.11"/>
+				<thrust_coeff forward="0.07" reverse="0.07"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -385,17 +385,26 @@
 			<ros_publisher topic="/bluerov/camera"/>
 		</sensor>
 			
-		<sensor name="FLS" type="fls" rate="10.0">
-			<specs beams="512" bins="500" horizontal_fov="130.0" vertical_fov="20.0" output_format="uint16"/> 
+		<sensor name="FLS_1deg" type="fls" rate="5.0">
+			<specs beams="512" bins="500" horizontal_fov="130.0" vertical_fov="1.0" output_format="uint8"/> 
 			<settings range_min="0.1" range_max="15.0" gain="1.1"/>
 			<noise multiplicative="0.03" additive="0.05"/>
 			<display colormap="hot"/>
 			<origin xyz="0.2 0 0.1" rpy="${pi/2 - pi/6} 0 ${pi/2}"/>
 			<link name="base_link"/>
-			<ros_publisher topic="/bluerov/fls"/>
+			<ros_publisher topic="/bluerov/fls_1deg"/>
+		</sensor>
+		<sensor name="FLS_20deg" type="fls" rate="5.0">
+			<specs beams="512" bins="500" horizontal_fov="130.0" vertical_fov="20.0" output_format="uint8"/> 
+			<settings range_min="0.1" range_max="15.0" gain="1.1"/>
+			<noise multiplicative="0.03" additive="0.05"/>
+			<display colormap="hot"/>
+			<origin xyz="0.2 0 0.1" rpy="${pi/2 - pi/6} 0 ${pi/2}"/>
+			<link name="base_link"/>
+			<ros_publisher topic="/bluerov/fls_20deg"/>
 		</sensor>
 
-		<world_transform rpy="0.0 0.0 0.0" xyz="5.0 0 0.25"/>
+		<world_transform rpy="0.0 0.0 0.0" xyz="7.0 0.0 1.0"/>
 
 		<!--   ROS SUBSCRIBERS / PUBLISHER THRUST/FORCES   -->
 		<ros_subscriber thrusters="/bluerov/controller/thruster_setpoints_sim" forces="/bluerov/controller/thruster_manager/input_stamped"/>

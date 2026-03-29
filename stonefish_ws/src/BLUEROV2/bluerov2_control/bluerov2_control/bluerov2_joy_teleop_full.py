@@ -72,16 +72,84 @@ class JoystickController(Node):
         self.rotation_joy = 3  # Assuming right analog stick
 
         # Allocation matrix for thruster control
-        self.allocation_mat = np.array([
-            [1, 1, 1, 0],
-            [1, -1 ,-1 ,0],
-            [-1, 1, -1, 0],
-            [-1, -1, 1, 0],
-            [0, 0, 0, 1],
-            [0, 0, 0, -1],
-            [0, 0, 0, -1],
-            [0, 0, 0, 1]
-        ])
+        # self.allocation_mat = np.array([
+        #     [1, 1, 1, 0],
+        #     [1, -1 ,-1 ,0],
+        #     [-1, 1, -1, 0],
+        #     [-1, -1, 1, 0],
+        #     [0, 0, 0, 1],
+        #     [0, 0, 0, -1],
+        #     [0, 0, 0, -1],
+        #     [0, 0, 0, 1]
+        # ])
+
+        self.build_allocation_matrix_v2()
+
+    def build_allocation_matrix_v2(self):
+        """Build 6x8 thruster allocation matrix"""
+        
+        self.B = np.array([
+            [ 1,  1, -1, -1,  0,  0,  0,  0],   # Surge
+            [-1,  1, -1,  1,  0,  0,  0,  0],   # Sway
+            [ 0,  0,  0,  0, -1, 1, 1, -1],   # Heave 
+            [-1,  1,  1, -1,  0,  0,  0,  0],   # Yaw
+        ], dtype=float)
+
+        # Use TRANSPOSE, not pinv — keeps outputs in [-1, 1]
+        # pinv divides by N (≈0.125 per entry for 8 thrusters) → tiny commands
+        # B.T maps a unit command directly to full-scale thruster outputs
+        self.B_mixer = self.B.T  # shape (8, 4)
+
+        self.get_logger().info(f'B:\n{self.B}')
+        self.get_logger().info(f'B_pinv:\n{self.B_mixer}')
+
+    def build_allocation_matrix(self):
+        """Build 6x8 thruster allocation matrix"""
+        
+        # Thruster configuration: [x, y, z, pitch_deg, yaw_deg]
+        thrusters = [
+            [0.13, 0.098, 0.028, 0.0, -46],  # T1_RFF
+            [0.13, -0.098, 0.028, 0.0, 46],  # T2_LFF
+            [-0.157, 0.096, 0.028, 0.0, 48 + 180],  # T3_RFR
+            [-0.157, -0.096, 0.028,  0.0, -(48 + 180)],  # T4_LFR
+            [0.117, 0.218, -0.04, 90, 0.0], # T5_RUF
+            [0.117, -0.218, -0.04, 90, 0.0], # T6_LUF
+            [-0.123, 0.218, -0.04,  90, 0.0], # T7_RUR
+            [-0.123, -0.218, -0.04,  90, 0.0], # T8_LUR
+        ]
+        
+        B = np.zeros((4, 8))
+        
+        for i, (x, y, z, pitch_deg, yaw_deg) in enumerate(thrusters):
+            pitch = np.radians(pitch_deg)
+            yaw = np.radians(yaw_deg)
+            
+            # Thrust direction
+            fx = np.cos(pitch) * np.cos(yaw)
+            fy = np.cos(pitch) * np.sin(yaw)
+            fz = np.sin(pitch)
+            
+            # Torque
+            tz = x * fy - y * fx
+            
+            B[:, i] = [fx, fy, fz, tz]
+        
+        self.B = B
+        
+
+        self.B_pinv = np.linalg.pinv(self.B)
+
+        # self.B_pinv = np.linalg.pinv(B)
+        self.get_logger().info(f'Allocation matrix: {B}')
+        self.get_logger().info(f'Pseudo-inverse shape: {self.B_pinv.shape}')
+        self.get_logger().info(f'Allocation matrix shape: {B.shape}')
+        self.get_logger().info(f'Pseudo-inverse shape: {self.B_pinv.shape}')
+
+        # Log the weighting ratios
+        # self.get_logger().info(f'Weighting factors:')
+        # self.get_logger().info(f'  Roll weight / Pitch weight = {np.sqrt(Iyy/Ixx):.2f}x')
+        # self.get_logger().info(f'  Roll weight / Yaw weight = {np.sqrt(Izz/Ixx):.2f}x')
+        # self.get_logger().info(f'This compensates for low roll inertia')
 
     def toggle_lights(self):
         """Toggle lights on/off by calling both service clients"""
@@ -158,23 +226,45 @@ class JoystickController(Node):
         axes = data.axes
         buttons = data.buttons
 
-        # Map joystick axes to movement commands
-        depth_com = axes[self.depth_joy]
-        side_com = axes[self.side_joy]
-        rotation_com = axes[self.rotation_joy]
-        forward_com = axes[self.forward_joy]
-        # Control commands
-        com = np.array([forward_com, side_com, rotation_com, depth_com]).T
-        rov_control_msg = Float64MultiArray()
-        rov_control_msg.data = (self.allocation_mat @ com).tolist()  # Convert to list
+        # axes[1] = left stick UD  -> Surge (forward/back)
+        # axes[0] = left stick LR  -> Sway  (strafe)
+        # axes[4] = right stick UD -> Heave (up/down)
+        # axes[3] = right stick LR -> Yaw   (rotation)
+        surge    =  axes[self.forward_joy]   # axes[1]
+        sway     = -axes[self.side_joy]      # axes[0], negated: stick-right = +Y sway
+        heave    =  axes[self.depth_joy]     # axes[4]
+        yaw      = -axes[self.rotation_joy]  # axes[3], negated: stick-right = -Yaw (turn right)
 
-        # Normalize thruster commands if any value exceeds 1
-        max_thuster_cmd = abs(max(rov_control_msg.data, key=abs))
-        if max_thuster_cmd > 1:
-           rov_control_msg.data = [x / max_thuster_cmd for x in rov_control_msg.data]
+        # # Map joystick axes to movement commands
+        # depth_com = axes[self.depth_joy]
+        # side_com = axes[self.side_joy]
+        # rotation_com = axes[self.rotation_joy]
+        # forward_com = axes[self.forward_joy]
+
+        # Control commands
+        # com = np.array([forward_com, side_com, rotation_com, depth_com]).T
+        # rov_control_msg = Float64MultiArray()
+        # # rov_control_msg.data = (self.B_pinv @ com).tolist()  # Convert to list
+        # rov_control_msg.data = self.B_pinv @ com
+        
+        com = np.array([surge, sway, heave, yaw])
+
+        thruster_cmds = self.B_mixer @ com
+
+        # Normalize if saturated
+        max_cmd = np.max(np.abs(thruster_cmds))
+        if max_cmd > 1.0:
+            thruster_cmds /= max_cmd
+
+        # # Normalize thruster commands if any value exceeds 1
+        # max_thuster_cmd = abs(max(rov_control_msg.data, key=abs))
+        # if max_thuster_cmd > 1:
+        #    rov_control_msg.data = [x / max_thuster_cmd for x in rov_control_msg.data]
 
         # Publish the control message
-        self.rov_control_pub.publish(rov_control_msg)
+        msg = Float64MultiArray()
+        msg.data = thruster_cmds.tolist()
+        self.rov_control_pub.publish(msg)
 
         # Handle SHARE button for toggling lights (edge detection)
         share_button_state = buttons[self.buttons_index_["share"]] == 1

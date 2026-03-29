@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<scenario>
+
+    <looks>
+        <look name="C1_BASE" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C1_BASE_Normal.png"/>
+        <look name="C2_BASE" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C2_BASE_Normal.png"/>
+        <look name="C3_BASE" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C3_BASE_Normal.png"/>                                                                        
+        <look name="C1_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C1_UW_Normal.png"/>      
+        <look name="C2_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C2_UW_Normal.png"/>    
+        <look name="C3_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C3_UW_Normal.png"/>
+        <look name="C1_C2_H_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C1_C2_H_UW_Normal.png"/>
+        <look name="C1_C3_H_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C1_C3_H_UW_Normal.png"/>                                                                        
+        <look name="C2_C3_H_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C2_C3_H_UW_Normal.png"/>      
+        <look name="C1_C2_VL_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C1_C2_VL_UW_Normal.png"/>    
+        <look name="C1_C2_VR_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C1_C2_VR_UW_Normal.png"/>
+        <look name="C2_C3_VL_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C2_C3_VL_UW_Normal.png"/>
+        <look name="C2_C3_VR_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C2_C3_VR_UW_Normal.png"/>                                                                        
+        <look name="C1_C3_VL_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C1_C3_VL_UW_Normal.png"/>      
+        <look name="C1_C3_VR_UW" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_UW.jpg"
+																		normal_map="wind_turbine_floater/texture/C1_C3_VR_UW_Normal.png"/>
+
+        <look name="Floater_Air" gray="1.0" roughness="1.0" metalness="0.0" texture="wind_turbine_floater/texture/Floater_Air.png"/> 
+
+		<look name="White" rgb="1.0 1.0 1.0" roughness="1.0" metalness="0.0"/>
+		<look name="Black" rgb="0.0 0.0 0.0" roughness="1.0" metalness="0.0"/>
+
+    </looks>
+
+    <!-- C1 -->
+
+	<static name="C1_BASE" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_BASE.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_BASE.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C1_BASE"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C1_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+    <!-- C1 - C2 -->
+	<static name="C1_C2_H_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C1_C2_H_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C2_VL_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C1_C2_VL_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C2_VR_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C1_C2_VR_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C2_H_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C2_VR_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C2_VL_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+    <!-- C2 -->
+	<static name="C2_BASE" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C2_BASE.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C2_BASE.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C2_BASE"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C2_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C2_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C2_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C2_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C2_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C2_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C2_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+    <!-- C2 - C3 -->
+	<static name="C2_C3_H_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C2_C3_H_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C2_C3_VL_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C2_C3_VL_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C2_C3_VR_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C2_C3_VR_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C2_C3_H_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C2_C3_VR_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C2_C3_VL_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+    <!-- C1 - C3 -->
+	<static name="C1_C3_H_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C1_C3_H_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C3_VL_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C1_C3_VL_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C3_VR_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C1_C3_VR_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C3_H_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C3_VR_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C1_C3_VL_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+
+    <!-- C3 -->
+
+	<static name="C3_BASE" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C3_BASE.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C3_BASE.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C3_BASE"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C3_UW" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C3_UW.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C3_UW.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="C3_UW"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+	<static name="C3_AIR" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/C3_AIR.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/C3_AIR.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+	<static name="CV" type="model">
+		<physical>
+			<mesh filename="wind_turbine_floater/mesh/CV.obj" scale="1.0" convex="true"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</physical>
+		<visual>
+			<mesh filename="wind_turbine_floater/mesh/CV.obj" scale="1.0"/>
+			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</visual>
+		<material name="Steel"/>
+		<look name="Floater_Air"/>
+		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+	</static>
+
+</scenario>
