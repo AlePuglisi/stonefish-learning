@@ -105,8 +105,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<!-- <thrust_coeff forward="0.07" reverse="0.11"/> -->
-				<thrust_coeff forward="0.07" reverse="0.07"/>
+				<thrust_coeff forward="0.07" reverse="0.11"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<link name="base_link"/>
@@ -131,7 +130,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.07"/>
+				<thrust_coeff forward="0.07" reverse="0.11"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<link name="base_link"/>
@@ -150,7 +149,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.07"/>
+				<thrust_coeff forward="0.07" reverse="0.11"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -175,7 +174,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.07"/>
+				<thrust_coeff forward="0.07" reverse="0.11"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -200,7 +199,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.07"/>
+				<thrust_coeff forward="0.07" reverse="0.11"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -225,7 +224,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.07"/>
+				<thrust_coeff forward="0.07" reverse="0.11"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -250,7 +249,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.07"/>
+				<thrust_coeff forward="0.07" reverse="0.11"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
@@ -275,7 +274,7 @@
 				<time_constant value="0.2"/>
 		    </rotor_dynamics>
 		    <thrust_model type="fluid_dynamics">
-				<thrust_coeff forward="0.07" reverse="0.07"/>
+				<thrust_coeff forward="0.07" reverse="0.11"/>
 				<torque_coeff value="0.015"/>
 		    </thrust_model>
 			<!-- <rotor_dynamics type="first_order">
