@@ -8,7 +8,7 @@
 		<material name="Biofouling" density="100.0" restitution="0.2"/>
 
 		<!-- Subsea Buoyancy Foam: R-3318 -->
-		<material name="Foam" density="50.0" restitution="0.3"/>
+		<material name="Foam" density="40.0" restitution="0.3"/>
 		<!-- Fake Buoyancy Foam -->
 		<material name="InternalFoam" density="100.0" restitution="0.3"/>
 		<!-- BlueROV2 Base Frames -->
@@ -74,6 +74,7 @@
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
 		<look name="propeller" rgb="0.0 0.1 0.85" roughness="0.3" metalness="0.0"/>
 		<look name="bluerov2_base" gray="1.0" roughness="1.0" metalness="0.1" texture="bluerov2/simple_hydro/fixed/bluerov2_base_texture.png"/>
+		<look name="bluerov2_joint" gray="1.0" roughness="1.0" metalness="0.1" texture="bluerov2/joint/bluerov2.png"/>
 
 		<look name="windTurbinePile" gray="1.0" roughness="0.1" texture="wind_turbine/textures/WindTurbine.png"/>
     </looks>   
