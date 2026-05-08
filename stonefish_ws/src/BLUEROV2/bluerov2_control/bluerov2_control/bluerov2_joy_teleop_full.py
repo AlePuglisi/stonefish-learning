@@ -83,9 +83,9 @@ class JoystickController(Node):
         #     [0, 0, 0, 1]
         # ])
 
-        self.build_allocation_matrix_v2()
+        self.build_allocation_matrix_simple()
 
-    def build_allocation_matrix_v2(self):
+    def build_allocation_matrix_simple(self):
         """Build 6x8 thruster allocation matrix"""
         
         self.B = np.array([
@@ -98,10 +98,7 @@ class JoystickController(Node):
         # Use TRANSPOSE, not pinv — keeps outputs in [-1, 1]
         # pinv divides by N (≈0.125 per entry for 8 thrusters) → tiny commands
         # B.T maps a unit command directly to full-scale thruster outputs
-        self.B_mixer = self.B.T  # shape (8, 4)
-
-        self.get_logger().info(f'B:\n{self.B}')
-        self.get_logger().info(f'B_pinv:\n{self.B_mixer}')
+        self.B_com = self.B.T  # shape (8, 4)
 
     def build_allocation_matrix(self):
         """Build 6x8 thruster allocation matrix"""
@@ -137,13 +134,13 @@ class JoystickController(Node):
         self.B = B
         
 
-        self.B_pinv = np.linalg.pinv(self.B)
+        self.B_com = np.linalg.pinv(self.B)
 
         # self.B_pinv = np.linalg.pinv(B)
         self.get_logger().info(f'Allocation matrix: {B}')
-        self.get_logger().info(f'Pseudo-inverse shape: {self.B_pinv.shape}')
+        self.get_logger().info(f'Pseudo-inverse shape: {self.B_com.shape}')
         self.get_logger().info(f'Allocation matrix shape: {B.shape}')
-        self.get_logger().info(f'Pseudo-inverse shape: {self.B_pinv.shape}')
+        self.get_logger().info(f'Pseudo-inverse shape: {self.B_com.shape}')
 
         # Log the weighting ratios
         # self.get_logger().info(f'Weighting factors:')
@@ -249,7 +246,7 @@ class JoystickController(Node):
         
         com = np.array([surge, sway, heave, yaw])
 
-        thruster_cmds = self.B_mixer @ com
+        thruster_cmds = self.B_com @ com
 
         # Normalize if saturated
         max_cmd = np.max(np.abs(thruster_cmds))

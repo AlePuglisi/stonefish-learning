@@ -32,15 +32,23 @@
     <include file="$(find bluerov2_sim)/scenarios/materials_looks.scn"/>
 
     <!--   Inlcude objects (obstacles, map features, dynamic objects, creatures)  -->
-    <include file="$(find bluerov2_sim)/scenarios/floater.scn"/>
     <!-- <include file="$(find bluerov2_sim)/scenarios/biofuel_test.scn"/> -->
+	<include file="$(find bluerov2_sim)/scenarios/floater.scn">      
+		<arg name="position" value="30.0 0.0 5.0"/>
+		<arg name="orientation" value="0.0 0.0 0.0"/>
+		<arg name="scale" value="1.0"/>
+	</include>
 
-    <include file="$(find bluerov2_sim)/scenarios/charuco_opti_acoustic.scn"/>
+    <!-- <include file="$(find bluerov2_sim)/scenarios/charuco_opti_acoustic.scn"/> -->
 
     <!--   Inlcude Addiitonal world actuators/sensors (lights, cameras, etc) not attached to Robots  -->
 
     <!--   Inlcude Robots  -->
-    <include file="$(find bluerov2_sim)/scenarios/bluerov2_joint.scn"/>
+	<include file="$(find bluerov2_sim)/scenarios/bluerov2_joint.scn">
+		<arg name="vehicle_name" value="bluerov"/>
+		<arg name="position" value="7.0 0.0 1.0"/>
+		<arg name="orientation" value="0.0 0.0 0.0"/>
+	</include>
     <!-- <include file="$(find bluerov2_sim)/scenarios/bluerov2_simple_hydro.scn"/> -->
     <!-- <include file="$(find bluerov2_sim)/scenarios/bluerov2.scn"/> -->
 

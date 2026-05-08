@@ -44,323 +44,323 @@
 
 	<static name="C1_BASE" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_BASE.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_BASE.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_BASE.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_BASE.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C1_BASE"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C1_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 
     <!-- C1 - C2 -->
 	<static name="C1_C2_H_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C1_C2_H_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C2_VL_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C1_C2_VL_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C2_VR_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C1_C2_VR_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C2_H_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_H_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C2_VR_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VR_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C2_VL_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C2_VL_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 
     <!-- C2 -->
 	<static name="C2_BASE" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C2_BASE.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_BASE.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C2_BASE.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_BASE.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C2_BASE"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C2_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C2_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C2_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C2_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C2_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C2_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C2_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 
     <!-- C2 - C3 -->
 	<static name="C2_C3_H_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C2_C3_H_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C2_C3_VL_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C2_C3_VL_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C2_C3_VR_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C2_C3_VR_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C2_C3_H_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_H_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C2_C3_VR_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VR_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C2_C3_VL_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C2_C3_VL_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 
     <!-- C1 - C3 -->
 	<static name="C1_C3_H_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C1_C3_H_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C3_VL_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C1_C3_VL_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C3_VR_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C1_C3_VR_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C3_H_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_H_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C3_VR_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VR_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C1_C3_VL_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C1_C3_VL_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 
 
@@ -368,56 +368,56 @@
 
 	<static name="C3_BASE" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C3_BASE.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C3_BASE.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C3_BASE.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C3_BASE.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C3_BASE"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C3_UW" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C3_UW.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C3_UW.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C3_UW.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C3_UW.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="C3_UW"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 	<static name="C3_AIR" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/C3_AIR.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/C3_AIR.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/C3_AIR.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/C3_AIR.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 
 	<static name="CV" type="model">
 		<physical>
-			<mesh filename="wind_turbine_floater/mesh/CV.obj" scale="1.0" convex="true"/>
+			<mesh filename="wind_turbine_floater/mesh/CV.obj" scale="$(arg scale)" convex="true"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</physical>
 		<visual>
-			<mesh filename="wind_turbine_floater/mesh/CV.obj" scale="1.0"/>
+			<mesh filename="wind_turbine_floater/mesh/CV.obj" scale="$(arg scale)"/>
 			<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
 		</visual>
 		<material name="Steel"/>
 		<look name="Floater_Air"/>
-		<world_transform xyz="30.0 0.0 5.0" rpy="0.0 0.0 0.0"/>
+		<world_transform xyz="$(arg position)" rpy="$(arg orientation)"/>
 	</static>
 
 </scenario>

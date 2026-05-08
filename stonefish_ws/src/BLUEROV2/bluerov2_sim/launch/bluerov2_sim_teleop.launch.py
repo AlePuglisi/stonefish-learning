@@ -70,7 +70,7 @@ def generate_launch_description():
 
     bluerov2_joy_teleop_node = Node(
             package='bluerov2_control',
-            executable='bluerov2_joy_teleop',
+            executable='bluerov2_joy_teleop_full',
             output='screen',
         )
     
