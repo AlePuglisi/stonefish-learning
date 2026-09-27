@@ -29,9 +29,15 @@
 	</environment>
 
     <!--   Inlcude utils (materials and looks)  -->
+
     <include file="$(find bluerov2_sim)/scenarios/materials_looks.scn"/>
     <include file="$(find bluerov2_sim)/scenarios/looks_semantic.scn"/>
 
+    <!--   Inlcude Robots  -->
+
+    <include file="$(find bluerov2_sim)/scenarios/bluerov2_simple_hydro.scn"/>
+    
+    <!--   Inlcude Scene  -->
 
     <static name="SandFloor" type="model">
         <physical>
@@ -48,8 +54,5 @@
     <include file="$(find bluerov2_sim)/scenarios/rocks.scn"/>
 
     <!--   Inlcude Addiitonal world actuators/sensors (lights, cameras, etc) not attached to Robots  -->
-
-    <!--   Inlcude Robots  -->
-    <include file="$(find bluerov2_sim)/scenarios/bluerov2_simple_hydro.scn"/>
 
 </scenario>

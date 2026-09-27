@@ -53,7 +53,7 @@
         </physical>
         <material name="Neutral"/>
         <look name="rock"/>
-        <world_transform xyz="-9.85 5.7 10.7" rpy="0.0 0.0 ${-70*pi/180}"/>
+        <world_transform xyz="-9.85 5.7 11.2" rpy="0.0 0.0 ${-70*pi/180}"/>
     </static>   
 
 
@@ -73,7 +73,7 @@
         </physical>
         <material name="Neutral"/>
         <look name="rock"/>
-        <world_transform xyz="--22.85 12.86 10.9" rpy="0.0 0.0 ${75*pi/180}"/>
+        <world_transform xyz="-22.85 12.86 10.9" rpy="0.0 0.0 ${75*pi/180}"/>
     </static>   
     <static name="RockB02" type="model">
         <physical>
