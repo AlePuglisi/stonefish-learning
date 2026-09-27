@@ -3,8 +3,6 @@
 
     <looks>
 		
-		<look name="sand_floor" gray="1.0" roughness="0.9" texture="sand_floor/texture/color4k.jpg" normal_map="sand_floor/texture/normal4k.png"/>
-
         <look name="CoralColors1" gray="1.0" roughness="1.0" metalness="0.0" texture="corals/texture/corals0.png"
                                                                         normal_map="corals/texture/corals_normal.png"/>
         <look name="CoralColors2" gray="1.0" roughness="1.0" metalness="0.0" texture="corals/texture/corals1.png"

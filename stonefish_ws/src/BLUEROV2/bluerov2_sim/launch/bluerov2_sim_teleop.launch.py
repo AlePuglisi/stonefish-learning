@@ -32,7 +32,7 @@ def generate_launch_description():
                         FindPackageShare('bluerov2_sim'), 'data'
                     ]),
                     'scenario_desc': PathJoinSubstitution([
-                        FindPackageShare('bluerov2_sim'), 'scenarios', 'ocean.scn'
+                        FindPackageShare('bluerov2_sim'), 'scenarios', 'worlds', 'pipes_posidonia_seafloor.scn'
                     ]),
                     'simulation_rate': '100.0',
                     'window_res_x': '1200',

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<scenario>
+
+    <static name="RockA00" type="model">
+        <physical>
+            <mesh filename="rocks/rockA/mesh/rockA.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="rock"/>
+        <world_transform xyz="4.47 0.0 10.9" rpy="0.0 0.0 0.0"/>
+    </static>   
+    <static name="RockA01" type="model">
+        <physical>
+            <mesh filename="rocks/rockA/mesh/rockA.obj" scale="2.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="rock"/>
+        <world_transform xyz="-5.66 25.3 10.9" rpy="0.0 0.0 ${-70*pi/180}"/>
+    </static>   
+    <static name="RockA02" type="model">
+        <physical>
+            <mesh filename="rocks/rockA/mesh/rockA.obj" scale="0.6" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="rock"/>
+        <world_transform xyz="-1.7 21.0 10.5" rpy="0.0 0.0 ${44*pi/180}"/>
+    </static>   
+    <static name="RockA03" type="model">
+        <physical>
+            <mesh filename="rocks/rockA/mesh/rockA.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="rock"/>
+        <world_transform xyz="-25 -26 10.7" rpy="0.0 0.0 0.0"/>
+    </static>   
+    <static name="RockA04" type="model">
+        <physical>
+            <mesh filename="rocks/rockA/mesh/rockA.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="rock"/>
+        <world_transform xyz="-10.85 -9 11.7" rpy="0.0 0.0 0.0"/>
+    </static>   
+    <static name="RockA05" type="model">
+        <physical>
+            <mesh filename="rocks/rockA/mesh/rockA.obj" scale="0.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="rock"/>
+        <world_transform xyz="-9.85 5.7 10.7" rpy="0.0 0.0 ${-70*pi/180}"/>
+    </static>   
+
+
+    <static name="RockB00" type="model">
+        <physical>
+            <mesh filename="rocks/rockB/mesh/rockB.obj" scale="2.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="rock"/>
+        <world_transform xyz="-17.1 -11.3 10.54" rpy="0.0 0.0 0.0"/>
+    </static>   
+    <static name="RockB01" type="model">
+        <physical>
+            <mesh filename="rocks/rockB/mesh/rockB.obj" scale="2.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="rock"/>
+        <world_transform xyz="--22.85 12.86 10.9" rpy="0.0 0.0 ${75*pi/180}"/>
+    </static>   
+    <static name="RockB02" type="model">
+        <physical>
+            <mesh filename="rocks/rockB/mesh/rockB.obj" scale="2.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Neutral"/>
+        <look name="rock"/>
+        <world_transform xyz="16.8 12.87 10.98" rpy="0.0 0.0 ${75*pi/180}"/>
+    </static>   
+
+</scenario>

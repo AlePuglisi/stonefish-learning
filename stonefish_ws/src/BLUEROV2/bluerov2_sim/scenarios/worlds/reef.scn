@@ -33,13 +33,23 @@
 
     <static name="SandFloor" type="model">
         <physical>
-            <mesh filename="sand_floor/mesh/sand_floor.obj" scale="0.3" convex="false"/>
+            <mesh filename="sand_floor/mesh/sand_floor.obj" scale="1.0" convex="false"/>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         </physical>
         <material name="Neutral"/>
         <look name="sand_floor"/>
         <world_transform xyz="0.0 0.0 8.0" rpy="0.0 0.0 0.0"/>
     </static>     
+
+    <static name="SandFloor" type="model">
+        <physical>
+            <mesh filename="pipe_line/mesh/pipe_line.obj" scale="0.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_line"/>
+        <world_transform xyz="0.0 0.0 8.0" rpy="0.0 0.0 0.0"/>
+    </static>   
 
     <!--   Define environment state (water type, currents, atmosphere, ...)   -->
     <include file="$(find bluerov2_sim)/scenarios/corals.scn"/>

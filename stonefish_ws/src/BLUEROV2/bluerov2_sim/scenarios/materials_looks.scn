@@ -5,7 +5,7 @@
 		<material name="Neutral" density="1000.0" restitution="0.5"/>
 
 		<material name="Steel" density="1000.0" restitution="0.9"/>
-		<material name="Biofouling" density="100.0" restitution="0.2"/>
+		<material name="Biofouling" density="100.0" restitution="0.1"/>
 
 		<!-- Subsea Buoyancy Foam: R-3318 -->
 		<material name="Foam" density="40.0" restitution="0.3"/>
@@ -67,16 +67,29 @@
 
     <looks>
         <look name="black" gray="0.01" roughness="0.2" metalness="0.0"/>
-		<look name="blue" rgb="0.0 0.3 0.8" roughness="0.0"/>
-        <look name="yellow" rgb="1.0 0.9 0.0" roughness="0.3"/>
-        <look name="gray" gray="1" roughness="0.2" metalness="0.0"/>
+		<look name="blue" rgb="0.0 0.3 0.8" roughness="0.5"/>
+		<look name="green" rgb="0.05 0.26 0.16" roughness="1.0" metalness="0.0"/>
+        <look name="yellow" rgb="1.0 0.9 0.0" roughness="0.5"/>
+        <look name="gray" gray="1" roughness="0.5" metalness="1.0"/>
+
 		<look name="manipulator" rgb="0.2 0.15 0.1" roughness="0.6" metalness="0.8"/>
         <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
+
 		<look name="propeller" rgb="0.0 0.1 0.85" roughness="0.3" metalness="0.0"/>
+
 		<look name="bluerov2_base" gray="1.0" roughness="1.0" metalness="0.1" texture="bluerov2/simple_hydro/fixed/bluerov2_base_texture.png"/>
 		<look name="bluerov2_joint" gray="1.0" roughness="1.0" metalness="0.1" texture="bluerov2/joint/bluerov2.png"/>
 
+		<look name="sand_floor" gray="1.0" roughness="0.9" texture="sand_floor/texture/color4k.jpg" normal_map="sand_floor/texture/normal4k.png"/>
+
 		<look name="windTurbinePile" gray="1.0" roughness="0.1" texture="wind_turbine/textures/WindTurbine.png"/>
+
+		<look name="pipe_line" gray="1.0" roughness="1.0" texture="pipe_line/texture/color.jpg" normal_map="pipe_line/texture/normal.png"/>
+		<look name="pipe_curve" gray="1.0" roughness="1.0" texture="pipe_curve/texture/color.jpg" normal_map="pipe_curve/texture/normal.png"/>
+		<look name="rock" gray="1.0" roughness="1.0" texture="rocks/rockA/texture/color.jpg" normal_map="rocks/rockA/texture/normal.jpg"/>
+
+		<look name="sea_grass" gray="1.0" roughness="1.0" texture="sea_grass/texture/color.jpg"/>
+
     </looks>   
 
 </scenario>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<scenario>
+
+    <static name="PipeLinear01" type="model">
+        <physical>
+            <mesh filename="pipe_line/mesh/pipe_line.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_line"/>
+        <world_transform xyz="0.395 -19.723 10.0" rpy="0.0 0.0 0.0"/>
+    </static>   
+    <static name="PipeLinear02" type="model">
+        <physical>
+            <mesh filename="pipe_line/mesh/pipe_line.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_line"/>
+        <world_transform xyz="-13.604 -19.723 10.0" rpy="0.0 0.0 0.0"/>
+    </static>   
+    <static name="PipeLinear03" type="model">
+        <physical>
+            <mesh filename="pipe_line/mesh/pipe_line.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_line"/>
+        <world_transform xyz="11.352 -8.7957 10.0" rpy="0.0 0.0 ${pi/2}"/>
+    </static>   
+    <static name="PipeCurve01" type="model">
+        <physical>
+            <mesh filename="pipe_curve/mesh/pipe_curve.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_curve"/>
+        <world_transform xyz="10.131 -18.505 10.0" rpy="0.0 0.0 ${pi/2}"/>
+    </static>   
+    <static name="PipeCurve02" type="model">
+        <physical>
+            <mesh filename="pipe_curve/mesh/pipe_curve.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_curve"/>
+        <world_transform xyz="-23.329 -19.723 11.22" rpy="0.0 ${-pi/2} ${-pi/2}"/>
+    </static>   
+    <static name="PipeCurve03" type="model">
+        <physical>
+            <mesh filename="pipe_curve/mesh/pipe_curve.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_curve"/>
+        <world_transform xyz="11.355 0.952 11.22" rpy="0.0 ${-pi/2} ${-pi}"/>
+    </static>   
+
+    <static name="PipeLinear04" type="model">
+        <physical>
+            <mesh filename="pipe_line/mesh/pipe_line.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_line"/>
+        <world_transform xyz="-8.2367 17.048 9.3662" rpy="0.0 0.0 0.0"/>
+    </static>   
+    <static name="PipeLinear05" type="model">
+        <physical>
+            <mesh filename="pipe_line/mesh/pipe_line.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_line"/>
+        <world_transform xyz="-22.207 17.048 9.3662" rpy="0.0 0.0 0.0"/>
+    </static>   
+    <static name="PipeCurve04" type="model">
+        <physical>
+            <mesh filename="pipe_curve/mesh/pipe_curve.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_curve"/>
+        <world_transform xyz="1.468 17.048 10.586" rpy="0.0 ${-pi/2} ${pi/2}"/>
+    </static>   
+    <static name="PipeCurve05" type="model">
+        <physical>
+            <mesh filename="pipe_curve/mesh/pipe_curve.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Steel"/>
+        <look name="pipe_curve"/>
+        <world_transform xyz="-31.932 17.048 10.586" rpy="0.0 ${-pi/2} ${pi*3/2}"/>
+    </static>  
+
+</scenario>

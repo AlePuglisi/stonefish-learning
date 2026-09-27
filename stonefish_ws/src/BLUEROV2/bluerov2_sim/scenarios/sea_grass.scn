@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<scenario>
+    
+    <static name="SeaGrass" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="0.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="2.04 -22.88 10.2" rpy="0.0 0.0 ${48*pi/180}"/>
+    </static>   
+    <static name="SeaGrass1" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="0.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="0.0 -22.96 10.2" rpy="0.0 0.0 ${-120*pi/180}"/>
+    </static>   
+    <static name="SeaGrass2" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="0.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="0.95 -24.66 10.2" rpy="0.0 0.0 ${-77*pi/180}"/>
+    </static>   
+    <static name="SeaGrass3" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="0.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-1.73 -22.42 10.2" rpy="0.0 0.0 ${-170*pi/180}"/>
+    </static>   
+
+
+    <static name="SeaGrass4" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="0.75" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="17.92 -3.84 10.0" rpy="0.0 0.0 ${-18*pi/180}"/>
+    </static>   
+    <static name="SeaGrass5" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="0.75" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="16.92 -1.46 10.0" rpy="0.0 0.0 ${-21*pi/180}"/>
+    </static>   
+
+
+    <static name="SeaGrass6" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-7.65 10.20 10.0" rpy="0.0 0.0 ${-81*pi/180}"/>
+    </static>   
+    <static name="SeaGrass7" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-6.13 12.97 10.0" rpy="0.0 0.0 ${-85*pi/180}"/>
+    </static>   
+    <static name="SeaGrass8" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-9.74 12.11 10.0" rpy="0.0 0.0 0.0"/>
+    </static>   
+
+
+    <static name="SeaGrass9" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-12.87 22.34 11.25" rpy="0.0 0.0 ${40*pi/180}"/>
+    </static>   
+    <static name="SeaGrass10" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-19.122 22.34 11.25" rpy="0.0 0.0 0.0"/>
+    </static>   
+
+
+    <static name="SeaGrass11" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="17.038 20.233 11.25" rpy="0.0 0.0 ${-4*pi/180}"/>
+    </static>   
+    <static name="SeaGrass12" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="12.42 24.45 11.25" rpy="0.0 0.0 ${-44*pi/180}"/>
+    </static>   
+    <static name="SeaGrass13" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="11.88 19.54 11.25" rpy="0.0 0.0 ${75*pi/180}"/>
+    </static>   
+
+
+    <static name="SeaGrass14" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-29.11 0.32 10" rpy="0.0 0.0 ${-1*pi/180}"/>
+    </static>   
+    <static name="SeaGrass15" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-25.5 1.2 10" rpy="0.0 0.0 ${-85*pi/180}"/>
+    </static>   
+    <static name="SeaGrass16" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-27 -1.6 10" rpy="0.0 0.0 ${-80*pi/180}"/>
+    </static>  
+    <static name="SeaGrass17" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-25.6 4.25 10" rpy="0.0 0.0 ${-85*pi/180}"/>
+    </static>   
+    <static name="SeaGrass18" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-23.9 6.89 10" rpy="0.0 0.0 ${-88*pi/180}"/>
+    </static>   
+    <static name="SeaGrass19" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-27.6 6.3 10" rpy="0.0 0.0 ${-5*pi/180}"/>
+    </static>  
+
+
+    <static name="SeaGrass20" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="18.7 -19.8 10.6" rpy="0.0 0.0 ${-26*pi/180}"/>
+    </static>  
+    <static name="SeaGrass21" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="22.35 -20.7 10.6" rpy="0.0 0.0 ${-110*pi/180}"/>
+    </static>  
+    <static name="SeaGrass22" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="19.8 -22.5 10.6" rpy="0.0 0.0 ${-100*pi/180}"/>
+    </static>  
+    <static name="SeaGrass23" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="16.2 -27.5 10.6" rpy="0.0 0.0 ${-105*pi/180}"/>
+    </static>  
+    <static name="SeaGrass24" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="18.7 -25.4 10.6" rpy="0.0 0.0 ${-108*pi/180}"/>
+    </static>  
+    <static name="SeaGrass25" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="15 -24.8 10.6" rpy="0.0 0.0 ${-24*pi/180}"/>
+    </static>  
+
+
+    <static name="SeaGrass25" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-19.3 2.54 10" rpy="0.0 0.0 ${-5*pi/180}"/>
+    </static>  
+    <static name="SeaGrass25" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-15.5 3.15 10" rpy="0.0 0.0 ${-88*pi/180}"/>
+    </static>  
+    <static name="SeaGrass25" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-17.3 0.5 10" rpy="0.0 0.0 ${-85*pi/180}"/>
+    </static>  
+    <static name="SeaGrass25" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-18.5 -5.3 10" rpy="0.0 0.0 ${-81*pi/180}"/>
+    </static>  
+    <static name="SeaGrass25" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.0" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-17.14 -2.54 10" rpy="0.0 0.0 ${-85*pi/180}"/>
+    </static>  
+    <static name="SeaGrass25" type="model">
+        <physical>
+            <mesh filename="sea_grass/mesh/sea_grass.obj" scale="1.5" convex="false"/>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </physical>
+        <material name="Biofouling"/>
+        <look name="sea_grass"/>
+        <world_transform xyz="-20.7 -3.4 10" rpy="0.0 0.0 ${-1*pi/180}"/>
+    </static>  
+
+
+</scenario>
