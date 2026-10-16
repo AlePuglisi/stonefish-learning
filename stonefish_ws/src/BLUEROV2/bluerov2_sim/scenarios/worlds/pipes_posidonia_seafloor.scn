@@ -35,7 +35,11 @@
 
     <!--   Inlcude Robots  -->
 
-    <include file="$(find bluerov2_sim)/scenarios/bluerov2_simple_hydro.scn"/>
+    <include file="$(find bluerov2_sim)/scenarios/bluerov2_simple_hydro.scn">
+    	<arg name="vehicle_name" value="bluerov"/>
+		<arg name="position" value="7.0 0.0 1.0"/>
+		<arg name="orientation" value="0.0 0.0 0.0"/>
+    </include>
     
     <!--   Inlcude Scene  -->
 

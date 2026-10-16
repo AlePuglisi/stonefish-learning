@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <scenario>
 
+    <looks>
+        <look name="pipe_line" gray="1.0" roughness="1.0" texture="pipe_line/texture/color.jpg" 
+                                                          normal_map="pipe_line/texture/normal.png"/>
+		<look name="pipe_curve" gray="1.0" roughness="1.0" texture="pipe_curve/texture/color.jpg" 
+                                                           normal_map="pipe_curve/texture/normal.png"/>
+    </looks>
+
     <static name="PipeLinear01" type="model">
         <physical>
             <mesh filename="pipe_line/mesh/pipe_line.obj" scale="1.0" convex="false"/>

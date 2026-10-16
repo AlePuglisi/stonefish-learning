@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <scenario>
     
+    <looks>
+        <look name="sea_grass" gray="1.0" roughness="1.0" texture="sea_grass/texture/color.jpg"/>
+    </looks>
+    
     <static name="SeaGrass" type="model">
         <physical>
             <mesh filename="sea_grass/mesh/sea_grass.obj" scale="0.5" convex="false"/>
