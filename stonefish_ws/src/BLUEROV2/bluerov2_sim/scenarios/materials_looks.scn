@@ -29,7 +29,6 @@
 			<friction material1="Neutral" material2="InternalFoam" static="0.5" dynamic="0.2"/>
 			<friction material1="Neutral" material2="Steel" static="0.5" dynamic="0.2"/>
 			<friction material1="Neutral" material2="Biofouling" static="0.5" dynamic="0.2"/>		
-    <include file="$(find bluerov2_sim)/scenarios/bluerov2_simple_hydro.scn"/>
 			<friction material1="Foam" material2="Foam" static="0.5" dynamic="0.2"/>
 			<friction material1="Foam" material2="Acrylic" static="0.5" dynamic="0.2"/>
 			<friction material1="Foam" material2="Polyethylene" static="0.5" dynamic="0.2"/>
@@ -60,9 +59,8 @@
 
 			<friction material1="Biofouling" material2="Biofouling" static="0.5" dynamic="0.2"/>	
 
-
-
 		</friction_table>
+
 	</materials>
 
     <looks>
@@ -83,10 +81,10 @@
 		<look name="bluerov2_joint" gray="1.0" roughness="1.0" metalness="0.1" texture="bluerov2/joint/bluerov2.png"/>
 
 		<!-- Some Scene colors -->
-		<look name="sand_floor" gray="1.0" roughness="0.9" texture="sand_floor/texture/color4k.jpg" normal_map="sand_floor/texture/normal4k.png"/>
+		<look name="sand_floor" gray="1.0" roughness="0.9" texture="sand_floor/texture/color4k.jpg" 
+		                                                   normal_map="sand_floor/texture/normal4k.png"/>
 
 		<look name="windTurbinePile" gray="1.0" roughness="0.1" texture="wind_turbine/textures/WindTurbine.png"/>
-
 
     </looks>   
 

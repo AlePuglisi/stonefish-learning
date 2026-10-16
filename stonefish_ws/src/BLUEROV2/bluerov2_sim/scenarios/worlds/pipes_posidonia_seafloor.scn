@@ -31,7 +31,6 @@
     <!--   Inlcude utils (materials and looks)  -->
 
     <include file="$(find bluerov2_sim)/scenarios/materials_looks.scn"/>
-    <include file="$(find bluerov2_sim)/scenarios/looks_semantic.scn"/>
 
     <!--   Inlcude Robots  -->
 

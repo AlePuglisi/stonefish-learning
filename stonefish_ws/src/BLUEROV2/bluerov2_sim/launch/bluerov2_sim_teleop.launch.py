@@ -21,7 +21,7 @@ def generate_launch_description():
 
     scenario_arg = DeclareLaunchArgument(
         'scenario',
-        default_value='pipes_posidonia_seafloor.scn',
+        default_value='pipes_posidonia_seafloor',
         description='Name of the Simulation Scenario'
     )
 
@@ -38,7 +38,7 @@ def generate_launch_description():
                         FindPackageShare('bluerov2_sim'), 'data'
                     ]),
                     'scenario_desc': PathJoinSubstitution([
-                        FindPackageShare('mola_auv_sim'), 'scenarios',
+                        FindPackageShare('bluerov2_sim'),'scenarios','worlds',
                         PythonExpression(["'", LaunchConfiguration('scenario'), "' + '.scn'"])
                     ]),
                     'simulation_rate': '100.0',
@@ -97,6 +97,7 @@ def generate_launch_description():
     
     return LaunchDescription([
         robot_name_arg,
+        scenario_arg,
         namespace_action,
 
         odom2tf_node, 

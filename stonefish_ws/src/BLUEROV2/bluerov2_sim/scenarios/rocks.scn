@@ -3,8 +3,9 @@
 
     <looks>
         <look name="rock" gray="1.0" roughness="1.0" texture="rocks/rockA/texture/color.jpg" 
-                                                     normal_map="rocks/rockA/texture/normal.jpg"/>
+                                                        normal_map="rocks/rockA/texture/normal.jpg"/>
     </looks>
+
     <static name="RockA00" type="model">
         <physical>
             <mesh filename="rocks/rockA/mesh/rockA.obj" scale="1.0" convex="false"/>
