@@ -11,7 +11,7 @@
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</visual>
 				<physical>
-					<mesh filename="bluerov2/joint/bluerov2_cube_phy.obj" scale="1.0"/>
+					<mesh filename="bluerov2/joint/bluerov2_cube_phy.obj" scale="1.0" convex="true"/>
 					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
 				</physical>
 				<material name="Polycarbonate"/>
