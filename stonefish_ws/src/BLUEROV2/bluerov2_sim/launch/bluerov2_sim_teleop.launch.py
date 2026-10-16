@@ -1,7 +1,7 @@
 import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, GroupAction, IncludeLaunchDescription, TimerAction
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, PythonExpression
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch.substitutions import Command
@@ -19,6 +19,12 @@ def generate_launch_description():
         description='Name of the robot'
     )
 
+    scenario_arg = DeclareLaunchArgument(
+        'scenario',
+        default_value='pipes_posidonia_seafloor.scn',
+        description='Name of the Simulation Scenario'
+    )
+
     # Group action with namespace
     namespace_action = GroupAction(
         actions=[
@@ -32,7 +38,8 @@ def generate_launch_description():
                         FindPackageShare('bluerov2_sim'), 'data'
                     ]),
                     'scenario_desc': PathJoinSubstitution([
-                        FindPackageShare('bluerov2_sim'), 'scenarios', 'worlds', 'pipes_posidonia_seafloor_sem.scn'
+                        FindPackageShare('mola_auv_sim'), 'scenarios',
+                        PythonExpression(["'", LaunchConfiguration('scenario'), "' + '.scn'"])
                     ]),
                     'simulation_rate': '100.0',
                     'window_res_x': '1200',
